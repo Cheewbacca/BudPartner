@@ -1,0 +1,131 @@
+@font-face 
+    font-family: 'Montserrat', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+.h1-font
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calculateWidth(60)
+    color: $white;
+    text-transform: uppercase;
+
+.h2-font
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calculateWidth(40)
+    color: $dark_blue
+    text-transform: uppercase;
+
+.h3-font 
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calculateWidth(25)
+    color: $dark_blue
+    text-transform: uppercase;
+
+.h4-font
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calculateWidth(15)
+    color: $dark_blue
+    text-transform: uppercase;
+
+.main-body
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calculateWidth(18)
+    color: $dark_blue
+    
+
+.main-body-small
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calculateWidth(15)
+    color: $dark_blue
+
+.bold-link
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: calculateWidth(15)
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: $orange
+
+.main-link
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: calculateWidth(15)
+    text-transform: uppercase;
+    color: $dark_blue
+
+.small-link
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calculateWidth(11)
+    color: $error
+
+@media screen and ( max-width: 768px )
+    .h1-font
+        font-size: tW(60)
+
+    .h2-font
+        font-size: tW(40)
+
+    .h3-font 
+        font-size: tW(25)
+
+    .h4-font
+        font-size: tW(15)
+
+    .main-body
+        font-size: tW(18)
+
+    .main-body-small
+        font-size: tW(15)
+
+    .bold-link
+        font-size: tW(15)
+
+    .main-link
+        font-size: tW(15)
+
+    .small-link
+        font-size: tW(11)
+
+@media screen and ( max-width: 500px )
+    .h1-font
+        font-size: 35px
+
+    .h2-font
+        font-size: 30px
+
+    .h3-font 
+        font-size: 17px
+
+    .h4-font
+        font-size: 13px
+
+    .main-body
+        font-size: 16px
+
+    .main-body-small
+        font-size: 15px
+
+    .bold-link
+        font-size: 13px
+
+    .main-link
+        font-size: 14px
+
+    .small-link
+        font-size: 11px

@@ -1,0 +1,9 @@
+@function calculateHeight($numberPx)
+    @return unquote($numberPx * 100 / 900 + "vh");
+@function calculateWidth($numberPx)
+    @return unquote($numberPx * 100 / 1440 + "vw");
+
+@function tH($numberPx)
+    @return unquote($numberPx * 100 / 1024 + "vh");
+@function tW($numberPx)
+    @return unquote($numberPx * 100 / 768 + "vw");

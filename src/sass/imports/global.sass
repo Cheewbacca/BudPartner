@@ -1,0 +1,127 @@
+// Paddings
+
+.pt150
+    padding-top: calculateHeight(150)
+
+.pt100
+    padding-top: calculateHeight(100)
+
+.pt50
+    padding-top: calculateHeight(50)
+
+.pt30
+    padding-top: calculateHeight(30)
+
+.pt15
+    padding-top: calculateHeight(15)
+
+.pt10
+    padding-top: calculateHeight(10)
+
+.btn-padding
+    padding: calculateHeight(20) calculateWidth(55)
+
+// Icons
+
+.icon-cross
+    position: relative;
+    width: calculateWidth(28)
+    height: calculateWidth(28)
+    &::before,
+    &::after
+        content: ' ';
+        position: absolute;
+        height: 1.5px;
+        width: 100%;
+        bottom: 0;
+        margin-bottom: calculateWidth(14)
+        left: 0;
+        transform: rotate(45deg)
+        background-color: $dark_blue
+    &::before
+        transform: rotate(-45deg);
+
+// General
+
+.text-center
+    text-align: center;
+
+.center
+    margin-left: auto;
+    margin-right: auto;
+
+// Inputs
+
+.input-default
+    padding: calculateHeight(12) calculateWidth(25)
+    background: $white;
+    border-radius: 50px;
+    color: $dark_blue;
+    border: 1px solid black
+    &:hover
+        box-shadow: 0 0 30px 30px $dark_shadow;
+    &:active
+        border: 1px solid $dark_blue;
+
+.input-error
+    border: 1px solid $error;
+    color: $error;
+
+
+@media screen and ( max-width: 768px )
+    .pt150
+        padding-top: tH(150)
+
+    .pt100
+        padding-top: tH(100)
+
+    .pt50
+        padding-top: tH(50)
+
+    .pt30
+        padding-top: tH(30)
+
+    .pt15
+        padding-top: tH(15)
+
+    .pt10
+        padding-top: tH(10)
+
+    .btn-padding
+        padding: tH(20) tW(55)
+    
+    .icon-cross
+        width: tW(28)
+        height: tW(28)
+        &::before,
+        &::after
+            margin-bottom: tW(14)
+
+@media screen and ( max-width: 500px )
+    .pt150
+        padding-top: 150px
+
+    .pt100
+        padding-top: 100px
+
+    .pt50
+        padding-top: 50px
+
+    .pt30
+        padding-top: 30px
+
+    .pt15
+        padding-top: 15px
+
+    .pt10
+        padding-top: 10px
+
+    .btn-padding
+        padding: 20px 55px
+
+    .icon-cross
+        width: 28px
+        height: 28px
+        &::before,
+        &::after
+            margin-bottom: -14px
