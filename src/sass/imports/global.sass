@@ -1,10 +1,13 @@
-// Paddings
+// Paddings and margins
 
 .pt150
     padding-top: calculateHeight(150)
 
 .pt100
     padding-top: calculateHeight(100)
+
+.pb100
+    padding-bottom: calculateHeight(100)
 
 .pt50
     padding-top: calculateHeight(50)
@@ -20,6 +23,13 @@
 
 .btn-padding
     padding: calculateHeight(20) calculateWidth(55)
+
+.main-padding
+    padding-left: calculateWidth(120)
+    padding-right: calculateWidth(120)
+
+.mt50
+    margin-top: calculateHeight(50)
 
 // Icons
 
@@ -49,6 +59,18 @@
 .center
     margin-left: auto;
     margin-right: auto;
+
+.logo
+    width: calculateWidth(125)
+
+.underline
+    text-decoration: underline;
+
+.border-right
+    border-right: 0.5px solid $border;
+
+.border-left
+    border-left: 0.5px solid $border;
 
 // Inputs
 
@@ -97,6 +119,12 @@
         &::after
             margin-bottom: tW(14)
 
+    .mt50
+        margin-top: tH(50)
+
+    .logo
+        width: tW(125)
+
 @media screen and ( max-width: 500px )
     .pt150
         padding-top: 150px
@@ -125,3 +153,9 @@
         &::before,
         &::after
             margin-bottom: -14px
+
+    .mt50
+        margin-top: 50px
+
+    .logo
+        width: 125px

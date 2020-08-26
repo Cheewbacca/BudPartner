@@ -1,0 +1,43 @@
+footer.main-padding
+    a(href="/").logo.border-left.pt100.pb100
+        include ../svg/header__logo
+    ul.pt100.pb100.border-left
+        li.h4-font услуги
+
+        -let services = new Map();
+        -services.set('Кухни', '#').set('Гостинные', '#').set('Спальни', '#').set('Шкафы', '#').set('Ванные комнаты', '#').set('Детские комнаты', '#').set('Мебель для бизнеса', '#').set('Двери', '#').set('Лестницы', '#').set('Стеновые панели', '#').set('Покраска изделий', '#').set('Фасады', '#');
+        -for(let [key, value] of services){
+            li 
+                a(href=""+value).main-body-small= key
+        -}
+    
+    ul.pt100.pb100.border-left
+        li.h4-font Полезные страницы
+
+        -let usefulPages = new Map();
+        -usefulPages.set('О нас', '#').set('Материалы', '#').set('Контакты', '#');
+        -for(let [key, value] of usefulPages){
+            li 
+                a(href=""+value).main-body-small= key
+        -}
+
+    .contact-us.border-left.pt100.pb100.border-right
+        ul
+            li.h4-font Позвоните нам
+
+            -let callUs = new Map();
+            -callUs.set('+38 (095) 011-10-25', '+38(095)011-10-25').set('+38 (097) 232-97-79', '+38(097)232-97-79').set('+38 (044) 428-87-72', '+38(044)428-87-72').set('+38 (099) 491-41-98', '+38(099)491-41-98').set('+38 (050) 355-98-56', '+38(050)355-98-56)');
+            -for(let [key, value] of callUs){
+                li 
+                    a(href="tel:"+value).underline.main-body-small= key
+            -}
+
+        ul.mt50
+            li.h4-font Напишите нам
+
+            -let eMails = new Map();
+            -eMails.set('budpartnerpro@gmail.com', 'budpartnerpro@gmail.com').set('bud-partner-md@ukr.net', 'bud-partner-md@ukr.net').set('alex.bpmd@gmail.com', 'alex.bpmd@gmail.com');
+            -for(let [key, value] of eMails){
+                li 
+                    a(href="mailto:"+value).underline.main-body-small= key
+            -}
