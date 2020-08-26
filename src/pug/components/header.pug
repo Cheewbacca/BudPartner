@@ -1,0 +1,23 @@
+header.main-padding.pt30
+    a(href="/").logo
+        include ../svg/header__logo
+    nav
+        ul
+            -let nav = new Map();
+            -nav.set('услуги', '#').set('о нас', '#').set('контакты', '#');
+            -for(let [key, value] of nav){
+                li
+                    a(href="" + value).main-link= key
+                    img(src="static/img/arrow.svg", alt="arrow")
+            -}
+            li 
+                ul.language
+                    li 
+                        a(href="#").main-link RU
+                        img(src="static/img/triangle.svg", alt="triangle")
+                    li 
+                        a(href="#").main-link UA
+                        img(src="static/img/triangle.svg", alt="triangle")
+                    li 
+                        a(href="#").main-link EN
+                        img(src="static/img/triangle.svg", alt="triangle")
