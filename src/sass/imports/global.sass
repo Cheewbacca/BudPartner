@@ -24,12 +24,24 @@
 .pt10
     padding-top: calculateHeight(10)
 
+.pb45
+    padding-bottom: calculateHeight(45)
+
 .btn-padding
     padding: calculateHeight(20) calculateWidth(55)
+
+.small-btn-padding
+    padding: calculateHeight(16) calculateWidth(25)
 
 .main-padding
     padding-left: calculateWidth(120)
     padding-right: calculateWidth(120)
+
+.mt70
+    margin-top: calculateHeight(70)
+
+.mb70
+    margin-bottom: calculateHeight(70)
 
 .mt50
     margin-top: calculateHeight(50)
@@ -62,6 +74,9 @@
 
 // General
 
+a
+    transition: color .3s
+
 .text-center
     text-align: center;
 
@@ -80,6 +95,14 @@
 
 .border-left
     border-left: 0.5px solid $border;
+
+.social-list
+    display: flex
+    a
+        display: block
+        width: calculateWidth(50)
+        img
+            width: 100%;
 
 // Inputs
 
@@ -112,6 +135,7 @@ input::placeholder
     outline: none;
     border: none
     cursor: pointer
+    text-transform: uppercase
 
 label
     font-size: 0
@@ -141,6 +165,9 @@ button
     .pt10
         padding-top: tH(10)
 
+    .pb45
+        padding-bottom: tH(45)
+
     .btn-padding
         padding: tH(20) tW(55)
     
@@ -150,6 +177,12 @@ button
         &::before,
         &::after
             margin-bottom: tW(14)
+
+    .mt70
+        margin-top: tH(70)
+
+    .mb70
+        margin-bottom: tH(70)
 
     .mt50
         margin-top: tH(50)
@@ -185,6 +218,9 @@ button
     .pt10
         padding-top: 10px
 
+    .pb45
+        padding-bottom: 45px
+
     .btn-padding
         padding: 20px 55px
 
@@ -194,6 +230,11 @@ button
         &::before,
         &::after
             margin-bottom: -14px
+    .mt70
+        margin-top: 70px
+
+    .mb70
+        margin-bottom: 70px
 
     .mt50
         margin-top: 50px

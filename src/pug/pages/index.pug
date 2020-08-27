@@ -10,8 +10,33 @@ html(land='ru')
         link(rel="stylesheet", href="static\\css\\main.css")
         link(rel="stylesheet", href="static\\css\\slick.css")
     body
-        include ../components/header
-        
+        .first-section__wrapper.main-padding.pt30.pb45
+            include ../components/header
+
+            section.first-section__content
+                .text-block
+                    h1.h1-font Мебель на заказ в Киеве и области
+                    p.main-body.pt15.mb70 Мы производим индивидуальную мебель высокого качества с <strong> гаранитией 3 года. </strong>
+                    a(href="#").subm.small-btn-padding.input-font рассчитать стоимость
+                        img(src="static/img/arrow.svg", alt="arrow")
+
+            section.first-section__bottom
+                .social-list
+                    a(href="#").mr20
+                        img(src="static/img/viber.svg", alt="viber")
+                    a(href="#")
+                        img(src="static/img/telegram.svg", alt="telegram")
+
+                a(href="#").scroll-down 
+                    img(src="static/img/firstArrow.svg", alt="")
+                ul
+                    li 
+                        include ../svg/phone.pug
+                        a(href="tel:+380 (095) 011-10-25").underline.main-body-small +380 (095) 011-10-25
+                    li 
+                        include ../svg/phone.pug
+                        a(href="tel:+380 (097) 232-97-79").underline.main-body-small +380 (097) 232-97-79
+
         include ../components/footer
 
         script(src="static//js//libs.min.js")
