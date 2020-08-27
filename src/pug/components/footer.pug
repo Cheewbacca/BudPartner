@@ -29,6 +29,7 @@ footer.main-padding
             -callUs.set('+38 (095) 011-10-25', '+38(095)011-10-25').set('+38 (097) 232-97-79', '+38(097)232-97-79').set('+38 (044) 428-87-72', '+38(044)428-87-72').set('+38 (099) 491-41-98', '+38(099)491-41-98').set('+38 (050) 355-98-56', '+38(050)355-98-56)');
             -for(let [key, value] of callUs){
                 li 
+                    include ../svg/phone.pug
                     a(href="tel:"+value).underline.main-body-small= key
             -}
 
@@ -39,5 +40,12 @@ footer.main-padding
             -eMails.set('budpartnerpro@gmail.com', 'budpartnerpro@gmail.com').set('bud-partner-md@ukr.net', 'bud-partner-md@ukr.net').set('alex.bpmd@gmail.com', 'alex.bpmd@gmail.com');
             -for(let [key, value] of eMails){
                 li 
+                    include ../svg/mail.pug
                     a(href="mailto:"+value).underline.main-body-small= key
             -}
+
+        .social-list.mt50
+            a(href="#").mr20
+                img(src="static/img/viber.svg", alt="viber")
+            a(href="#")
+                img(src="static/img/telegram.svg", alt="telegram")

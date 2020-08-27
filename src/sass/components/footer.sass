@@ -13,6 +13,8 @@ footer
     ul 
         li 
             color: $white
+            align-items: flex-end
+            display: flex;
             &:first-child
                 margin-bottom: calculateHeight(5)
             &:not(:first-child)
@@ -22,3 +24,11 @@ footer
                 transition: color .3s
                 &:hover
                     color: $orange
+    .social-list
+        width: 100%;
+        display: flex
+        a
+            display: block
+            width: calculateWidth(50)
+            img
+                width: 100%;
