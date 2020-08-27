@@ -1,0 +1,14 @@
+.our-products__content
+    h2.border-left.pl20.h2-font.border-biggest что мы производим
+    ul.border-left-d.pt70.pb100
+        li.pt15 
+            a(href="#").h4-font.active-link Кухни
+        -let products = new Map();
+        -products.set('гостинные', '#').set('спальни', '#').set('шкафы, Гардеробные', '#').set('ванные комнаты', '#').set('мебель для бизнеса', '#').set('двери', '#').set('стеновые панели', '#').set('лестницы', '#').set('покраска изделий', '#').set('Мебельные фасады', '#');
+        -for(let [key, value] of products){
+            li.pt15 
+                a(href=""+value).h4-font= key
+        -}
+        li.mt70  
+            a(href="#").small-btn-padding.subm.input-font посмотреть все услуги
+    .our-products__images
