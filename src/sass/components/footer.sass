@@ -5,11 +5,10 @@ footer
     grid-template-columns: repeat( 4, 1fr )
     grid-template-rows: 1fr 
     width: 100%;
-    position: absolute;
-    bottom: 0
     background-color: $dark_blue;
     align-items: start
     grid-gap: 1px;
+    position: relative
     form
         width: 100%;
         position: absolute;
@@ -49,14 +48,5 @@ footer
                 margin-top: calculateHeight(10)
             a 
                 color: $white
-                transition: color .3s
                 &:hover
                     color: $orange
-    .social-list
-        width: 100%;
-        display: flex
-        a
-            display: block
-            width: calculateWidth(50)
-            img
-                width: 100%;
