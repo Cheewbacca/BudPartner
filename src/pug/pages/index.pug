@@ -12,30 +12,29 @@ html(land='ru')
     body
         .first-section__wrapper.main-padding.pt30.pb45
             include ../components/header
-
-            section.first-section__content
-                .text-block
-                    h1.h1-font Мебель на заказ в Киеве и области
-                    p.main-body.pt15.mb70 Мы производим индивидуальную мебель высокого качества с <strong> гаранитией 3 года. </strong>
-                    a(href="#").subm.small-btn-padding.input-font рассчитать стоимость
-                        img(src="static/img/arrow.svg", alt="arrow")
-
-            section.first-section__bottom
-                .social-list
-                    a(href="#").mr20
-                        img(src="static/img/viber.png", alt="viber")
-                    a(href="#")
-                        img(src="static/img/telegram.png", alt="telegram")
-
-                a(href="#").scroll-down 
-                    img(src="static/img/firstArrow.svg", alt="arrow")
-                ul
-                    li 
-                        include ../svg/phone.pug
-                        a(href="tel:+380 (095) 011-10-25").underline.main-body-small +380 (095) 011-10-25
-                    li 
-                        include ../svg/phone.pug
-                        a(href="tel:+380 (097) 232-97-79").underline.main-body-small +380 (097) 232-97-79
+            include ../components/first_screen
+        .our-goals__wrapper.main-padding
+            section.our-goals__content
+                .our-goals__item.pt30.pb45.border-left-d
+                    .our-goals__item-inner.border-left.border-big.pt15
+                        .img-box
+                            img(src="static/img/item-1.svg", alt="")
+                        p.h4-font 15 лет на рынке
+                .our-goals__item.pt30.pb45.border-left-d
+                    .our-goals__item-inner.border-left.border-big.pt15
+                        .img-box
+                            img(src="static/img/item-2.svg", alt="")
+                        p.h4-font Собственное производство
+                .our-goals__item.pt30.pb45.border-left-d
+                    .our-goals__item-inner.border-left.border-big.pt15
+                        .img-box
+                            img(src="static/img/item-3.svg", alt="")
+                        p.h4-font гарантия 3 года
+                .our-goals__item.pt30.pb45.border-left-d.border-right-d
+                    .our-goals__item-inner.border-left.border-big.pt15
+                        .img-box
+                            img(src="static/img/item-4.svg", alt="")
+                        p.h4-font Работаем с частными лицами и организациями
 
         include ../components/footer
 

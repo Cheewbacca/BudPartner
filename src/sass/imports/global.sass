@@ -46,6 +46,9 @@
 .mt50
     margin-top: calculateHeight(50)
 
+.mt20
+    margin-top: calculateHeight(20)
+
 .mr20
     margin-right: calculateWidth(20)
 
@@ -95,6 +98,16 @@ a
 
 .border-left
     border-left: 0.5px solid $border;
+
+.border-big
+    border-width: 1px;
+
+.border-right-d
+    border-right: 0.5px dashed $light;
+
+.border-left-d
+    border-left: 0.5px dashed $light;
+
 
 .social-list
     display: flex
@@ -195,6 +208,9 @@ button
     .mr10
         margin-right: tW(10)
 
+    .mt20
+        margin-top: tH(20)
+
 @media screen and ( max-width: 500px )
     .pt350
         padding-top: 350px
@@ -246,3 +262,6 @@ button
 
     .mr10
         margin-right: 10px
+
+    .mt20
+        margin-top: 20px
