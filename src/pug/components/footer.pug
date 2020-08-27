@@ -1,7 +1,20 @@
 footer.main-padding
-    a(href="/").logo.border-left.pt100.pb100
+    form(action="")
+        h3.text-center.h3-font  оставьте заявку на бесплатную консультацию
+
+        label(for="consultation_name") Имя
+            img(src="static/img/man.svg", alt="man")
+            input(type="text" id="consultation_name" placeholder="Имя" name="Имя" required).input-default.input-font
+        label(for="consultation_phone") Телефон 
+            img(src="static/img/black-phone.svg", alt="phone")
+            input(type="text" id="consultation_phone" placeholder="Телефон" name="Телефон" required).input-default.input-font
+        label(for="consultation_btn").img-reverted 
+            button(type="submit" id="consultation_btn").subm.btn-padding.input-font оставить заявку
+            img(src="static/img/arrow.svg", alt="arrow")
+
+    a(href="/").logo.border-left.pt350.pb100
         include ../svg/header__logo
-    ul.pt100.pb100.border-left
+    ul.pt350.pb100.border-left
         li.h4-font услуги
 
         -let services = new Map();
@@ -11,7 +24,7 @@ footer.main-padding
                 a(href=""+value).main-body-small= key
         -}
     
-    ul.pt100.pb100.border-left
+    ul.pt350.pb100.border-left
         li.h4-font Полезные страницы
 
         -let usefulPages = new Map();
@@ -21,7 +34,7 @@ footer.main-padding
                 a(href=""+value).main-body-small= key
         -}
 
-    .contact-us.border-left.pt100.pb100.border-right
+    .contact-us.border-left.pt350.pb100.border-right
         ul
             li.h4-font Позвоните нам
 
