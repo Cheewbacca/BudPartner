@@ -2,17 +2,47 @@ footer > *
     height: 100%
 footer
     display: grid;
-    grid-template-columns: repeat( auto-fit , minmax(300px, 1fr) )
-    grid-template-rows: 1fr
+    grid-template-columns: repeat( 4, 1fr )
+    grid-template-rows: 1fr 
     width: 100%;
     position: absolute;
     bottom: 0
     background-color: $dark_blue;
     align-items: start
     grid-gap: 1px;
+    form
+        width: 100%;
+        position: absolute;
+        top: calculateHeight(100)
+        height: auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        label
+            margin: calculateHeight(30) calculateWidth(12.5) 0
+            position: relative
+            img
+                position: absolute
+                left: calculateWidth(25)
+                width: calculateWidth(15)
+                height: calculateWidth(14)
+                top: 50%;
+                margin-top: calculateWidth(-7)
+        .img-reverted 
+            img
+                left: initial;
+                right: calculateWidth(25)
+        input 
+            height: 100%
+        h3
+            width: 100%;
+            color: $white
+                
     ul 
         li 
             color: $white
+            align-items: flex-end
+            display: flex;
             &:first-child
                 margin-bottom: calculateHeight(5)
             &:not(:first-child)
@@ -22,3 +52,11 @@ footer
                 transition: color .3s
                 &:hover
                     color: $orange
+    .social-list
+        width: 100%;
+        display: flex
+        a
+            display: block
+            width: calculateWidth(50)
+            img
+                width: 100%;

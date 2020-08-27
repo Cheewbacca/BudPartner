@@ -1,5 +1,8 @@
 // Paddings and margins
 
+.pt350
+    padding-top: calculateHeight(350)
+
 .pt150
     padding-top: calculateHeight(150)
 
@@ -30,6 +33,12 @@
 
 .mt50
     margin-top: calculateHeight(50)
+
+.mr20
+    margin-right: calculateWidth(20)
+
+.mr10
+    margin-right: calculateWidth(10)
 
 // Icons
 
@@ -75,13 +84,13 @@
 // Inputs
 
 .input-default
-    padding: calculateHeight(12) calculateWidth(25)
+    padding: calculateHeight(12) calculateWidth(25) calculateHeight(12) calculateWidth(50) 
     background: $white;
     border-radius: 50px;
     color: $dark_blue;
     border: 1px solid black
     &:hover
-        box-shadow: 0 0 30px 30px $dark_shadow;
+        box-shadow: 0 0 10px 10px $dark_shadow;
     &:active
         border: 1px solid $dark_blue;
 
@@ -89,8 +98,31 @@
     border: 1px solid $error;
     color: $error;
 
+input::placeholder
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: $dark_blue;
+
+.subm
+    text-align: center
+    background-color: $orange
+    border-radius: 50px;
+    color: $white;
+    outline: none;
+    border: none
+    cursor: pointer
+
+label
+    font-size: 0
+
+button
+    text-transform: uppercase
 
 @media screen and ( max-width: 768px )
+    .pt350
+        padding-top: tH(350)
+
     .pt150
         padding-top: tH(150)
 
@@ -125,7 +157,16 @@
     .logo
         width: tW(125)
 
+    .mr20
+        margin-right: tW(20)
+
+    .mr10
+        margin-right: tW(10)
+
 @media screen and ( max-width: 500px )
+    .pt350
+        padding-top: 350px
+
     .pt150
         padding-top: 150px
 
@@ -159,3 +200,9 @@
 
     .logo
         width: 125px
+
+    .mr20
+        margin-right: 20px
+
+    .mr10
+        margin-right: 10px
