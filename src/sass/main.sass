@@ -42,4 +42,36 @@ body
 
             .our-products__images
                 grid-column: 2/5
+                display: grid
+                grid-template-columns: repeat( 3, 1fr )
+                width: 100%
+                position: relative
+                .our-products__image
+                    img
+                        transition: transform .4s;
+                        cursor: pointer
+                        max-height: calculateHeight(360)
+                        max-width: calculateWidth(360)
+                        &:hover
+                            transform: scale(1.1)
+                            z-index: 1
+                    .product__img-1
+                        position: absolute;
+                        top: 0
+                        left: 50%   
+                        margin-left: -10%
+                    .product__img-2
+                        position: absolute;
+                        bottom: 100px
+                        left: 50%   
+                        margin-left: -25%
+                    .product__img-3
+                        position: absolute;
+                        top: 5%
+                        right: 0
+                    .product__img-4
+                        position: absolute;
+                        bottom: 20%
+                        right: 0
+
     @import 'components/footer'
