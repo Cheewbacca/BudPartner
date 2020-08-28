@@ -1,22 +1,23 @@
-doctype html
-html(land='ru')
+<!DOCTYPE html>
+html(lang="ru")
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(title="BudPartner")
         meta(description="Budparnter development")
-        title Home
+        title Services
         link(rel="shortcut icon", href="static//img//icon.png", type="image/x-icon")
         link(rel="stylesheet", href="static\\css\\main.css")
         link(rel="stylesheet", href="static\\css\\slick.css")
     body
-        .first-section__wrapper.main-padding.pt30.pb45
+        .services__wrapper.services-first-section__wrapper.main-padding.pt30.pb100
             include ../components/header
-            include ../homepage/first_screen
-        .our-goals__wrapper.main-padding
-            include ../homepage/goals
-       
-        include ../components/footer_bordered
+            include ../services/first_section
+        
+        .all-services.main-padding.main-y-padding
+            include ../services/all_services
 
-        script(src="static//js//libs.min.js")
-        script(src="static//js//main.js")
+        include ../components/footer
+
+        script(src="static/js/libs.min.js")
+        script(src="static/js/main.js")

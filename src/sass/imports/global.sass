@@ -1,5 +1,8 @@
 // Paddings and margins
 
+.p25
+    padding: 25px
+
 .pt350
     padding-top: calculateHeight(350)
 
@@ -37,6 +40,10 @@
     padding-left: calculateWidth(120)
     padding-right: calculateWidth(120)
 
+.main-y-padding
+    padding-top: calculateHeight(100)
+    padding-bottom: calculateHeight(150)
+
 .mt70
     margin-top: calculateHeight(70)
 
@@ -45,6 +52,9 @@
 
 .mt50
     margin-top: calculateHeight(50)
+
+.mt30
+    margin-top: calculateHeight(30)
 
 .mt20
     margin-top: calculateHeight(20)
@@ -148,6 +158,12 @@ input::placeholder
     border: none
     cursor: pointer
     text-transform: uppercase
+    display: inline-flex
+    img
+        width: calculateWidth(15)
+        height: calculateWidth(14)
+        margin-left: 5px
+    
 
 label
     font-size: 0
@@ -199,9 +215,12 @@ button
     .mt50
         margin-top: tH(50)
 
+    .mt30
+        margin-top: tH(30)
+
     .logo
         width: tW(125)
-
+    
     .mr20
         margin-right: tW(20)
 
@@ -253,6 +272,9 @@ button
 
     .mt50
         margin-top: 50px
+
+    .mt30
+        margin-top: 30px
 
     .logo
         width: 125px
