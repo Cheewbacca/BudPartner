@@ -8,73 +8,7 @@ body
     @import 'components/header'
     @import 'homepage/first_section'
     @import 'homepage/goals'
-    .our-products__wrapper
-        .our-products__content
-            display: grid
-            grid-template-columns: repeat( 4, 1fr )
-            h2 
-                grid-column: 1/5
-            ul 
-                li 
-                    &:last-child
-                        a
-                            color: $orange
-                            background-color: initial
-                            border: 1px solid $orange
-                            position: relative
-                            padding-right: 55px
-                            &::after
-                                position: absolute;
-                                content: url(../img/orArrow.svg)
-                                right: 25px
-                                top: 50%;
-                                margin-top: -8px
-                                
-                        &:hover
-                            a
-                                color: $white
-                                background-color: $orange
-                                
-                    a
-                        color: $dark_blue
-                        &:hover
-                            color: $orange
-
-            .our-products__images
-                grid-column: 2/5
-                display: grid
-                grid-template-columns: repeat( 3, 1fr )
-                width: 100%
-                .our-products__image
-                    display: grid;
-                    grid-template-columns: 1.5fr;
-                    grid-template-rows: 1fr 1fr
-                    .our-products__image-box
-                        position: relative
-                        img
-                            transition: transform .4s;
-                            cursor: pointer
-                            max-height: calculateHeight(300)
-                            max-width: calculateWidth(300)
-                            &:hover
-                                transform: scale(1.1)
-                                z-index: 1
-                        .product__img-1
-                            position: absolute;
-                            top: 0
-                            left: 50%;
-                            margin-left: -25%;
-                        .product__img-2
-                            position: absolute;
-                            top: 0
-                            left: -50px
-                        .product__img-3
-                            position: absolute;
-                            top: 5%
-                            right: 0
-                        .product__img-4
-                            position: absolute;
-                            bottom: 20%
-                            right: 0
-
+    @import 'homepage/products'
+    @import 'homepage/numbers'
+    @import 'homepage/choose-us'
     @import 'components/footer'

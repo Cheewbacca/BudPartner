@@ -27,6 +27,9 @@
 .pt10
     padding-top: calculateHeight(10)
 
+.pb250
+    padding-bottom: calculateHeight(250)
+
 .pb45
     padding-bottom: calculateHeight(45)
 
@@ -173,6 +176,22 @@ label
 button
     text-transform: uppercase
 
+.gray-bg
+    position: absolute
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: $light
+    z-index: -1
+    
+.grid-template
+    height: 100%;
+    width: calc(100% - 8.33333vw - 8.33333vw)
+    position: absolute
+    display: grid;
+    grid-template-columns: repeat( 4 , 1fr)
+
 @media screen and ( max-width: 768px )
     .pt350
         padding-top: tH(350)
@@ -203,6 +222,9 @@ button
 
     .pb45
         padding-bottom: tH(45)
+
+    .pb250
+        padding-bottom: tH(250)
 
     .pl20
         padding-left: tW(20)
@@ -268,6 +290,9 @@ button
 
     .pb45
         padding-bottom: 45px
+
+    .pb250
+        padding-bottom: 250px
 
     .pl20
         padding-left: 20px
