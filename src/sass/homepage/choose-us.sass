@@ -1,0 +1,35 @@
+.choose-us__wrapper
+    background-color: $light
+    position: relative
+    overflow: hidden
+    .grid-template
+        .border-item
+            border-color: $white
+    .white-bg
+        height: 100%;
+        background-color: $white
+        z-index: 0
+        width: 120%;
+        position: absolute
+        bottom: -90%
+        right: -50px
+        transform: rotate(-5deg)
+        .grid-template
+            display: grid
+            grid-template-columns: repeat( 4 , 1fr )
+    .choose-us
+        position: relative
+        .top-section
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+            a
+                margin-right: calculateWidth(15)
+        .choose-us__content
+            display: flex;
+            justify-content: space-between
+            align-items: center;
+            .choose-us__item
+                width: 25%
+                p 
+                    color: $dark_blue
