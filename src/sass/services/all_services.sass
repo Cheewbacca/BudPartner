@@ -1,0 +1,81 @@
+.all-services
+    &__content
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        justify-content: space-between
+    &__item
+        flex: 0 0 24.3%
+        min-width: 182px
+        margin-bottom: 10px
+        position: relative
+        &--hidden
+            height: 0
+            margin-bottom: 0
+        .kitchen
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all1.png')
+        .livingRoom
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all2.png')
+        .bedroom
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all3.png')
+        .wardrobe
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all4.png')
+        .bath
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all5.png')
+        .childrenRoom
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all6.png')
+        .business
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all7.png')
+        .table
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all8.png')
+        .hallway
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all9.png')
+        .door
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all10.png')
+        .upholstery
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all11.png')
+        .panels
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all12.png')
+        .stairs
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all13.png')
+        .painting
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all14.png')
+        .facades
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all15.png')
+        .height-equal-width
+            padding-top: 100%
+        .content
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-size: 100%
+            background-repeat: no-repeat
+            padding-right: 20px
+            &:hover
+                transition: background-size .6s
+                z-index: 1
+                background-size: 130%
+                background-position: 30%
+                .all-services__heading
+                    color: $orange
+                    transition: color .6s
+    &__heading
+        position: relative
+        &:after
+            content: ''
+            width: 20px
+            height: 20px
+            margin-left: 10px
+            display: inline-block
+            background-image: url('/static/img/orArrow.svg')
+            background-size: cover
+            background-repeat: no-repeat
+            position: absolute
+            bottom: calculateHeight(8)
+            @media all and (max-width: 1200px)
+                bottom: calculateHeight(4)
+            @media all and (max-width: 1000px)
+                bottom: calculateHeight(2)
+    
