@@ -1,4 +1,4 @@
-.all-services__content
+.all-services__content.main-padding.main-y-padding
     -const servicesList = new Map();
     -servicesList.set('Кухни', {link: '#', className: 'kitchen'}).set('Гостинные', {link: '#', className: 'livingRoom'}).set('Спальни', {link: '#', className: 'bedroom'}).set('шкафы, гардеробные', {link: '#', className: 'wardrobe'}).set('Ванные комнаты', {link: '#', className: 'bath'}).set('Детские комнаты', {link: '#', className: 'childrenRoom'}).set('Мебель для бизнеса', {link: '#', className: 'business'}).set('Столы', {link: '#', className: 'table'}).set('прихожая', {link: '#', className: 'hallway'}).set('Двери', {link: '#', className: 'door'}).set('обшивка мебели', {link: '#', className: 'upholstery'}).set('стеновые панели', {link: '#', className: 'panels'}).set('лестницы', {link: '#', className: 'stairs'}).set('покраска изделий', {link: '#', className: 'painting'}).set('МЕБЕЛЬНЫЕ фасады', {link: '#', className: 'facades'});
     -for([key, value] of servicesList){
@@ -8,5 +8,11 @@
                 h3.h3-font.all-services__heading= key
     -}
 
-    a(href="").all-services__item.all-services__item--hidden
-    a(href="").all-services__item.all-services__item--hidden
+    //- a(href="").all-services__item.all-services__item--hidden
+    //- a(href="").all-services__item.all-services__item--hidden
+
+    .all-services__lines
+        .border-left-d
+        .border-left-d
+        .border-left-d
+        .border-left-d.border-right-d
