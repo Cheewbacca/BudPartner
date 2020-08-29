@@ -2,6 +2,7 @@
     background-color: $light
     position: relative
     overflow: hidden
+    padding-bottom: calculateHeight(50)
     .grid-template
         .border-item
             border-color: $white
@@ -9,14 +10,19 @@
         height: 100%;
         background-color: $white
         z-index: 0
-        width: 120%;
+        width: calc( 100% + 200px )
         position: absolute
         bottom: -90%
         right: -50px
         transform: rotate(-5deg)
+        overflow: hidden
         .grid-template
-            display: grid
-            grid-template-columns: repeat( 4 , 1fr )
+            width: calc(100% - 8.33333vw - 8.33333vw - 200px)
+            margin-left: calc( 50px + 100px + 8.33333vw )
+            transform: rotate(5deg) translate(0px, -50%)
+            .border-item
+                border-color: $light
+                
     .choose-us
         position: relative
         .top-section
