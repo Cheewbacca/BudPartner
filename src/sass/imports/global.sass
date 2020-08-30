@@ -167,7 +167,35 @@ a
             width: 24px
             height: 24px
 
-
+.rounded-button
+    width: 50px
+    height: 50px
+    background: $orange
+    border-radius: 50%
+    position: relative
+    cursor: pointer
+    &:after
+        content: ''
+        display: block
+        width: 25px
+        height: 25px
+        background-image: url('/static/img/arrow.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        margin: auto
+    &--left
+        &:after
+            transform: rotate(-135deg)
+    &--right
+        &:after
+            transform: rotate(45deg)
+    &:hover
+        background: $orange_hover
 
 
 // Inputs

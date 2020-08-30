@@ -1,23 +1,15 @@
 $('document').ready(() => {
-    $('#ourWorksSlider').slick({
-        // infinite: true,
-        // slidesToShow: 3,
-        // dots: false,
-        // speed: 1000,
-        // // centerMode: true,
-        // draggable: true,
-        // arrows: false,
-        // variableWidth: true,
-        // responsive: [{
-        //     breakpoint: 1024,
-        //     settings: {
-        //     }
-        // },
-        // ],
-        infinite: true,
-        slidesToShow: 3,
-        dots: false,
-        arrows: false,
-        draggable: true,
+    const slider = $('#ourWorksSlider');
+    // to avoid animation bug in slick slider (when slide from last to first)
+    // set slidesToShow equal number of items - 1
+    const slidesToShow = slider.children().length - 1;
+
+    slider.slick({
+        slidesToShow: slidesToShow,
+        speed: 800,
+        centerMode: true,
+        variableWidth: true,
+        nextArrow: $('#prevArrow'),
+        prevArrow: $('#nextArrow'),
     });
 });
