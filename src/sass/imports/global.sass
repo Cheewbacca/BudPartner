@@ -148,6 +148,13 @@ a
 .border-left-d
     border-left: 0.5px dashed $light;
 
+.check
+    padding-left: calculateWidth(20)
+    position: relative
+    &::after
+        content: url(../img/check.svg)
+        position: absolute;
+        left: 0
 
 .social-list
     display: flex
@@ -155,7 +162,7 @@ a
         display: block
         width: calculateWidth(50)
         img
-            height: 100%
+            height: auto
 // Inputs
 
 .input-default
