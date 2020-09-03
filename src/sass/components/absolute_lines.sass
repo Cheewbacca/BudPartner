@@ -1,0 +1,14 @@
+.absolute-lines
+    position: absolute
+    top: 0
+    bottom: 0
+    left: calculateWidth(120)
+    right: calculateWidth(120)
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr )
+    grid-template-rows: 1fr
+    z-index: 1
+    @media all and (max-width: 768px)
+        display: none
+    &--d 
+        z-index: -1

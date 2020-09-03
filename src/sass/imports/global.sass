@@ -68,6 +68,12 @@
 .mb70
     margin-bottom: calculateHeight(70)
 
+.mb50
+    margin-bottom: calculateHeight(50)
+
+.mb15
+    margin-bottom: calculateHeight(15)
+
 .mt50
     margin-top: calculateHeight(50)
 
@@ -155,6 +161,11 @@ a
         content: url(../img/check.svg)
         position: absolute;
         left: 0
+  
+.border-left-light
+    border-left: 0.5px solid $white
+.border-right-light
+    border-right: 0.5px solid $white
 
 .social-list
     display: flex
@@ -163,6 +174,75 @@ a
         width: calculateWidth(50)
         img
             height: auto
+
+.heading-arrow
+    position: relative
+    &:after
+        content: ''
+        width: 30px
+        height: 30px
+        display: inline-block
+        background-image: url('/static/img/orArrow.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto
+        margin-left: 10px
+        @media all and (max-width: 1000px)
+            width: 24px
+            height: 24px
+
+.heading-check
+    position: relative
+    &:before
+        content: ''
+        width: 18px
+        height: 13px
+        display: inline-block
+        background-image: url('/static/img/check.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        position: absolute
+        left: -22px
+        margin-top: calculateHeight(6)
+        @media all and (max-width: 1440px)
+            margin-top: calculateHeight(4)
+        @media all and (max-width: 1000px)
+            width: 14px
+            height: 10px
+
+.rounded-button
+    width: 50px
+    height: 50px
+    background: $orange
+    border-radius: 50%
+    position: relative
+    cursor: pointer
+    &:after
+        content: ''
+        display: block
+        width: 25px
+        height: 25px
+        background-image: url('/static/img/arrow.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        margin: auto
+    &--left
+        &:after
+            transform: rotate(-135deg)
+    &--right
+        &:after
+            transform: rotate(45deg)
+    &:hover
+        background: $orange_hover
+
 // Inputs
 
 .input-default
@@ -285,6 +365,12 @@ button
 
     .mb70
         margin-bottom: tH(70)
+    
+    .mb50
+        margin-bottom: tH(50)
+
+    .mb15
+        margin-bottom: tH(15)
 
     .mt50
         margin-top: tH(50)
@@ -365,6 +451,12 @@ button
 
     .mb70
         margin-bottom: 70px
+
+    .mb50
+        margin-bottom: 50px
+
+    .mb15
+        margin-bottom: 15px
 
     .mt50
         margin-top: 50px

@@ -1,0 +1,30 @@
+.you-will-get
+    &__wrapper 
+        position: relative
+        background: $light
+    &__content
+        z-index: 2
+        position: relative
+    &__items
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: 1fr
+        @media all and (max-width: 768px)
+            grid-template-columns: repeat(2, 1fr)
+        @media all and (max-width: 500px)
+            grid-template-columns: 1fr
+    &__item
+        padding: 0 25px
+        @media all and (max-width: 500px)
+            padding: 0
+            h4
+                margin-left: 25px
+        @media all and (max-width: 768px)
+            margin-bottom: 50px
+            &:last-child 
+                margin-bottom: 0
+
+
+
+
+    
