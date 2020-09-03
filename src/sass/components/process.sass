@@ -1,0 +1,19 @@
+.process__wrapper.main-padding
+    section.process.pt30
+        position: relative
+        .process__content
+            display: grid;
+            grid-template-columns: repeat( 3 , 1fr )
+            .process__item
+                padding: calculateHeight(30) calculateWidth(50)
+                position: relative
+                p
+                    width: 70%
+                    z-index: $zIndexBig
+                    a 
+                        color: $orange
+                img
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: -1
