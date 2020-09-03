@@ -10,12 +10,12 @@ global.$ = {
     }
 };
 
-$.path.tasks.forEach(function (taskPath){
+$.path.tasks.forEach(function (taskPath) {
     require(taskPath)();
 });
 
 $.gulp.task('default', $.gulp.series(
-    $.gulp.parallel('pug', 'sass'/* , 'scripts:libs', 'scripts' */),
+    $.gulp.parallel('pug', 'sass'/* , 'scripts:libs'*/, 'scripts'),
     $.gulp.parallel('watch', 'serve')
 ));
 

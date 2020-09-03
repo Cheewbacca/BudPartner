@@ -1,0 +1,59 @@
+.our-works
+    &__wrapper
+        position: relative
+    &__slider
+        background: transparent
+        overflow: hidden
+        @media all and (max-width: 500px)
+            overflow: visible
+            margin: 0 -20px
+        &-item
+            margin: 0 -6px
+            width: 430px
+            height: 300px
+            overflow: hidden
+            @media all and (max-width: 500px)
+                width: 315px
+                height: 222px
+        &-img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            transform: scale(0.837)
+            transition: all .8s
+        &-buttons
+            @media all and (max-width: 500px)
+                display: flex
+                align-items: center
+                justify-content: center
+    &__slider-wrap
+        position: relative
+        .rounded-button
+            position: absolute
+            bottom: 0
+            top: 0
+            margin: auto
+            @media all and (max-width: 500px)
+                position: relative
+                margin: 15px 15px 0
+            &--left
+                left: -25px
+                @media all and (max-width: 500px)
+                    left: unset
+            &--right
+                right: -25px
+                @media all and (max-width: 500px)
+                    right: unset
+
+        .slick-list 
+            margin: 0 -10px
+
+        .slick-center
+            margin-top: 0
+            .our-works__slider-img
+                transform: scale(1)
+                transition: all .8s
+            
+             
+
+
