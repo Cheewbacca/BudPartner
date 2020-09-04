@@ -13,6 +13,8 @@
             height: 300px
             overflow: hidden
             position: relative
+            &:hover > div
+                display: block
             @media all and (max-width: 500px)
                 width: 315px
                 height: 222px
@@ -32,6 +34,8 @@
             background-size: cover
             background-repeat: no-repeat
             cursor: pointer
+            display: none
+            transition: all .8s
         &-buttons
             @media all and (max-width: 500px)
                 display: flex
@@ -67,6 +71,7 @@
             .our-works__slider-scale
                 right: 25px
                 bottom: 15px
+                transition: all .8s
             
              
 
