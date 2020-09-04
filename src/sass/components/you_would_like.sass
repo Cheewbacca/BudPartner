@@ -1,0 +1,70 @@
+.you-would-like
+    &__wrapper
+        position: relative
+        padding-bottom: 140px
+    &__items
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        justify-content: space-between
+        margin: 0 -5px
+        @media all and (max-width: 415px)
+            justify-content: space-around
+    &__item
+        color: $white
+        background: #ccc
+        position: relative
+        min-width: 168px
+        flex: 0 0 15%
+        // margin-bottom: 10px
+        margin: 0 5px 10px
+        .height-equal-width
+            padding-top: 100%
+        .content
+            position: absolute
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            background-size: 100%
+            background-repeat: no-repeat
+            padding-right: 25px
+            &:hover
+                transition: background-size .6s
+                z-index: 1
+                background-size: 130%
+                background-position: 30%
+                .you-would-like__heading
+                    color: $orange
+                    transition: color .6s
+        .livingRoom
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all2.png')
+        .wardrobe
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all4.png')
+        .bath
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all5.png')
+        .childrenRoom
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all6.png')
+        .business
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all7.png')
+        .door
+            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all10.png')
+    &__heading
+        position: relative
+        &:after
+            content: ''
+            width: 15px
+            height: 15px
+            margin-left: 5px
+            display: inline-block
+            background-image: url('/static/img/orArrow.svg')
+            background-size: cover
+            background-repeat: no-repeat
+            position: absolute
+            bottom: calculateHeight(5)
+            @media all and (max-width: 1300px)
+                bottom: calculateHeight(4)
+            @media all and (max-width: 1200px)
+                bottom: calculateHeight(3)
+            @media all and (max-width: 1000px)
+                bottom: calculateHeight(2)
