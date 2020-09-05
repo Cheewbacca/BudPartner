@@ -13,9 +13,8 @@ $(document).ready(() => {
         prevArrow: $('#officeNextArrow'),
     });
 
+
     const saleStaffSlider = $('#saleStaffSlider');
-    // to avoid animation bug in slick slider (when slide from last to first)
-    // set slidesToShow equal number of items - 1
     slidesToShow = saleStaffSlider.children().length - 1;
 
     saleStaffSlider.slick({
