@@ -8,7 +8,7 @@
         align-items: center
         justify-content: space-between
         margin: 0 -5px
-        @media all and (max-width: 415px)
+        @media all and (max-width: 395px)
             justify-content: space-around
     &__item
         color: $white
@@ -16,8 +16,9 @@
         position: relative
         min-width: 168px
         flex: 0 0 15%
-        // margin-bottom: 10px
         margin: 0 5px 10px
+        @media all and (max-width: 415px)
+            min-width: 160px
         .height-equal-width
             padding-top: 100%
         .content
