@@ -25,4 +25,3 @@ function removeActive(nodes, className){
         removeActive(products, 'active-link');
         this.classList.add('active-link');
     });
-});
