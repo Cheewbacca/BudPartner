@@ -116,6 +116,8 @@ a
         content: url(../img/orArrow.svg);
         position: absolute;
         right: calculateWidth(-15)
+        width: calculateWidth(16)
+        top: 0
 
 .text-center
     text-align: center;
@@ -150,11 +152,12 @@ a
 
 .check
     padding-left: calculateWidth(20)
-    position: relative
+    position: relative;
     &::after
         content: url(../img/check.svg)
         position: absolute;
         left: 0
+        width: calculateWidth(16)            
 
 .social-list
     display: flex
@@ -277,6 +280,15 @@ button
         &::after
             margin-bottom: tW(14)
 
+    .check
+        &::after
+            width: tW(16)    
+
+    .active-link
+        &::after
+            width: tW(16)
+            right: tW(-15)
+
     .mt150
         margin-top: tH(150)
 
@@ -356,6 +368,15 @@ button
         &::before,
         &::after
             margin-bottom: -14px
+
+    .check
+        &::after
+            width: 16px
+
+    .active-link
+        &::after
+            width: 16px
+            right: -15px
 
     .mt150
         margin-top: 150px
