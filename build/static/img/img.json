@@ -1,0 +1,71 @@
+{
+    "images" :
+    [
+        {
+            "img1" : "static/img/services__main-all1.png",
+            "img2" : "static/img/services__main-all2.png",
+            "img3" : "static/img/services__main-all3.png",
+            "img4" : "static/img/services__main-all4.png"
+        },
+        {
+            "img5" : "static/img/services__main-all5.png",
+            "img6" : "static/img/services__main-all6.png",
+            "img7" : "static/img/services__main-all7.png",
+            "img8" : "static/img/services__main-all8.png"
+        },
+        {
+            "img9" : "static/img/services__main-all9.png",
+            "img10" : "static/img/services__main-all10.png",
+            "img11" : "static/img/services__main-all11.png",
+            "img12" : "static/img/services__main-all12.png"
+        },
+        {
+            "img13" : "static/img/services__main-all13.png",
+            "img14" : "static/img/services__main-all14.png",
+            "img15" : "static/img/services__main-all15.png",
+            "img16" : "static/img/services__main-all1.png"
+        },
+        {
+            "img17" : "static/img/services__main-all2.png",
+            "img18" : "static/img/services__main-all3.png",
+            "img19" : "static/img/services__main-all4.png",
+            "img20" : "static/img/services__main-all5.png"
+        },
+        {
+            "img21" : "static/img/services__main-all6.png",
+            "img22" : "static/img/services__main-all7.png",
+            "img23" : "static/img/services__main-all8.png",
+            "img24" : "static/img/services__main-all9.png"
+        },
+        {
+            "img25" : "static/img/services__main-all10.png",
+            "img26" : "static/img/services__main-all11.png",
+            "img27" : "static/img/services__main-all12.png",
+            "img28" : "static/img/services__main-all13.png"
+        },
+        {
+            "img29" : "static/img/services__main-all14.png",
+            "img30" : "static/img/services__main-all15.png",
+            "img31" : "static/img/services__main-all1.png",
+            "img32" : "static/img/services__main-all2.png"
+        },
+        {
+            "img33" : "static/img/services__main-all3.png",
+            "img34" : "static/img/services__main-all4.png",
+            "img35" : "static/img/services__main-all5.png",
+            "img36" : "static/img/services__main-all6.png"
+        },
+        {
+            "img37" : "static/img/services__main-all7.png",
+            "img38" : "static/img/services__main-all8.png",
+            "img39" : "static/img/services__main-all9.png",
+            "img40" : "static/img/services__main-all10.png"
+        },
+        {
+            "img37" : "static/img/services__main-all7.png",
+            "img38" : "static/img/services__main-all8.png",
+            "img39" : "static/img/services__main-all9.png",
+            "img40" : "static/img/services__main-all10.png"
+        }
+    ]
+}
