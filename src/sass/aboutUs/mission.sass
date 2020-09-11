@@ -1,0 +1,16 @@
+.mission
+    &__wrapper
+        position: relative
+    &__content
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 1fr
+        @media all and (max-width: 768px)
+           grid-template-columns: 1fr
+    &__textBlock
+        max-width: 495px
+        @media all and (max-width: 768px)
+            padding-left: 0
+        p
+            color: $dark_blue
+
