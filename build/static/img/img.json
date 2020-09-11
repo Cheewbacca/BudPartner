@@ -2,6 +2,12 @@
     "images" :
     [
         {
+            "img111" : "static/img/product-1.png",
+            "img222" : "static/img/product-2.png",
+            "img333" : "static/img/product-3.png",
+            "img444" : "static/img/product-4.png"
+        },
+        {
             "img1" : "static/img/services__main-all1.png",
             "img2" : "static/img/services__main-all2.png",
             "img3" : "static/img/services__main-all3.png",

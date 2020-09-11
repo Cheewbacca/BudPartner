@@ -17,21 +17,34 @@ $.getJSON( "static/img/img.json", function( data ) {
     });
   });
 
-function random(){
-    return Math.floor(Math.random()*2) == 1 ? 1 : -1 * Math.floor((Math.random() * 11) + 1);
-}
+// function random(){
+//     return Math.floor(Math.random()*2) == 1 ? 1 : -1 * Math.floor((Math.random() * 11) + 1);
+// }
 
 $.each($('.our-products__content ul li a:not(".subm")'), function(linkIndex){
     $(this).mouseover(function(){
-        $.each($('.our-products__image-box').children(), function(imgIndex){
-            $(this)[0].src = allImages[linkIndex][imgIndex];
-            $(this)[0].style.top = `${random()}%`;
-            $(this)[0].style.left = `${random()}%`;
-            $(this)[0].style.right = `${random()}%`;
-            $(this)[0].style.bottom = `${random()}%`;
-        });
-    });
+        if (linkIndex){
+            $(this).addClass('active-link');
+            $.each($('.our-products__image-box').children(), function(imgIndex){
+                $(this).fadeOut(300, ()=>{
+                    $(this)[0].src = allImages[linkIndex][imgIndex];
+                    $(this).fadeIn();
+                });
 
+            });
+        }
+    });
+    $(this).mouseleave(function(){
+        if (linkIndex){
+            $(this).removeClass('active-link');
+            $.each($('.our-products__image-box').children(), function(imgIndex){
+                $(this).fadeOut(300, ()=>{
+                    $(this)[0].src = allImages[0][imgIndex];
+                    $(this).fadeIn();
+                });
+            });
+        }
+    });
 });
 
 (function($) {
