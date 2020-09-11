@@ -12,6 +12,9 @@
             width: 430px
             height: 300px
             overflow: hidden
+            position: relative
+            &:hover > div
+                display: block
             @media all and (max-width: 500px)
                 width: 315px
                 height: 222px
@@ -20,6 +23,18 @@
             width: 100%
             object-fit: cover
             transform: scale(0.837)
+            transition: all .8s
+        &-scale
+            width: 25px
+            height: 25px
+            position: absolute
+            right: 55px
+            bottom: 40px
+            background-image: url('../img/arrows_out-white.svg')
+            background-size: cover
+            background-repeat: no-repeat
+            cursor: pointer
+            display: none
             transition: all .8s
         &-buttons
             @media all and (max-width: 500px)
@@ -52,6 +67,10 @@
             margin-top: 0
             .our-works__slider-img
                 transform: scale(1)
+                transition: all .8s
+            .our-works__slider-scale
+                right: 25px
+                bottom: 15px
                 transition: all .8s
             
              

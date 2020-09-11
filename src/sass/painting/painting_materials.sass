@@ -1,0 +1,61 @@
+.painting-materials
+    &__wrapper
+        background-color: $light
+        position: relative
+        padding-bottom: 240px
+        @media all and (max-width: 920px)
+            padding-bottom: unset
+    &__content
+        position: relative
+        z-index: 2
+    &__heading
+        display: block
+    &__text
+        color: $dark_blue
+        max-width: 495px
+    &__img
+        position: absolute
+        @media all and (max-width: 1275px)
+            transform: scale(0.8)
+        @media all and (max-width: 1090px)
+            transform: scale(0.6)
+        @media all and (max-width: 920px)
+            position: static
+        &--first
+            top: 0
+            left: 33%
+            width: 438px
+            height: 433px
+            @media all and (max-width: 920px)
+                width: 262px
+                height: 260px
+                transform: scale(1)
+            @media all and (max-width: 500px)
+                width: 210px 
+                height: 208px
+        &--second
+            top: 0
+            right: 0
+            width: 369px
+            height: 333px
+            @media all and (max-width: 1275px)
+                right: -40px
+            @media all and (max-width: 1090px)
+                right: -80px
+            @media all and (max-width: 920px)
+                width: 221px
+                height: 200px
+                transform: scale(1)
+            @media all and (max-width: 500px)
+                width: 176px
+                height: 160px
+
+    &__images
+        @media all and (max-width: 920px)
+            display: flex
+            justify-content: space-around
+            align-items: center
+        @media all and (max-width: 385px)
+            flex-direction: column
+            padding-bottom: 100px
+            padding-top: 20px

@@ -1,0 +1,32 @@
+.provide-painting
+    &__wrapper
+        position: relative
+    &__items
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 1fr
+        grid-gap: 50px 10px
+        @media all and (max-width: 768px)
+            grid-template-columns: repeat(2, 1fr)
+        @media all and (max-width: 500px)
+            grid-template-columns: 1fr
+    &__item
+    &__img-wrap
+        position: relative
+        &:after
+            content: ''
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            background: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%)
+            position: absolute
+            z-index: 1
+    &__img
+        width: 100%
+        object-fit: cover
+        margin-bottom: 15px
+        background: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%)
+        position: relative
+    &__text
+        color: $dark_blue

@@ -1,0 +1,48 @@
+.callback
+    &__wrapper
+        background-image: url('../img/callback__bg.png')
+        background-size: cover
+        background-repeat: no-repeat
+        // min-height: 522px
+    &__heading
+        color: $white
+        border-left-color: $white
+    &__text
+        color: $white
+        max-width: 525px
+        a
+            color: $orange
+            text-decoration: underline
+    &__form
+        height: auto
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        @media all and (max-width: 768px)
+            flex-direction: column
+            align-items: center
+        label
+            margin: 0 calculateWidth(12.5) 
+            position: relative
+            @media all and (max-width: 768px)
+                margin: calculateHeight(30) calculateWidth(12.5) 0
+            img
+                position: absolute
+                left: calculateWidth(25)
+                width: calculateWidth(15)
+                height: calculateWidth(14)
+                top: 50%;
+                margin-top: calculateWidth(-7)
+                @media all and (max-width: 768px)
+                    width: 15px
+                    height: 15px
+                    top: 0
+                    bottom: 0
+                    margin: auto
+            .img-reverted 
+                img
+                    left: initial;
+                    right: calculateWidth(25)
+        @media all and (min-width: 769px)
+            input 
+                height: 100%

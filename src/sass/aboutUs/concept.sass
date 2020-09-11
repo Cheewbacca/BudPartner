@@ -1,0 +1,37 @@
+.concept
+    &__wrapper
+        position: relative
+        background: $light
+    &__content
+        position: relative
+        z-index: 2
+    &__items
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: 1fr
+        @media all and (max-width: 768px)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 50px 10px
+        @media all and (max-width: 500px)
+            grid-template-columns: 1fr
+            grid-gap: 50px 0
+    &__item
+        position: relative
+        p
+            max-width: 250px
+            @media all and (max-width: 500px)
+                max-width: unset
+                text-align: center
+        @media all and (max-width: 500px)
+            h4
+                text-align: center
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        @media all and (max-width: 500px)
+            right: 0
+            margin: auto
+
+
