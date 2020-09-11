@@ -1,0 +1,101 @@
+@import 'first_section';
+@import 'office'
+@import 'sale_staff'
+
+.business-slider
+    &__content
+        display: grid
+        grid-template-columns: 5fr 17fr
+        grid-template-rows: 1fr
+        @media all and (max-width: 768px)
+            grid-template-columns: 1fr
+    &__text
+        min-width: 200px
+        flex: 0 0 7%
+        color: $dark_blue
+        &-item
+            margin-bottom: 10px
+            position: relative
+            &:last-child
+                margin-bottom: 0
+            &:before
+                content: '•'
+                font-size: 32px
+                display: inline-block
+                width: 7px
+                height: 7px
+                color: $orange
+                line-height: 1px
+                position: absolute
+                top: calculateHeight(9)
+                top: 0
+                bottom: 0
+                margin: auto
+                left: 4px
+                @media all and (max-width: 1000px)
+                    left: 1px
+                @media all and (max-width: 768px)
+                    left: 0
+            @media all and (max-width: 768px)
+                padding-left: 20px
+    &__wrap
+        position: relative
+        overflow: hidden
+        padding-left: 2px
+        .slick-center
+            .business-slider__slider-scale
+                right: 25px
+                bottom: 15px
+                transition: all .8s
+        @media all and (max-width: 768px)
+            padding-left: 0
+            margin-top: 50px
+            margin-left: calculateWidth(-120)
+
+            .slick-center
+                .business-slider__slider-img
+                    transform: scale(1)
+    &__slider
+        &-item
+            width: 332.5px
+            height: 250px
+            overflow: hidden
+            position: relative
+            margin: 0 5px
+            &:hover > .business-slider__slider-scale
+                display: block
+            @media all and (max-width: 768px)
+                width: 315px
+                height: 222px
+                margin: 0 -6px
+                transition: all .8s    
+        &-img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            @media all and (max-width: 768px)
+                transform: scale(0.837)
+                transition: all .8s
+        &-scale
+            width: 25px
+            height: 25px
+            position: absolute
+            right: 25px
+            bottom: 15px
+            background-image: url('../img/arrows_out-white.svg')
+            background-size: cover
+            background-repeat: no-repeat
+            cursor: pointer
+            transition: all .8s
+            display: none
+            @media all and (max-width: 768px)
+                right: 40px
+                bottom: 30px
+
+    &__buttons
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 25px
+        .rounded-button
+            margin: 0 15px

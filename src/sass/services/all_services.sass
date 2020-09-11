@@ -5,6 +5,12 @@
         grid-template-columns: repeat( 4, 1fr )
         grid-template-rows: 1fr
         grid-gap: 10px 0
+        @media all and (max-width: 910px)
+            grid-template-columns: repeat( 3, 1fr )
+        @media all and (max-width: 680px)
+            grid-template-columns: repeat( 2, 1fr )
+        @media all and (max-width: 450px)
+            grid-template-columns: 1fr
     &__item
         min-width: 182px
         position: relative
