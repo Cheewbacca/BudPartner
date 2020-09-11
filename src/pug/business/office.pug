@@ -1,0 +1,29 @@
+.office__wrapper.pl120.main-y-padding
+    .office__content
+        h2.h2-font.border-left.pl20.mb50 офисная мебель
+
+        .business-slider__content
+            ul.business-slider__text
+                -const officeList = ['Офисные столы', 'Офисные стеллажи', 'Офисные шкафы', 'Мобильные тумбочки', 'Тумбы под принтер', 'Кабинеты директоров'];
+                -for(let item of officeList){
+                    li.main-body-small.business-slider__text-item.pl20= item
+                -}
+            .business-slider__wrap
+                .business-slider__slider#officeSlider
+                    .business-slider__slider-item
+                        img(src="/static/img/materials__facades.png", alt="our works").business-slider__slider-img
+                        .business-slider__slider-scale
+                    .business-slider__slider-item
+                        img(src="/static/img/kitchen__main-bg.png", alt="our works").business-slider__slider-img
+                        .business-slider__slider-scale
+                    .business-slider__slider-item
+                        img(src="/static/img/materials__facades.png", alt="our works").business-slider__slider-img
+                        .business-slider__slider-scale
+                    .business-slider__slider-item
+                        img(src="/static/img/kitchen__main-bg.png", alt="our works").business-slider__slider-img
+                        .business-slider__slider-scale
+
+                .business-slider__buttons
+                    .rounded-button.rounded-button--left#officeNextArrow
+                    .rounded-button.rounded-button--right#officePrevArrow
+    include ../components/absolute_lines-d

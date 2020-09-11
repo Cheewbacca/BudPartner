@@ -1,0 +1,41 @@
+.contact-us
+    &__wrapper
+        position: relative
+    &__content
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 1fr
+        @media all and (max-width: 768px)
+            grid-template-columns: 1fr
+            grid-gap: 150px 0
+    &__li 
+        position: relative
+        padding-left: 20px
+        &--email
+            padding-left: 30px
+    &__links
+        &--phones
+            @media all and (max-width: 768px)
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-gap: 10px 0
+            @media all and (max-width: 425px)
+                grid-template-columns: 1fr
+    &__link
+        color: $dark_blue
+    &__img
+        position: absolute
+        left: 1px
+        top: 0
+        bottom: 0
+        margin: auto
+    &__h4
+        color: $dark_blue
+    &__socialBlock
+        display: flex
+        padding-top: 15px
+    &__social-icon
+        width: 50px
+        height: 50px
+
+        

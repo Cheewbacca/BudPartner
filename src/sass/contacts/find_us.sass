@@ -1,0 +1,53 @@
+.find-us
+    &__wrapper
+        position: relative
+        background: $light
+    &__content
+        position: relative
+        z-index: 2
+        display: grid
+        grid-template-columns: 5fr 7fr
+        grid-template-rows: 1fr
+        @media all and (max-width: 768px)
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr 1fr
+            grid-gap: 50px 0
+    &__h4
+        color: $dark_blue
+        margin-bottom: 10px
+        position: relative
+        &--address
+            padding-left: 25px
+            &:before
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                bottom: 0
+                margin: auto
+                background-size: cover
+                background-repeat: no-repeat
+                background-image: url('../img/location-dark.svg')
+                display: block
+                width: 15px
+                height: 21px
+
+        &--time
+            padding-left: 31px
+            &:before
+                content: ''
+                position: absolute
+                left: 0
+                top: 0
+                bottom: 0
+                margin: auto
+                background-size: cover
+                background-repeat: no-repeat
+                background-image: url('../img/clock-dark.svg')
+                display: block
+                width: 21px
+                height: 21px
+
+    &__text
+        color: $dark_blue
+        padding-left: 2px
