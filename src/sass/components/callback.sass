@@ -22,8 +22,10 @@
             flex-direction: column
             align-items: center
         label
-            margin: calculateHeight(30) calculateWidth(12.5) 0
+            margin: 0 calculateWidth(12.5) 
             position: relative
+            @media all and (max-width: 768px)
+                margin: calculateHeight(30) calculateWidth(12.5) 0
             img
                 position: absolute
                 left: calculateWidth(25)
