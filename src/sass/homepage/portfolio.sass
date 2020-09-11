@@ -47,16 +47,19 @@
                 grid-row-gap: calculateWidth(45)
                 .portfolio__galery-body-column
                     display: flex;
+                    transform: translate(200%)
+                    transition: transform 1.5s;
                     &:nth-child(2)
                         transform: translate(calculateWidth(-50))
+                        transform: translate(-200%)
                     img
                         width: calculateWidth(200)
                         height: calculateWidth(200)
                         object-fit: cover
-                        transition: transform .5s
-                        cursor: pointer;
-                        &:hover
-                            transform: scale(1.1)
                         &:not(:last-child)
                             margin-right: calculateWidth(50)
+                .parallax 
+                    transform: translate(0, 0)
+                    &:nth-child(2)
+                        transform: translate(calculateWidth(-50))
                             
