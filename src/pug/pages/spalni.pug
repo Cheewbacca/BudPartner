@@ -5,18 +5,16 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(title="BudPartner")
         meta(description="Budparnter development")
-        title Business
+        title Спальни
         link(rel="shortcut icon", href="static//img//icon.png", type="image/x-icon")
         link(rel="stylesheet", href="static\\css\\main.css")
         link(rel="stylesheet", href="static\\css\\slick.css")
     body
-        .services__wrapper.business-first-section__wrapper.main-padding.pt30.pb100
+        .services__wrapper.bedroom-first-section__wrapper.main-padding.pt30.pb100
             include ../components/header
-            include ../business/first_section
+            include ../spalni/first_section
 
-        include ../business/office
-
-        include ../business/sale_staff
+        include ../components/our_works
 
         include ../components/materials
 
@@ -34,4 +32,4 @@ html(lang="ru")
 
         script(src="static/js/libs.min.js")
         script(src="static/js/main.js")
-        script(src="static/js/business.js")
+        script(src="static/js/slider.js")
