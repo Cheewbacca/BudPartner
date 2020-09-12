@@ -5,20 +5,20 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(title="BudPartner")
         meta(description="Budparnter development")
-        title Painting
+        title Мебель для бизнеса
         link(rel="shortcut icon", href="static//img//icon.png", type="image/x-icon")
         link(rel="stylesheet", href="static\\css\\main.css")
         link(rel="stylesheet", href="static\\css\\slick.css")
     body
-        .services__wrapper.painting-first-section__wrapper.main-padding.pt30.pb100
+        .services__wrapper.business-first-section__wrapper.main-padding.pt30.pb100
             include ../components/header
-            include ../painting/first_section
+            include ../dlya-biznesa/first_section
 
-        include ../painting/provide_painting
+        include ../dlya-biznesa/office
 
-        include ../components/callback
+        include ../dlya-biznesa/sale_staff
 
-        include ../painting/painting_materials
+        include ../components/materials
 
         include ../components/process
 
@@ -34,3 +34,4 @@ html(lang="ru")
 
         script(src="static/js/libs.min.js")
         script(src="static/js/main.js")
+        script(src="static/js/business.js")
