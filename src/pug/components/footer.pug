@@ -12,29 +12,29 @@ footer.main-padding
             button(type="submit" id="consultation_btn").subm.btn-padding.input-font оставить заявку
             img(src="static/img/arrow.svg", alt="arrow")
 
-    a(href="/").logo.pt350.pb100
+    a(href="/").logo.border-left.pt350.pb100
         include ../svg/header__logo
-    ul.pt350.pb100
+    ul.pt350.pb100.border-left
         li.h4-font услуги
 
         -let services = new Map();
-        -services.set('Кухни', '#').set('Гостинные', '#').set('Спальни', '#').set('Шкафы', '#').set('Ванные комнаты', '#').set('Детские комнаты', '#').set('Мебель для бизнеса', '#').set('Двери', '#').set('Лестницы', '#').set('Стеновые панели', '#').set('Покраска изделий', '#').set('Фасады', '#');
+        -services.set('Кухни', 'kukhni.html').set('Гостинные', 'gostinye.html').set('Спальни', 'spalni.html').set('Шкафы, гардеробные', 'garderobnye.html').set('Ванные комнаты', 'vannye.html').set('Детские комнаты', 'detskie.html').set('Мебель для бизнеса', 'dlya-biznesa.html').set('Двери', 'dveri.html').set('Лестницы', 'lestniczy.html').set('Стеновые панели', 'stenovye-paneli.html').set('Покраска изделий', 'pokraska.html').set('Фасады', 'facades.html');
         -for(let [key, value] of services){
             li 
                 a(href=""+value).main-body-small= key
         -}
     
-    ul.pt350.pb100
+    ul.pt350.pb100.border-left
         li.h4-font Полезные страницы
 
         -let usefulPages = new Map();
-        -usefulPages.set('О нас', '#').set('Материалы', '#').set('Контакты', '#');
+        -usefulPages.set('О нас', 'o-nas.html').set('Материалы', '#').set('Контакты', 'kontakty.html');
         -for(let [key, value] of usefulPages){
             li 
                 a(href=""+value).main-body-small= key
         -}
 
-    .contact-us.pt350.pb100
+    .contact-us.border-left.pt350.pb100.border-right
         ul
             li.h4-font Позвоните нам
 
