@@ -2,15 +2,15 @@
     h2.border-left.pl20.h2-font.border-biggest что мы производим
     ul.border-left-d.pt70.pb100
         li.pt15 
-            a(href="#").h4-font.active-link.product Кухни
+            a(href="kukhni.html").h4-font.active-link.product Кухни
         -let products = new Map();
-        -products.set('гостинные', '#').set('спальни', '#').set('шкафы, Гардеробные', '#').set('ванные комнаты', '#').set('мебель для бизнеса', '#').set('двери', '#').set('стеновые панели', '#').set('лестницы', '#').set('покраска изделий', '#').set('Мебельные фасады', '#');
+        -products.set('гостинные', 'gostinye.html').set('спальни', 'spalni.html').set('шкафы, Гардеробные', 'garderobnye.html').set('ванные комнаты', 'vannye.html').set('мебель для бизнеса', 'dlya-biznesa.html').set('двери', 'dveri.html').set('стеновые панели', 'stenovye-paneli.html').set('лестницы', 'lestniczy.html').set('покраска изделий', 'pokraska.html').set('Мебельные фасады', 'mebelnye-fasady.html');
         -for(let [key, value] of products){
             li.pt15 
                 a(href=""+value).h4-font.product= key
         -}
         li.mt70  
-            a(href="#").small-btn-padding.subm.input-font посмотреть все услуги
+            a(href="uslugi.html").small-btn-padding.subm.input-font посмотреть все услуги
     .our-products__images.border-left-d.border-right-d
         .our-products__image.border-right-d 
             .our-products__image-box
