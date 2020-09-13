@@ -1,13 +1,37 @@
 // Paddings and margins
 
+.p25
+    padding: 25px
+
+.p15
+    padding: 15px
+
+.pt350
+    padding-top: calculateHeight(350)
+
+.pt250
+    padding-top: calculateHeight(250)
+
 .pt150
     padding-top: calculateHeight(150)
+
+.pt95
+    padding-top: calculateHeight(95)
 
 .pt100
     padding-top: calculateHeight(100)
 
 .pb100
     padding-bottom: calculateHeight(100)
+
+.pb170
+    padding-bottom: calculateHeight(170)
+
+.pb175
+    padding-bottom: calculateHeight(175)
+
+.pt70
+    padding-top: calculateHeight(70)
 
 .pt50
     padding-top: calculateHeight(50)
@@ -21,15 +45,85 @@
 .pt10
     padding-top: calculateHeight(10)
 
+.pb250
+    padding-bottom: calculateHeight(250)
+
+.pb150
+    padding-bottom: calculateHeight(150)
+
+.pb45
+    padding-bottom: calculateHeight(45)
+
+.pl120
+    padding-left: calculateWidth(120)
+
+.pl30
+    padding-left: calculateWidth(30)
+
+.pl20
+    padding-left: calculateWidth(20)
+
+.pl12
+    padding-left: calculateWidth(12)
+
 .btn-padding
     padding: calculateHeight(20) calculateWidth(55)
+
+.small-btn-padding
+    padding: calculateHeight(16) calculateWidth(25)
 
 .main-padding
     padding-left: calculateWidth(120)
     padding-right: calculateWidth(120)
 
+.mt150
+    margin-top: calculateHeight(150)
+    
+.main-y-padding
+    padding-top: calculateHeight(100)
+    padding-bottom: calculateHeight(150)
+
+.mt70
+    margin-top: calculateHeight(70)
+
+.mb165
+    margin-bottom: calculateHeight(165)
+
+.mb70
+    margin-bottom: calculateHeight(70)
+
+.mb50
+    margin-bottom: calculateHeight(50)
+
+.mb40
+    margin-bottom: calculateHeight(40)
+
+.mb30
+    margin-bottom: calculateHeight(30)
+
+.mb25
+    margin-bottom: calculateHeight(25)
+
+.mb20
+    margin-bottom: calculateHeight(20)
+
+.mb15
+    margin-bottom: calculateHeight(15)
+
 .mt50
     margin-top: calculateHeight(50)
+
+.mt30
+    margin-top: calculateHeight(30)
+
+.mt20
+    margin-top: calculateHeight(20)
+
+.mr20
+    margin-right: calculateWidth(20)
+
+.mr10
+    margin-right: calculateWidth(10)
 
 // Icons
 
@@ -53,6 +147,20 @@
 
 // General
 
+a
+    transition: color .3s
+
+.active-link
+    text-decoration: underline;
+    color: $orange !important;
+    position: relative
+    &::after
+        content: url(../img/orArrow.svg);
+        position: absolute;
+        right: calculateWidth(-15)
+        width: calculateWidth(16)
+        top: 0
+
 .text-center
     text-align: center;
 
@@ -72,16 +180,119 @@
 .border-left
     border-left: 0.5px solid $border;
 
+.border-big
+    border-width: 1px;
+
+.border-biggest
+    border-width: 1.5px;
+
+.border-right-d
+    border-right: 0.5px dashed $light;
+
+.border-left-d
+    border-left: 0.5px dashed $light;
+
+.check
+    padding-left: calculateWidth(20)
+    position: relative;
+    &::after
+        content: url(../img/check.svg)
+        position: absolute;
+        left: 0
+        width: calculateWidth(16)            
+  
+.border-left-light
+    border-left: 0.5px solid $white
+.border-right-light
+    border-right: 0.5px solid $white
+
+.social-list
+    display: flex
+    a
+        display: block
+        width: calculateWidth(50)
+        img
+            height: auto
+            width: 100%
+
+.heading-arrow
+    position: relative
+    &:after
+        content: ''
+        width: 30px
+        height: 30px
+        display: inline-block
+        background-image: url('/static/img/orArrow.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto
+        margin-left: 10px
+        @media all and (max-width: 1000px)
+            width: 24px
+            height: 24px
+
+.heading-check
+    position: relative
+    &:before
+        content: ''
+        width: 18px
+        height: 13px
+        display: inline-block
+        background-image: url('/static/img/check.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        position: absolute
+        left: -22px
+        margin-top: calculateHeight(6)
+        @media all and (max-width: 1440px)
+            margin-top: calculateHeight(4)
+        @media all and (max-width: 1000px)
+            width: 14px
+            height: 10px
+
+.rounded-button
+    width: 50px
+    height: 50px
+    background: $orange
+    border-radius: 50%
+    position: relative
+    cursor: pointer
+    &:after
+        content: ''
+        display: block
+        width: 25px
+        height: 25px
+        background-image: url('/static/img/arrow.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        margin: auto
+    &--left
+        &:after
+            transform: rotate(-135deg)
+    &--right
+        &:after
+            transform: rotate(45deg)
+    &:hover
+        background: $orange_hover
+
 // Inputs
 
 .input-default
-    padding: calculateHeight(12) calculateWidth(25)
+    padding: calculateHeight(12) calculateWidth(25) calculateHeight(12) calculateWidth(50) 
     background: $white;
     border-radius: 50px;
     color: $dark_blue;
     border: 1px solid black
     &:hover
-        box-shadow: 0 0 30px 30px $dark_shadow;
+        box-shadow: 0 0 10px 10px $dark_shadow;
     &:active
         border: 1px solid $dark_blue;
 
@@ -89,13 +300,77 @@
     border: 1px solid $error;
     color: $error;
 
+input::placeholder
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: $dark_blue;
+
+.subm
+    text-align: center
+    background-color: $orange
+    border-radius: 50px;
+    color: $white;
+    outline: none;
+    border: none
+    cursor: pointer
+    text-transform: uppercase
+    display: inline-flex
+    img
+        width: calculateWidth(15)
+        height: calculateWidth(14)
+        margin-left: 5px
+    
+
+label
+    font-size: 0
+
+button
+    text-transform: uppercase
+
+.gray-bg
+    position: absolute
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background-color: $light
+    z-index: -1
+    
+.grid-template
+    height: 100%;
+    width: calc(100% - 8.33333vw - 8.33333vw)
+    position: absolute
+    display: grid;
+    grid-template-columns: repeat( 4 , 1fr)
 
 @media screen and ( max-width: 768px )
+    .pt350
+        padding-top: tH(350)
+
+    .pt250
+        padding-top: tH(250)
+
     .pt150
         padding-top: tH(150)
 
     .pt100
         padding-top: tH(100)
+
+    .pt95
+        padding-top: tH(95)
+
+    .pb100  
+        padding-bottom: tH(100)
+
+    .pb170
+        padding-bottom: tH(170)
+
+    .pb175
+        padding-bottom: tH(175)
+
+    .pt70
+        padding-top: tH(70)
 
     .pt50
         padding-top: tH(50)
@@ -109,6 +384,24 @@
     .pt10
         padding-top: tH(10)
 
+    .pb45
+        padding-bottom: tH(45)
+
+    .pb250
+        padding-bottom: tH(250)
+
+    .pb150
+        padding-bottom: tH(150)
+
+    .pl30
+        padding-left: tW(30)
+
+    .pl20
+        padding-left: tW(20)
+
+    .pl12
+        padding-left: tW(12)
+
     .btn-padding
         padding: tH(20) tW(55)
     
@@ -119,18 +412,103 @@
         &::after
             margin-bottom: tW(14)
 
+    .check
+        &::after
+            width: tW(16)    
+
+    .active-link
+        &::after
+            width: tW(16)
+            right: tW(-15)
+
+    .mt150
+        margin-top: tH(150)
+
+    .mb165
+        margin-bottom: tH(165)
+
+    .mt70
+        margin-top: tH(70)
+
+    .mb70
+        margin-bottom: tH(70)
+    
+    .mb50
+        margin-bottom: tH(50)
+
+    .mb40
+        margin-bottom: tH(40)
+
+    .mb30
+        margin-bottom: tH(30)
+
+    .mb25
+        margin-bottom: tH(25)
+
+    .mb20
+        margin-bottom: tH(20)
+
+    .mb15
+        margin-bottom: tH(15)
+
     .mt50
         margin-top: tH(50)
 
+    .mt30
+        margin-top: tH(30)
+
     .logo
         width: tW(125)
+    
+    .mr20
+        margin-right: tW(20)
+
+    .mr10
+        margin-right: tW(10)
+
+    .mt20
+        margin-top: tH(20)
+
+    .mb100-tablet
+        margin-bottom: 100px
+
+    .input-default
+        padding: 12px 25px 12px 30px
+        width: 253px
+        height: 52px
+        line-height: 52px
+
+    input::placeholder
+        font-size: 15px
+        line-height: 52px
 
 @media screen and ( max-width: 500px )
+    .pt350
+        padding-top: 350px
+
+    .pt250
+        padding-top: 250px
+
     .pt150
         padding-top: 150px
 
     .pt100
         padding-top: 100px
+
+    .pt95
+        padding-top: 95px
+
+    .pb100  
+        padding-bottom: 100px
+
+    .pb170
+        padding-bottom: 170px
+
+    .pb175
+        padding-bottom: 175px
+
+    .pt70
+        padding-top: 70px
 
     .pt50
         padding-top: 50px
@@ -144,6 +522,24 @@
     .pt10
         padding-top: 10px
 
+    .pb45
+        padding-bottom: 45px
+
+    .pb250
+        padding-bottom: 250px
+
+    .pb150
+        padding-bottom: 150px
+
+    .pl30
+        padding-left: 30px
+
+    .pl20
+        padding-left: 20px
+
+    .pl12
+        padding-left: 12px
+
     .btn-padding
         padding: 20px 55px
 
@@ -154,8 +550,62 @@
         &::after
             margin-bottom: -14px
 
+    .check
+        &::after
+            width: 16px
+
+    .active-link
+        &::after
+            width: 16px
+            right: -15px
+
+    .mt150
+        margin-top: 150px
+    
+    .mb165
+        margin-bottom: 165px
+    
+    .mt70
+        margin-top: 70px
+
+    .mb70
+        margin-bottom: 70px
+
+    .mb50
+        margin-bottom: 50px
+
+    .mb40
+        margin-bottom: 40px
+
+    .mb30
+        margin-bottom: 30px
+
+    .mb25
+        margin-bottom: 25px
+
+    .mb20
+        margin-bottom: 20px
+
+    .mb15
+        margin-bottom: 15px
+
     .mt50
         margin-top: 50px
 
+    .mt30
+        margin-top: 30px
+
     .logo
         width: 125px
+
+    .mr20
+        margin-right: 20px
+
+    .mr10
+        margin-right: 10px
+
+    .mt20
+        margin-top: 20px
+
+    .input-default
+        padding: 12px 25px

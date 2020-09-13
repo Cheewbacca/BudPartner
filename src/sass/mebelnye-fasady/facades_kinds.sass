@@ -1,0 +1,23 @@
+.facades-kinds
+    &__wrapper
+        position: relative
+    &__items
+        display: flex
+        align-items: center
+        flex-flow: row wrap
+        justify-content: space-between
+        @media all and (max-width: 768px)
+            flex-direction: column
+    &__item
+        flex: 0 0 32.8%
+        position: relative
+        @media all and (max-width: 768px)
+            margin-bottom: 50px
+            &:last-child
+                margin-bottom: 0
+        &-img
+            object-fit: cover
+            width: 100%
+            margin-bottom: 15px
+        &-text
+            color: $dark_blue

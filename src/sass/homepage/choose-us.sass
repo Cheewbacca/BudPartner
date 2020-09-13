@@ -1,0 +1,41 @@
+.choose-us__wrapper
+    background-color: $light
+    position: relative
+    overflow: hidden
+    padding-bottom: calculateHeight(50)
+    .grid-template
+        .border-item
+            border-color: $white
+    .white-bg
+        height: 100%;
+        background-color: $white
+        z-index: 0
+        width: calc( 100% + 200px )
+        position: absolute
+        bottom: -90%
+        right: -50px
+        transform: rotate(-5deg)
+        overflow: hidden
+        .grid-template
+            width: calc(100% - 8.33333vw - 8.33333vw - 200px)
+            margin-left: calc( 50px + 100px + 8.33333vw )
+            transform: rotate(5deg) translate(0px, -50%)
+            .border-item
+                border-color: $light
+                
+    .choose-us
+        position: relative
+        .top-section
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+            a
+                margin-right: calculateWidth(15)
+        .choose-us__content
+            display: flex;
+            justify-content: space-between
+            align-items: flex-start;
+            .choose-us__item
+                width: 25%
+                p 
+                    color: $dark_blue

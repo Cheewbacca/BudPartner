@@ -1,14 +1,34 @@
 doctype html
-html
+html(land='ru')
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(title="BudPartner")
+        meta(description="Budparnter development")
+        title Home
+        link(rel="shortcut icon", href="static//img//icon.png", type="image/x-icon")
         link(rel="stylesheet", href="static\\css\\main.css")
         link(rel="stylesheet", href="static\\css\\slick.css")
     body
-        include ../components/header
-        
-        include ../components/footer
+        .first-section__wrapper.main-padding.pt30.pb45
+            include ../components/header
+            include ../homepage/first_screen
+        .our-goals__wrapper.main-padding
+            include ../homepage/goals
+        .our-products__wrapper.main-padding
+            include ../homepage/products
+        .our-numbers__wrapper.main-padding
+            include ../homepage/numbers
+        .choose-us__wrapper.main-padding
+            include ../homepage/choose-us
+        include ../components/process
+        .portfolio__wrapper.main-padding
+            include ../homepage/portfolio
+        .clients__wrapper.main-padding
+            include ../homepage/clients
 
+        include ../components/footer
+        
         script(src="static//js//libs.min.js")
         script(src="static//js//main.js")
+        script(src="static//js//homepage.js")

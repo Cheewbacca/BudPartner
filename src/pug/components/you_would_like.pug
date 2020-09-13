@@ -1,0 +1,18 @@
+.you-would-like__wrapper.main-padding.pt150
+    .you-would-like__content
+        h2.h2-font.border-left.pl20.mb50 вам может понравиться
+        .you-would-like__items
+            -const wouldLikeList = new Map();
+            -wouldLikeList.set('Гостинные', {link: '#', className: 'livingRoom'}).set('шкафы, гардеробные', {link: '#', className: 'wardrobe'}).set('Ванные комнаты', {link: '#', className: 'bath'}).set('Детские комнаты', {link: '#', className: 'childrenRoom'}).set('Мебель для бизнеса', {link: '#', className: 'business'}).set('Двери', {link: '#', className: 'door'});
+            -for([key, value] of wouldLikeList){
+            a(href=""+value.link).you-would-like__item
+                .height-equal-width
+                div(class="content p15 "+value.className)
+                    h4.h4-font.you-would-like__heading= key
+            -}
+
+            -for(let i = 0; i < 4; i++){
+                a.you-would-like__item
+            -}
+
+    include absolute_lines-d

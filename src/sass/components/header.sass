@@ -2,11 +2,8 @@ header
     width: 100%;
     display: flex;
     justify-content: space-between
-    background-color: black;
     align-items: flex-start
-    position: absolute;
     z-index: $zIndexFirst;
-    top: 0;
     nav
         ul
             li 
@@ -14,18 +11,21 @@ header
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+                position: relative
                 &:not(:last-child)
+                    margin-bottom: 10px
                     &:hover   
                         a 
                             color: $orange
                 a
                     color: $white
                     margin-right: calculateWidth(5)
-                    transition: color .3s;
                 img 
                     width: calculateWidth(15)
                 ul.language
                     flex-grow: 0
+                    position: absolute
+                    top: 0
                     &:hover
                         li
                             display: flex;  

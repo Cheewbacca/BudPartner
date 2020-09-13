@@ -1,0 +1,65 @@
+.portfolio__wrapper    
+    width: 100%;
+    height: 90vh
+    background-color: $dark_blue
+    position: relative
+    transform: skewY(-5deg) 
+    overflow: hidden
+    .portfolio
+        width: 100%;
+        height: 100%
+        display: grid;
+        grid-template-columns: repeat( 4 , 1fr )
+        .portfolio__item
+            z-index: 10000
+            border-color: $border
+            color: $white
+            display: flex
+            flex-wrap: wrap
+            .text-block
+                position: relative
+                width: 100%
+                transform: skewY(5deg) 
+                a
+                    display: block
+                    &::after
+                        right: initial
+                h2 
+                    position: absolute
+                    white-space: nowrap
+                    color: $white   
+                    border-color: $white
+                    top: 0
+                p 
+                    max-width: 60%
+        .portfolio__galery
+            right: calculateWidth(120);
+            top: 0
+            z-index: 1
+            height: 100%
+            transform: skewY(5deg) 
+            position: absolute
+            z-index: 999999999999999
+            .portfolio__galery-body
+                display: grid;
+                grid-template-columns: 1fr
+                grid-template-rows: repeat(3, 1fr)
+                grid-row-gap: calculateWidth(45)
+                .portfolio__galery-body-column
+                    display: flex;
+                    transform: translate(200%)
+                    transition: transform 1.5s;
+                    &:nth-child(2)
+                        transform: translate(calculateWidth(-50))
+                        transform: translate(-200%)
+                    img
+                        width: calculateWidth(200)
+                        height: calculateWidth(200)
+                        object-fit: cover
+                        &:not(:last-child)
+                            margin-right: calculateWidth(50)
+                .parallax 
+                    transform: translate(0, 0)
+                    &:nth-child(2)
+                        transform: translate(calculateWidth(-50))
+                            

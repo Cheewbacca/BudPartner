@@ -1,0 +1,57 @@
+.first-section__wrapper
+    background-image: url(../img/first_bg.png)
+    background-repeat: no-repeat;
+    background-size: cover
+    width: 100%;
+    height: 100vh;
+    display: flex
+    flex-wrap: wrap
+    flex-direction: columns
+    justify-content: space-between
+    .first-section__content
+        .text-block
+            width: 60%
+            p
+                width: 60%
+            a
+                display: inline-flex
+                img
+                    width: calculateWidth(15)
+                    height: calculateWidth(14)
+                    margin-left: 5px
+    .first-section__bottom
+        width: 100%
+        display: flex;
+        align-items: flex-end
+        justify-content: space-between
+        .scroll-down 
+            width: calculateWidth(7)
+            height: calculateHeight(50)
+            animation: scrollDownShake 3s ease-in-out 2s infinite
+            &:hover
+                animation-play-state: paused;
+        ul 
+            li 
+                display: flex
+                white-space: nowrap
+                justify-content: flex-start
+                align-items: center
+                &:not(:first-child)
+                    margin-top: calculateHeight(5)
+                &:hover
+                    a 
+                        color: $orange
+                a
+                    color: $white
+    
+@keyframes scrollDownShake
+    0%
+        transform: translate(0, 0)
+    25%
+        transform: translate(0, 0)
+    50%
+        transform: translate(0, 10px)
+    75%
+        transform: translate(0, 0)
+    100%
+        transform: translate(0, 0)
