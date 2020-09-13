@@ -4,7 +4,7 @@ header
     nav
         ul
             -let nav = new Map();
-            -nav.set('услуги', '#').set('о нас', '#').set('контакты', '#');
+            -nav.set('услуги', 'services.html').set('о нас', 'aboutUs.html').set('контакты', 'contacts.html');
             -for(let [key, value] of nav){
                 li
                     a(href="" + value).main-link= key
