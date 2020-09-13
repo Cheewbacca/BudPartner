@@ -73,7 +73,18 @@ $.each($('.our-products__content ul li a:not(".subm")'), function(linkIndex){
     });
 })(jQuery);
 
+const header = $('header');
+
 $(window).scroll(function() {
+
+    if ($(window).scrollTop() > $('.our-goals__wrapper').offset().top) {
+        header.addClass('header__scroll');
+        header.children('nav').children('ul').children('li').addClass('heading-arrow');
+    } else {
+        header.removeClass('header__scroll');
+        header.children('nav').children('ul').children('li').removeClass('heading-arrow');
+    }
+
     const portfTop = $('.portfolio__wrapper').offset().top - window.innerHeight;
     const portfolio__galery = $('.portfolio__galery-body-column'); 
     if ($(window).scrollTop() > portfTop * 1.1) {

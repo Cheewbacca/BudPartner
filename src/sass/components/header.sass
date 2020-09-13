@@ -48,13 +48,16 @@ header
                                 
                     
 .header__scroll
-    background-color: $white;
+    background-color: transparent;
     position: fixed
     left: 0;
     top: 0;
-    padding-left: calculateWidth(120)
-    padding-right: calculateWidth(120) 
     align-items: center;
+    padding: calculateHeight(10) calculateWidth(120) 
+    transition: box-shadow .3s
+    background-color: $white;
+    &:hover
+        box-shadow: $main_shadow;
     .logo 
         width: calculateWidth(125)
         svg
