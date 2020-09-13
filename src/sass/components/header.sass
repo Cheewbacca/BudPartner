@@ -47,3 +47,36 @@ header
                             width: calculateWidth(10)
                                 
                     
+.header__scroll
+    background-color: $white;
+    position: fixed
+    left: 0;
+    top: 0;
+    padding-left: calculateWidth(120)
+    padding-right: calculateWidth(120) 
+    align-items: center;
+    .logo 
+        width: calculateWidth(125)
+        svg
+            --color-logo: #00213C;
+    nav 
+        ul 
+            display: flex;
+            li 
+                margin-bottom: initial !important
+                a 
+                    color: $dark-blue;
+                    font-weight: bold;
+                &:last-child
+                    display: none
+                &:not(:first-child)
+                    margin-left: calculateWidth(70)
+            .heading-arrow
+                &::after
+                    background-image: url(/static/img/darkArrow.svg)
+                    width: calculateWidth(15)
+                    height: calculateWidth(15)
+                    margin: initial
+                    top: 50%;
+                    margin-top: calculateWidth(-7.5)
+                    

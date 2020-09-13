@@ -1,0 +1,61 @@
+#modal__wrapper
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: $zIndexBiggest;
+    background-color: rgba(0, 0, 0, .7)
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 calculateWidth(225)
+    .modal__content
+        position: relative
+        padding: calculateHeight(50) calculateWidth(100) calculateHeight(100)
+        border-radius: 50px;
+        box-shadow: calculateWidth(10)calculateWidth(10) calculateWidth(100) rgba(0, 0, 0, 0.05);
+        background-color: $dark-blue;
+        #modal__content-cross
+            position: absolute;
+            left: initial !important;
+            bottom: initial !important;
+            top: calculateHeight(30) !important
+            right: calculateWidth(30) !important
+            &::before,
+            &::after
+                background-color: $white;
+        h3 
+        p
+            width: 80%
+            margin-top: calculateHeight(20)
+            color: $white
+            a 
+                color: $orange;
+        form
+            margin-top: calculateHeight(50)
+            width: 100%;
+            top: calculateHeight(100)
+            height: auto
+            display: flex
+            justify-content: space-between
+            label
+                position: relative
+                img
+                    position: absolute
+                    left: calculateWidth(25)
+                    width: calculateWidth(15)
+                    height: calculateWidth(14)
+                    top: 50%;
+                    margin-top: calculateWidth(-7)
+                button 
+                    white-space: nowrap
+            .img-reverted 
+                img
+                    left: initial;
+                    right: calculateWidth(25)
+            input 
+                height: 100%
+            h3
+                width: 100%;
+                color: $white

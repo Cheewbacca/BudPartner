@@ -17,10 +17,6 @@ $.getJSON( "static/img/img.json", function( data ) {
     });
   });
 
-// function random(){
-//     return Math.floor(Math.random()*2) == 1 ? 1 : -1 * Math.floor((Math.random() * 11) + 1);
-// }
-
 $.each($('.our-products__content ul li a:not(".subm")'), function(linkIndex){
     $(this).mouseover(function(){
         if (linkIndex){
