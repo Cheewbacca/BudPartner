@@ -91,3 +91,7 @@ $(window).scroll(function() {
         portfolio__galery.addClass('parallax');
     }
 });
+
+if ($(window).width() <= 768){
+    $('.top-section .active-link').appendTo($('.top-section .active-link').parent().siblings('.choose-us__content'));
+}

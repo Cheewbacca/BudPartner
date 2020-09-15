@@ -1,7 +1,13 @@
 .our-goals__content
     display: grid
     grid-template-columns: repeat(4, 1fr)
+    @media screen and ( max-width: 768px )
+        grid-template-columns: repeat(2, 1fr)
     .our-goals__item
+        @media screen and ( max-width: 768px )
+            padding-bottom: tH(30)
+        @media screen and ( max-width: 768px )
+            padding-bottom: 30px
         .our-goals__item-inner
             padding-left: calculateWidth(20)
             height: 100%

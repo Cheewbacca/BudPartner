@@ -346,6 +346,8 @@ button
     position: absolute
     display: grid;
     grid-template-columns: repeat( 4 , 1fr)
+    @media screen and ( max-width: 768px )
+        grid-template-columns: repeat( 2 , 1fr)
 
 @media screen and ( max-width: 768px )
     .pt350
@@ -416,6 +418,7 @@ button
             margin-bottom: tW(14)
 
     .check
+        padding-left: tW(20)
         &::after
             width: tW(16)    
 
@@ -484,6 +487,10 @@ button
     input::placeholder
         font-size: 15px
         line-height: 52px
+
+    .social-list
+        a
+            width: tW(50)
 
 @media screen and ( max-width: 500px )
     .pt350
@@ -554,6 +561,7 @@ button
             margin-bottom: -14px
 
     .check
+        padding-left: 20px
         &::after
             width: 16px
 
@@ -611,4 +619,8 @@ button
         margin-top: 20px
 
     .input-default
-        padding: 12px 25px
+        padding: 12px 50px
+
+    .social-list
+        a
+            width: 50px 

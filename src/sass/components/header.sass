@@ -3,7 +3,10 @@ header
     display: flex;
     justify-content: space-between
     align-items: flex-start
-    z-index: $zIndexFirst;
+    z-index: $zIndexFirst;        
+    @media screen and ( max-width: 768px )
+        align-items: center;
+        padding-bottom: tH(100)
     nav
         ul
             li 
@@ -45,6 +48,24 @@ header
                         img
                             opacity: 0
                             width: calculateWidth(10)
+    #burger
+        @media screen and ( max-width: 768px )
+            position: relative
+            width: 37px
+            height: 30px
+            cursor: pointer
+            border-top: 3px solid $white
+            border-bottom: 3px solid $white
+            &::after
+                position: absolute;
+                content: ' ';
+                top: 50%;
+                margin-top: -1.5px;
+                height: 3px;
+                width: 100%;
+                background-color: $white
+            ul 
+                display: none
                                 
                     
 .header__scroll

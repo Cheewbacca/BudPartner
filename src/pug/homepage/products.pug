@@ -11,6 +11,7 @@
         -}
         li.mt70  
             a(href="uslugi.html").small-btn-padding.subm.input-font посмотреть все услуги
+                img(src="static/img/orArrow.svg", alt="arrow")
     .our-products__images.border-left-d.border-right-d
         .our-products__image.border-right-d 
             .our-products__image-box
@@ -25,5 +26,14 @@
                 img(src="static/img/product-3.png", alt="").product__img-3
             .our-products__image-box
                 img(src="static/img/product-4.png", alt="").product__img-4
-            
-            
+
+.all-services__content.main-padding.main-y-padding.main-services__content
+    h2.border-left.pl20.h2-font.border-biggest что мы производим
+    -const servicesList = new Map();
+    -servicesList.set('Кухни', {link: '#', className: 'kitchen'}).set('Гостинные', {link: '#', className: 'livingRoom'}).set('Спальни', {link: '#', className: 'bedroom'}).set('шкафы, гардеробные', {link: '#', className: 'wardrobe'}).set('Ванные комнаты', {link: '#', className: 'bath'}).set('Детские комнаты', {link: '#', className: 'childrenRoom'}).set('Мебель для бизнеса', {link: '#', className: 'business'}).set('Столы', {link: '#', className: 'table'}).set('прихожая', {link: '#', className: 'hallway'}).set('Двери', {link: '#', className: 'door'}).set('обшивка мебели', {link: '#', className: 'upholstery'}).set('стеновые панели', {link: '#', className: 'panels'}).set('лестницы', {link: '#', className: 'stairs'}).set('покраска изделий', {link: '#', className: 'painting'}).set('МЕБЕЛЬНЫЕ фасады', {link: '#', className: 'facades'});
+    -for([key, value] of servicesList){
+        a(href=""+value.link).all-services__item
+            .height-equal-width
+            div(class="content p25 "+value.className)
+                h3.h3-font.all-services__heading= key
+    -}

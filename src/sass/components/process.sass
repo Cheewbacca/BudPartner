@@ -1,15 +1,26 @@
 .process__wrapper.main-padding
+    @media screen and ( max-width: 768px )
+        z-index: $zIndexBig
+    .grid-template
+        @media screen and ( max-width: 768px )
+            display: none;
     section.process.pt30
         position: relative
+        border-right: 1px dashed #E9EFF6;
+        border-left: 1px dashed #E9EFF6;
         .process__content
             display: grid;
             grid-template-columns: repeat( 3 , 1fr )
+            @media screen and ( max-width: 768px )
+                grid-template-columns: repeat( 1 , 1fr )
             .process__item
                 padding: calculateHeight(30) calculateWidth(50)
                 position: relative
                 p
                     width: 70%
                     z-index: $zIndexBig
+                    @media screen and ( max-width: 768px )
+                        width: 100%;
                     a 
                         color: $orange
                 img
