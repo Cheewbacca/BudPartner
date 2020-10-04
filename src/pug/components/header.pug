@@ -8,13 +8,13 @@ header
             -for(let [key, value] of nav){
                 li
                     a(href="" + value).main-link= key
-                    img(src="static/img/arrow.svg", alt="arrow")
+                    img(src="static/img/arrow.svg", alt="переход на другую страницу", title="перейти на страницу "+key)
             -}
             li 
                 ul.language
                     li 
                         a(href="#").main-link RU
-                        img(src="static/img/triangle.svg", alt="triangle")
+                        img(src="static/img/triangle.svg", alt="выбор языка", title="выбрать язык RU")
                     li 
                         a(href="#").main-link UA
-                        img(src="static/img/triangle.svg", alt="triangle")
+                        img(src="static/img/triangle.svg", alt="выбор языка", title="выбрать язык UA")

@@ -6,7 +6,7 @@
                 -let phones = ['+38 (095) 011-10-25', '+38 (097) 232-97-79', '+38(097)232-97-79', '+38 (044) 428-87-72', '+38 (050) 355-98-56'];
                 -for(let phone of phones){
                     li.mb20.contact-us__li
-                        img(src="/static/img/black-phone.svg", alt="phone icon").contact-us__img
+                        img(src="/static/img/black-phone.svg", alt="телефон", title="позвоните нам").contact-us__img
                         a(href="tel:"+phone).underline.main-body-small.contact-us__link= phone
                 -}
         .contact-us__item
@@ -15,14 +15,14 @@
                 -let emails = ['budpartnerpro@gmail.com', 'bud-partner-md@ukr.net', 'alex.bpmd@gmail.com'];
                 -for(let email of emails){
                     li.mb20.contact-us__li.contact-us__li--email
-                        img(src="/static/img/dark_email.svg", alt="phone icon").contact-us__img
+                        img(src="/static/img/dark_email.svg", alt="почта", title="напишите нам").contact-us__img
                         a(href="mailto:"+email).underline.main-body-small.contact-us__link= email
                 -}
             h4.h4-font.contact-us__h4 Или напишите нам в Viber или Telegram
             .contact-us__socialBlock
-                a(href="#").mr20
-                    img(src="static/img/viber.svg", alt="viber").contact-us__social-icon
-                a(href="#")
-                    img(src="static/img/telegram.svg", alt="telegram").contact-us__social-icon
+                a(href="#", rel="nofollow").mr20
+                    img(src="static/img/viber.svg", alt="viber", title="viber").contact-us__social-icon
+                a(href="#", rel="nofollow")
+                    img(src="static/img/telegram.svg", alt="telegram", title="telegram").contact-us__social-icon
     include ../components/absolute_lines-d
 
