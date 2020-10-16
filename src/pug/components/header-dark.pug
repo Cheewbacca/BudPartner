@@ -1,0 +1,20 @@
+header
+    a(href="/").logo
+        img(src="/static/img/main-logo-dark.svg", alt="логотип", title="логотип")
+    nav
+        ul
+            -let nav = new Map();
+            -nav.set('услуги', 'uslugi.html').set('о нас', 'o-nas.html').set('контакты', 'kontakty.html');
+            -for(let [key, value] of nav){
+                li
+                    a(href="" + value).main-link.text-darkBlue= key
+                    img(src="static/img/arrow-dark.svg", alt="переход на другую страницу", title="перейти на страницу "+key)
+            -}
+            li 
+                ul.language
+                    li 
+                        a(href="#").main-link RU
+                        img(src="static/img/triangle.svg", alt="выбор языка", title="выбрать язык RU")
+                    li 
+                        a(href="#").main-link UA
+                        img(src="static/img/triangle.svg", alt="выбор языка", title="выбрать язык UA")

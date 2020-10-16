@@ -5,17 +5,36 @@
     position: relative
     transform: skewY(-5deg) 
     overflow: hidden
+    @media screen and (max-width: 1440px)
+        height: 70vh
+    @media screen and (max-width: 1200px)
+        height: 60vh
+    @media screen and (max-width: 900px)
+        height: 50vh
+    @media screen and (max-width: 768px)
+        height: auto
+    .grid-template
+        .border-left-d
+            @media screen and ( max-width: 500px )
+                border-left: initial;
     .portfolio
         width: 100%;
         height: 100%
         display: grid;
         grid-template-columns: repeat( 4 , 1fr )
+        @media screen and (max-width: 768px)
+            grid-template-columns: repeat( 2 , 1fr )
+        .portfolio__item.pt150
+            @media screen and ( max-width: 500px )
+                padding-top: 100px;
         .portfolio__item
             z-index: 10000
             border-color: $border
             color: $white
             display: flex
             flex-wrap: wrap
+            @media screen and (max-width: 768px)
+                grid-column: 1/3
             .text-block
                 position: relative
                 width: 100%
@@ -24,6 +43,8 @@
                     display: block
                     &::after
                         right: initial
+                    @media screen and ( max-width: 500px )
+                        margin-top: 50px;
                 h2 
                     position: absolute
                     white-space: nowrap
@@ -40,6 +61,12 @@
             transform: skewY(5deg) 
             position: absolute
             z-index: 999999999999999
+            @media screen and (max-width: 768px)
+                grid-column: 1/3
+                position: static
+                width: 130%;
+                margin-left: -15%
+                margin-top: tH(50)
             .portfolio__galery-body
                 display: grid;
                 grid-template-columns: 1fr
@@ -49,6 +76,8 @@
                     display: flex;
                     transform: translate(200%)
                     transition: transform 1.5s;
+                    @media screen and (max-width: 768px)
+                        justify-content: space-between;
                     &:nth-child(2)
                         transform: translate(calculateWidth(-50))
                         transform: translate(-200%)
@@ -56,6 +85,9 @@
                         width: calculateWidth(200)
                         height: calculateWidth(200)
                         object-fit: cover
+                        @media screen and (max-width: 768px)
+                            width: tW(200)
+                            height: tW(200)
                         &:not(:last-child)
                             margin-right: calculateWidth(50)
                 .parallax 

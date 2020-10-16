@@ -8,6 +8,11 @@ footer
     background-color: $dark_blue;
     align-items: start
     position: relative
+    @media screen and ( max-width: 768px )
+        grid-template-columns: repeat( 1, 1fr )
+        padding-bottom: tH(100)
+    @media screen and ( max-width: 500px )
+        padding-bottom: 100px
     form
         width: 100%;
         position: absolute;
@@ -16,9 +21,16 @@ footer
         display: flex
         flex-wrap: wrap
         justify-content: center
+        @media screen and ( max-width: 768px )
+            padding: tH(100) 0px; 
+            position: static
         label
             margin: calculateHeight(30) calculateWidth(12.5) 0
             position: relative
+            @media screen and ( max-width: 768px )
+                margin: tH(30) tW(12.5) 0
+            @media screen and ( max-width: 500px )
+                width: 75%
             img
                 position: absolute
                 left: calculateWidth(25)
@@ -26,21 +38,57 @@ footer
                 height: calculateWidth(14)
                 top: 50%;
                 margin-top: calculateWidth(-7)
+                @media screen and ( max-width: 768px )
+                    left: tW(25)
+                    width: tW(15)
+                    height: tW(14)
+                    margin-top: tW(-7)
+                @media screen and ( max-width: 500px )
+                    left: 25px
+                    width: 15px
+                    height: 14px
+                    margin-top: -7px
+            input 
+                height: 100%
+                @media screen and ( max-width: 500px )
+                    width: 100% !important
         .img-reverted 
             img
                 left: initial;
                 right: calculateWidth(25)
+                @media screen and ( max-width: 768px )
+                    right: tW(25)
+                @media screen and ( max-width: 500px )
+                    right: 25px
         input 
             height: 100%
+            @media screen and ( max-width: 500px )
+                width: 100%
+        button
+            @media screen and ( max-width: 500px )
+                width: 100%
         h3
             width: 100%;
             color: $white
-                
+
+    a, 
+    div, 
+    ul
+        @media screen and ( max-width: 768px )
+            padding: initial !important
+            margin: 0 auto;
+            border: initial !important;
     ul 
+        @media screen and ( max-width: 768px )
+            margin-top: 50px;
         li 
             color: $white
             align-items: flex-end
             display: flex;
+            text-align: center;
+            span
+                @media screen and ( max-width: 768px )
+                    margin: 0 auto
             &:first-child
                 margin-bottom: calculateHeight(5)
             &:not(:first-child)
@@ -49,3 +97,9 @@ footer
                 color: $white
                 &:hover
                     color: $orange
+    div 
+        ul.mt50
+            @media screen and ( max-width: 768px )                
+                li 
+                    a
+                        margin: initial

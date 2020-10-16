@@ -3,19 +3,20 @@ footer.main-padding
         h3.text-center.h3-font  оставьте заявку на бесплатную консультацию
 
         label(for="consultation_name") Имя
-            img(src="static/img/man.svg", alt="man")
+            img(src="static/img/man.svg", alt="имя", title="имя")
             input(type="text" id="consultation_name" placeholder="Имя" name="Имя" required).input-default.input-font
         label(for="consultation_phone") Телефон 
-            img(src="static/img/black-phone.svg", alt="phone")
+            img(src="static/img/black-phone.svg", alt="телефон", title="телефон")
             input(type="text" id="consultation_phone" placeholder="Телефон" name="Телефон" required).input-default.input-font
         label(for="consultation_btn").img-reverted 
             button(type="submit" id="consultation_btn").subm.btn-padding.input-font оставить заявку
-            img(src="static/img/arrow.svg", alt="arrow")
+            img(src="static/img/arrow.svg", alt="оставить заявку", title="оставить заявку")
 
     a(href="/").logo.border-left.pt350.pb100
         include ../svg/header__logo
     ul.pt350.pb100.border-left
-        li.h4-font услуги
+        li
+            span.h4-font  услуги
 
         -let services = new Map();
         -services.set('Кухни', 'kukhni.html').set('Гостинные', 'gostinye.html').set('Спальни', 'spalni.html').set('Шкафы, гардеробные', 'garderobnye.html').set('Ванные комнаты', 'vannye.html').set('Детские комнаты', 'detskie.html').set('Мебель для бизнеса', 'dlya-biznesa.html').set('Двери', 'dveri.html').set('Лестницы', 'lestniczy.html').set('Стеновые панели', 'stenovye-paneli.html').set('Покраска изделий', 'pokraska.html').set('Фасады', 'facades.html');
@@ -25,7 +26,8 @@ footer.main-padding
         -}
     
     ul.pt350.pb100.border-left
-        li.h4-font Полезные страницы
+        li
+            span.h4-font Полезные страницы
 
         -let usefulPages = new Map();
         -usefulPages.set('О нас', 'o-nas.html').set('Материалы', '#').set('Контакты', 'kontakty.html');
@@ -36,7 +38,8 @@ footer.main-padding
 
     .contact-us.border-left.pt350.pb100.border-right
         ul
-            li.h4-font Позвоните нам
+            li
+                span.h4-font Позвоните нам
 
             -let callUs = new Map();
             -callUs.set('+38 (095) 011-10-25', '+38(095)011-10-25').set('+38 (097) 232-97-79', '+38(097)232-97-79').set('+38 (044) 428-87-72', '+38(044)428-87-72').set('+38 (099) 491-41-98', '+38(099)491-41-98').set('+38 (050) 355-98-56', '+38(050)355-98-56)');
@@ -47,7 +50,8 @@ footer.main-padding
             -}
 
         ul.mt50
-            li.h4-font Напишите нам
+            li
+                span.h4-font Напишите нам
 
             -let eMails = new Map();
             -eMails.set('budpartnerpro@gmail.com', 'budpartnerpro@gmail.com').set('bud-partner-md@ukr.net', 'bud-partner-md@ukr.net').set('alex.bpmd@gmail.com', 'alex.bpmd@gmail.com');
@@ -58,7 +62,7 @@ footer.main-padding
             -}
 
         .social-list.mt50
-            a(href="#").mr20
-                img(src="static/img/viber.svg", alt="viber")
-            a(href="#")
-                img(src="static/img/telegram.svg", alt="telegram")
+            a(href="#", rel="nofollow").mr20
+                img(src="static/img/viber.svg", alt="viber", title="viber")
+            a(href="#", rel="nofollow")
+                img(src="static/img/telegram.svg", alt="telegram", title="telegram")

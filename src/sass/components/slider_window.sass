@@ -1,0 +1,54 @@
+.slider-window
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    background: rgba(0, 0, 0, .95)
+    z-index: 3
+    display: flex
+    &__img
+        object-fit: cover
+        max-width: calc(100% - 120px)
+        max-height: 90%
+        margin: auto
+        position: relative
+        z-index: 4
+        @media all and (max-width: 550px)
+            max-width: 99%
+    &__buttons
+        @media all and (max-width: 550px)
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            bottom: 20px
+            right: 0
+            left: 0
+            margin: auto
+    .rounded-button
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto
+        z-index: 4
+        @media all and (max-width: 550px)
+            margin: 15px 15px 0
+            position: relative
+        &--left
+            left: 0
+        &--right
+            right: 0
+    &__cross
+        width: 50px
+        height: 50px
+        background-color: $orange
+        border-radius: 50%
+        background-image: url('../img/cross.svg')
+        background-size: 20px 20px
+        background-position: center
+        background-repeat: no-repeat
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer

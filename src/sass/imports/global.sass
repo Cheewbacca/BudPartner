@@ -150,6 +150,9 @@
 a
     transition: color .3s
 
+svg
+    --color-logo: #ffffff
+
 .active-link
     text-decoration: underline;
     color: $orange !important;
@@ -167,6 +170,9 @@ a
 .center
     margin-left: auto;
     margin-right: auto;
+
+.text-darkBlue
+    color: $dark_blue
 
 .logo
     width: calculateWidth(125)
@@ -214,6 +220,11 @@ a
         img
             height: auto
             width: 100%
+
+.social-list.scrolled
+    position: fixed;
+    bottom: 30px;
+    right: 8.33333vw;
 
 .heading-arrow
     position: relative
@@ -263,8 +274,8 @@ a
     &:after
         content: ''
         display: block
-        width: 25px
-        height: 25px
+        width: 20px
+        height: 20px
         background-image: url('/static/img/arrow.svg')
         background-size: cover
         background-repeat: no-repeat
@@ -321,12 +332,12 @@ input::placeholder
         height: calculateWidth(14)
         margin-left: 5px
     
-
 label
     font-size: 0
 
 button
     text-transform: uppercase
+    
 
 .gray-bg
     position: absolute
@@ -343,6 +354,8 @@ button
     position: absolute
     display: grid;
     grid-template-columns: repeat( 4 , 1fr)
+    @media screen and ( max-width: 768px )
+        grid-template-columns: repeat( 2 , 1fr)
 
 @media screen and ( max-width: 768px )
     .pt350
@@ -413,6 +426,7 @@ button
             margin-bottom: tW(14)
 
     .check
+        padding-left: tW(20)
         &::after
             width: tW(16)    
 
@@ -481,6 +495,14 @@ button
     input::placeholder
         font-size: 15px
         line-height: 52px
+
+    .social-list
+        a
+            width: tW(50)
+
+    .main-padding
+        padding-left: tW(120)
+        padding-right: tW(120)
 
 @media screen and ( max-width: 500px )
     .pt350
@@ -551,6 +573,7 @@ button
             margin-bottom: -14px
 
     .check
+        padding-left: 20px
         &::after
             width: 16px
 
@@ -608,4 +631,12 @@ button
         margin-top: 20px
 
     .input-default
-        padding: 12px 25px
+        padding: 12px 50px
+
+    .social-list
+        a
+            width: 50px 
+
+    .main-padding
+        padding-left: 20px
+        padding-right: 20px

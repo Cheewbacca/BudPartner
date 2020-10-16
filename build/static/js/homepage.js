@@ -17,10 +17,6 @@ $.getJSON( "static/img/img.json", function( data ) {
     });
   });
 
-// function random(){
-//     return Math.floor(Math.random()*2) == 1 ? 1 : -1 * Math.floor((Math.random() * 11) + 1);
-// }
-
 $.each($('.our-products__content ul li a:not(".subm")'), function(linkIndex){
     $(this).mouseover(function(){
         if (linkIndex){
@@ -77,10 +73,46 @@ $.each($('.our-products__content ul li a:not(".subm")'), function(linkIndex){
     });
 })(jQuery);
 
+const header = $('header');
+
 $(window).scroll(function() {
+
+    if ($(window).scrollTop() > $('.our-goals__wrapper').offset().top) {
+        header.addClass('header__scroll');
+        if ($(window).width() > 768){
+            $('.burger__wrapper-top ul li.nav_items img').attr('src', 'static/img/arrow-dark.svg');
+        }
+        header.children('nav').children('ul').children('li').addClass('heading-arrow');
+        $('.contact-us .social-list').fadeIn(500, ()=>{ $('.contact-us .social-list').addClass('scrolled'); });
+    } else {
+        header.removeClass('header__scroll');
+        $('.burger__wrapper-top ul li.nav_items img').attr('src', 'static/img/arrow.svg');
+        header.children('nav').children('ul').children('li').removeClass('heading-arrow');
+        $('.contact-us .social-list').fadeIn(500, ()=>{ $('.contact-us .social-list').removeClass('scrolled'); });
+    }
+
+    if ($(window).scrollTop() > $('footer').offset().top) {
+        $('.contact-us .social-list').fadeIn(500, ()=>{ $('.contact-us .social-list').removeClass('scrolled'); });
+    }
+
     const portfTop = $('.portfolio__wrapper').offset().top - window.innerHeight;
     const portfolio__galery = $('.portfolio__galery-body-column'); 
     if ($(window).scrollTop() > portfTop * 1.1) {
         portfolio__galery.addClass('parallax');
     }
+});
+
+if ($(window).width() <= 768){
+    $('.top-section .active-link').appendTo($('.top-section .active-link').parent().siblings('.choose-us__content'));
+}
+
+$('#burger').on('click', function(e){
+    e.preventDefault();
+    $('.burger__wrapper').css('transform', 'translate(0)');
+});
+
+$('#cross').on('click', function(e){
+    e.preventDefault();
+    $('.burger__wrapper').css('transform', 'translate(100%)');
+    e.stopPropagation();
 });

@@ -5,25 +5,55 @@
     background-repeat: no-repeat
     background-size: 100% 100%
     position: relative
+    @media screen and ( max-width: 768px )
+        height: auto
+    @media screen and ( max-width: 500px )
+        background-size: auto;
+    .grid-template
+        .border-item
+            border-left: 0.5px solid $light;
+            border-right: 0.5px solid $white;
     .numbers
         width: 100%;
         height: 100%
         display: grid;
         grid-template-columns: repeat( 4 , 1fr )
+        @media screen and ( max-width: 768px )
+            grid-template-columns: repeat( 2 , 1fr )
+            padding-top: tH(200)
+            padding-bottom: tH(200)
+        @media screen and ( max-width: 500px )
+            grid-template-columns: repeat( 2 , 1fr )
+            padding-top: 200px
+            padding-bottom: 200px
         .numbers__item
             border-color: $white
             color: $white
             display: flex
             align-items: center
             flex-wrap: wrap
+            @media screen and ( max-width: 768px )
+                border: initial;
             .text-block
                 position: relative
                 width: 100%
+                @media screen and ( max-width: 768px )
+                    padding-top: tH(80)
+                @media screen and ( max-width: 500px )
+                    height: 100%
                 h2 
                     position: absolute
                     white-space: nowrap
                     color: $white
                     border-color: $white
                     top: 0
+                    @media screen and ( max-width: 768px )
+                        border: initial;
+                        padding: initial;
+                        padding-bottom: tH(40)
+                h4
+                    span
+                        @media screen and ( max-width: 500px )
+                            font-size: 60px
                 p 
                     max-width: 60%
