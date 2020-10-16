@@ -6,8 +6,9 @@
     .our-goals__item
         @media screen and ( max-width: 768px )
             padding-bottom: tH(30)
-        @media screen and ( max-width: 768px )
-            padding-bottom: 30px
+        @media screen and ( max-width: 500px )
+            padding-bottom: initial
+            padding-top: 30px
         .our-goals__item-inner
             padding-left: calculateWidth(20)
             height: 100%
@@ -17,5 +18,13 @@
             align-items: flex-start
             .img-box
                 min-height: 80px
+                @media screen and ( max-width: 500px )
+                    min-height: initial;
+                    height: 30px;
+                    img 
+                        height: 100%;
             p
                 width: 100%
+                @media screen and ( max-width: 500px ) 
+                    font-size: 13px
+                    margin-top: 13px

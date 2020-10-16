@@ -26,11 +26,15 @@
             width: calc(100% - 8.33333vw - 8.33333vw - 200px)
             margin-left: calc( 50px + 100px + 8.33333vw )
             transform: rotate(5deg) translate(0px, -50%)
+            @media screen and ( max-width: 500px )
+                display: none
             .border-item
                 border-color: $light
                 
     .choose-us
         position: relative
+        @media screen and ( max-width: 500px )
+            padding-top: initial;
         .top-section
             display: flex;
             justify-content: space-between;

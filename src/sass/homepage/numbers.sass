@@ -7,7 +7,8 @@
     position: relative
     @media screen and ( max-width: 768px )
         height: auto
-        background-size: 100% 100%
+    @media screen and ( max-width: 500px )
+        background-size: auto;
     .grid-template
         .border-item
             border-left: 0.5px solid $light;
@@ -21,6 +22,10 @@
             grid-template-columns: repeat( 2 , 1fr )
             padding-top: tH(200)
             padding-bottom: tH(200)
+        @media screen and ( max-width: 500px )
+            grid-template-columns: repeat( 2 , 1fr )
+            padding-top: 200px
+            padding-bottom: 200px
         .numbers__item
             border-color: $white
             color: $white
@@ -34,6 +39,8 @@
                 width: 100%
                 @media screen and ( max-width: 768px )
                     padding-top: tH(80)
+                @media screen and ( max-width: 500px )
+                    height: 100%
                 h2 
                     position: absolute
                     white-space: nowrap
@@ -44,5 +51,9 @@
                         border: initial;
                         padding: initial;
                         padding-bottom: tH(40)
+                h4
+                    span
+                        @media screen and ( max-width: 500px )
+                            font-size: 60px
                 p 
                     max-width: 60%
