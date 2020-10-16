@@ -1,20 +1,36 @@
 header
     a(href="/").logo
         include ../svg/header__logo
-    nav
-        ul
-            -let nav = new Map();
-            -nav.set('услуги', 'uslugi.html').set('о нас', 'o-nas.html').set('контакты', 'kontakty.html');
-            -for(let [key, value] of nav){
-                li
-                    a(href="" + value).main-link= key
-                    img(src="static/img/arrow.svg", alt="переход на другую страницу", title="перейти на страницу "+key)
-            -}
-            li 
-                ul.language
+    nav#burger
+        .burger__wrapper
+            .burger__wrapper-top
+                #cross
+                ul
+                    -let nav = new Map();
+                    -nav.set('услуги', 'uslugi.html').set('о нас', 'o-nas.html').set('контакты', 'kontakty.html');
+                    -for(let [key, value] of nav){
+                        li.nav_items
+                            a(href="" + value).main-link= key
+                            img(src="static/img/arrow.svg", alt="переход на другую страницу", title="перейти на страницу "+key)
+                    -}
                     li 
-                        a(href="#").main-link RU
-                        img(src="static/img/triangle.svg", alt="выбор языка", title="выбрать язык RU")
+                        ul.language
+                            li 
+                                a(href="#").main-link RU
+                                img(src="static/img/triangle.svg", alt="выбор языка", title="выбрать язык RU")
+                            li 
+                                a(href="#").main-link UA
+                                img(src="static/img/triangle.svg", alt="выбор языка", title="выбрать язык UA")
+            .burger__wrapper-bottom
+                .social-list.mt50
+                    a(href="#", rel="nofollow").mr20
+                        img(src="static/img/viber.svg", alt="viber", title="viber")
+                    a(href="#", rel="nofollow")
+                        img(src="static/img/telegram.svg", alt="telegram", title="telegram")
+                ul 
                     li 
-                        a(href="#").main-link UA
-                        img(src="static/img/triangle.svg", alt="выбор языка", title="выбрать язык UA")
+                        include ../svg/phone.pug
+                        a(href="tel:+380(095)011-10-25").underline.main-body-small +380 (095) 011-10-25
+                    li 
+                        include ../svg/phone.pug
+                        a(href="tel:+380(097)232-97-79").underline.main-body-small +380 (097) 232-97-79

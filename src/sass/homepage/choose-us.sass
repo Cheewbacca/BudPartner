@@ -3,9 +3,15 @@
     position: relative
     overflow: hidden
     padding-bottom: calculateHeight(50)
+    @media screen and ( max-width: 768px )
+        padding-bottom: tH(50)
+    @media screen and ( max-width: 500px )
+        padding-bottom: 50px
     .grid-template
         .border-item
             border-color: $white
+            @media screen and ( max-width: 768px )
+                border-right: .5px solid $white;
     .white-bg
         height: 100%;
         background-color: $white
@@ -20,11 +26,15 @@
             width: calc(100% - 8.33333vw - 8.33333vw - 200px)
             margin-left: calc( 50px + 100px + 8.33333vw )
             transform: rotate(5deg) translate(0px, -50%)
+            @media screen and ( max-width: 500px )
+                display: none
             .border-item
                 border-color: $light
                 
     .choose-us
         position: relative
+        @media screen and ( max-width: 500px )
+            padding-top: initial;
         .top-section
             display: flex;
             justify-content: space-between;
@@ -35,7 +45,21 @@
             display: flex;
             justify-content: space-between
             align-items: flex-start;
+            @media screen and ( max-width: 768px )
+                flex-wrap: wrap
+                a 
+                    margin-top: tH(50)
+            @media screen and ( max-width: 500px )
+                a 
+                    margin-top: 50px
             .choose-us__item
                 width: 25%
+                @media screen and ( max-width: 768px )
+                    width: 100%;
+                    &:not(:first-child)
+                        margin-top: tH(50)
+                @media screen and ( max-width: 500px )
+                    &:not(:first-child)
+                        margin-top: 50px
                 p 
                     color: $dark_blue

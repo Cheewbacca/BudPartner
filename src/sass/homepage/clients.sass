@@ -5,8 +5,12 @@
         transform: skewY(5deg)
     .clients__logos
         display: flex;
-        justify-content: space-between
+        justify-content: space-between;
+        flex-wrap: wrap;
         a 
+            margin: 10px 0;
+            @media screen and ( max-width: 500px )
+                flex-basis: 50%;
             img 
                 object-fit: cover
                 height: calculateHeight(40)
