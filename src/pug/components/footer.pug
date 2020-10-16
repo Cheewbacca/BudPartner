@@ -3,14 +3,14 @@ footer.main-padding
         h3.text-center.h3-font  оставьте заявку на бесплатную консультацию
 
         label(for="consultation_name") Имя
-            img(src="static/img/man.svg", alt="man")
+            img(src="static/img/man.svg", alt="имя", title="имя")
             input(type="text" id="consultation_name" placeholder="Имя" name="Имя" required).input-default.input-font
         label(for="consultation_phone") Телефон 
-            img(src="static/img/black-phone.svg", alt="phone")
+            img(src="static/img/black-phone.svg", alt="телефон", title="телефон")
             input(type="text" id="consultation_phone" placeholder="Телефон" name="Телефон" required).input-default.input-font
         label(for="consultation_btn").img-reverted 
             button(type="submit" id="consultation_btn").subm.btn-padding.input-font оставить заявку
-            img(src="static/img/arrow.svg", alt="arrow")
+            img(src="static/img/arrow.svg", alt="оставить заявку", title="оставить заявку")
 
     a(href="/").logo.border-left.pt350.pb100
         include ../svg/header__logo
@@ -62,7 +62,7 @@ footer.main-padding
             -}
 
         .social-list.mt50
-            a(href="#").mr20
-                img(src="static/img/viber.svg", alt="viber")
-            a(href="#")
-                img(src="static/img/telegram.svg", alt="telegram")
+            a(href="#", rel="nofollow").mr20
+                img(src="static/img/viber.svg", alt="viber", title="viber")
+            a(href="#", rel="nofollow")
+                img(src="static/img/telegram.svg", alt="telegram", title="telegram")

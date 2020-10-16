@@ -1,14 +1,14 @@
 header
     a(href="/").logo
-        include ../svg/header__logo
-    nav#burger
+        img(src="/static/img/main-logo-dark.svg", alt="логотип", title="логотип")
+    nav
         ul
             -let nav = new Map();
             -nav.set('услуги', 'uslugi.html').set('о нас', 'o-nas.html').set('контакты', 'kontakty.html');
             -for(let [key, value] of nav){
                 li
-                    a(href="" + value).main-link= key
-                    img(src="static/img/arrow.svg", alt="переход на другую страницу", title="перейти на страницу "+key)
+                    a(href="" + value).main-link.text-darkBlue= key
+                    img(src="static/img/arrow-dark.svg", alt="переход на другую страницу", title="перейти на страницу "+key)
             -}
             li 
                 ul.language
