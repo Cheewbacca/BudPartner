@@ -84,6 +84,7 @@ header
                 display: flex;
                 flex-direction: column
                 justify-content: space-between
+                min-height: 100vh;
                 &-top
                     #cross
                         width: 30px;
@@ -133,8 +134,10 @@ header
     transition: box-shadow .3s
     background-color: $white;
     max-height: 100px
+    transition: transform .3s;
     &:hover
         box-shadow: $main_shadow;
+        transform: translate(0px, 0px) !important;
     @media screen and ( max-width: 500px )
         padding: 10px 20px
     .logo 
