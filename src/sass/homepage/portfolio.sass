@@ -72,15 +72,13 @@
                 grid-template-columns: 1fr
                 grid-template-rows: repeat(3, 1fr)
                 grid-row-gap: calculateWidth(45)
+                transition: transform .3s;
                 .portfolio__galery-body-column
                     display: flex;
-                    transform: translate(200%)
-                    transition: transform 1.5s;
                     @media screen and (max-width: 768px)
                         justify-content: space-between;
                     &:nth-child(2)
                         transform: translate(calculateWidth(-50))
-                        transform: translate(-200%)
                     img
                         width: calculateWidth(200)
                         height: calculateWidth(200)
@@ -90,8 +88,4 @@
                             height: tW(200)
                         &:not(:last-child)
                             margin-right: calculateWidth(50)
-                .parallax 
-                    transform: translate(0, 0)
-                    &:nth-child(2)
-                        transform: translate(calculateWidth(-50))
                             
