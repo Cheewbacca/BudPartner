@@ -327,6 +327,11 @@ input::placeholder
     cursor: pointer
     text-transform: uppercase
     display: inline-flex
+    justify-content: center;
+    height: 52px;
+    line-height: 1;
+    @media screen and ( max-width: 500px )
+        justify-content: space-around;
     img
         width: calculateWidth(15)
         height: calculateWidth(14)
@@ -563,7 +568,7 @@ button
         padding-left: 12px
 
     .btn-padding
-        padding: 20px 55px
+        padding: 1.77778vh 1.73611vw;
 
     .icon-cross
         width: 28px
