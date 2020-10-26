@@ -73,19 +73,29 @@ $.each($('.our-products__content ul li a:not(".subm")'), function(linkIndex){
     });
 })(jQuery);
 
-$(window).scroll(function(event) {
+var portfolio__galery = $('.portfolio__galery-body');
 
-    var currentWidth = $(window).width();
-
-    const portfolio__galery = $('.portfolio__galery-body'); 
-
-    if ($(window).scrollTop() > $('.portfolio__wrapper').offset().top - window.innerHeight && currentWidth > 768) {
+function portfolioAnimation(){
+    if ($(window).scrollTop() > $('.portfolio__wrapper').offset().top) {
+    
         var scrolled = $(window).scrollTop();
+
         portfolio__galery.css({
             'transform' : 'translate(0px, ' + ( scrolled * 0.1 - window.innerHeight / 2 ) + 'px)'
         });
     }
+}
 
+if ($(window).width() > 768){
+    $(window).on('scroll', portfolioAnimation);
+}
+
+$(window).on('resize', function(){
+    if ($(window).width() > 768){
+        $(window).on('scroll', portfolioAnimation);
+    }else {
+        $(window).off('scroll', portfolioAnimation);
+    }
 });
 
 if ($(window).width() <= 768){
