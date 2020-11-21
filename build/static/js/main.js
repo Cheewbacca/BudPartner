@@ -15,7 +15,7 @@ $(window).scroll(function(event) {
 
     var currentWidth = $(window).width();
 
-    if ($(window).scrollTop() > $('.our-goals__wrapper').offset().top) {
+    if ($(window).scrollTop() > 700) {
         header.addClass('header__scroll');
         if (currentWidth > 768){
             $('.burger__wrapper-top ul li.nav_items img').attr('src', 'static/img/arrow-dark.svg');
@@ -58,3 +58,5 @@ $('#cross').on('click', function(e){
     $('.burger__wrapper').css('transform', 'translate(100%)');
     e.stopPropagation();
 });
+
+$("#consultation_phone").inputmask({"mask": "(+380) 99-999-99-99"});
