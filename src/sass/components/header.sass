@@ -4,6 +4,7 @@ header
     justify-content: space-between
     align-items: flex-start
     z-index: $zIndexFirst;        
+    transition: transform .3s, background-color .3s, opacity 1s;
     @media screen and ( max-width: 768px )
         align-items: center;
         padding-bottom: tH(100)
@@ -138,7 +139,8 @@ header
     padding: calculateHeight(10) calculateWidth(120) 
     transition: box-shadow .3s
     max-height: 100px
-    transition: transform .3s, background-color .3s;
+    transition: transform .3s, background-color .3s, opacity 1s;
+    z-index: 99999999999;
     &:hover
         box-shadow: $main_shadow;
         transform: translate(0px, 0px) !important;
