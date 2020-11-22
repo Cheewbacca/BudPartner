@@ -1,10 +1,12 @@
 .all-services__content.main-padding.main-y-padding
     -const servicesList = new Map();
-    -servicesList.set('Кухни', {link: '#', className: 'kitchen'}).set('Гостинные', {link: '#', className: 'livingRoom'}).set('Спальни', {link: '#', className: 'bedroom'}).set('шкафы, гардеробные', {link: '#', className: 'wardrobe'}).set('Ванные комнаты', {link: '#', className: 'bath'}).set('Детские комнаты', {link: '#', className: 'childrenRoom'}).set('Мебель для бизнеса', {link: '#', className: 'business'}).set('Столы', {link: '#', className: 'table'}).set('прихожая', {link: '#', className: 'hallway'}).set('Двери', {link: '#', className: 'door'}).set('обшивка мебели', {link: '#', className: 'upholstery'}).set('стеновые панели', {link: '#', className: 'panels'}).set('лестницы', {link: '#', className: 'stairs'}).set('покраска изделий', {link: '#', className: 'painting'}).set('МЕБЕЛЬНЫЕ фасады', {link: '#', className: 'facades'});
+    -servicesList.set('Кухни', {link: '#', url: '/static/img/services__main-all1.png'}).set('Гостинные', {link: '#', url: '/static/img/services__main-all2.png'}).set('Спальни', {link: '#', url: '/static/img/services__main-all3.png'}).set('шкафы, гардеробные', {link: '#', url: '/static/img/services__main-all4.png'}).set('Ванные комнаты', {link: '#', url: '/static/img/services__main-all5.png'}).set('Детские комнаты', {link: '#', url: '/static/img/services__main-all6.png'}).set('Мебель для бизнеса', {link: '#', url: '/static/img/services__main-all7.png'}).set('Столы', {link: '#', url: '/static/img/services__main-all8.png'}).set('прихожая', {link: '#', url: '/static/img/services__main-all9.png'}).set('Двери', {link: '#', url: '/static/img/services__main-all10.png'}).set('обшивка мебели', {link: '#', url: '/static/img/services__main-all11.png'}).set('стеновые панели', {link: '#', url: '/static/img/services__main-all12.png'}).set('лестницы', {link: '#', url: '/static/img/services__main-all13.png'}).set('покраска изделий', {link: '#', url: '/static/img/services__main-all14.png'}).set('МЕБЕЛЬНЫЕ фасады', {link: '#', url: '/static/img/services__main-all15.png'});
+    -const attr = {};
     -for([key, value] of servicesList){
         a(href=""+value.link).all-services__item
             .height-equal-width
-            div(class="content p25 "+value.className)
+            - attr.style = `background-image: url('${value.url}')`;
+            div(class="content p25")&attributes(attr)
                 h3.h3-font.all-services__heading= key
     -}
 
