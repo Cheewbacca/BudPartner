@@ -12,6 +12,10 @@ document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
     });
 });
 
+$('#modal__cross').on('click', function(){
+    $('#modal__wrapper').fadeOut();
+});
+
 const headerHeight = $('header').height();
 
 const header = $('header');

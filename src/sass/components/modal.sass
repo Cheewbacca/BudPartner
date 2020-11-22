@@ -6,17 +6,17 @@
     left: 0;
     z-index: $zIndexBiggest;
     background-color: rgba(0, 0, 0, .7)
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 calculateWidth(225)
     .modal__content
         position: relative
         padding: calculateHeight(50) calculateWidth(100) calculateHeight(100)
-        border-radius: 50px;
+        border-radius: 10px;
         box-shadow: $main_shadow;
         background-color: $dark-blue;
-        #modal__content-cross
+        #modal__cross
             position: absolute;
             left: initial !important;
             bottom: initial !important;
