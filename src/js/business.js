@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    const officeSlider = $('#officeSlider');
+    const officeSlider = $('.officeSlider');
     // to avoid animation bug in slick slider (when slide from last to first)
     // set slidesToShow equal number of items - 1
     let slidesToShow = officeSlider.children().length - 1;
@@ -9,12 +9,12 @@ $(document).ready(() => {
         speed: 800,
         centerMode: true,
         variableWidth: true,
-        nextArrow: $('#officePrevArrow'),
-        prevArrow: $('#officeNextArrow'),
+        nextArrow: $('.officePrevArrow'),
+        prevArrow: $('.officeNextArrow'),
     });
 
 
-    const saleStaffSlider = $('#saleStaffSlider');
+    const saleStaffSlider = $('.saleStaffSlider');
     slidesToShow = saleStaffSlider.children().length - 1;
 
     saleStaffSlider.slick({
@@ -22,8 +22,8 @@ $(document).ready(() => {
         speed: 800,
         centerMode: true,
         variableWidth: true,
-        nextArrow: $('#saleStaffPrevArrow'),
-        prevArrow: $('#saleStaffNextArrow'),
+        nextArrow: $('.saleStaffPrevArrow'),
+        prevArrow: $('.saleStaffNextArrow'),
     });
 });
 
