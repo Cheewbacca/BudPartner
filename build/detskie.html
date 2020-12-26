@@ -16,7 +16,7 @@
       <div class="modal__content"><a class="icon-cross" href="#" id="modal__cross"></a>
         <h3 class="h3-font"> оставьте заявку на бесплатную консультацию</h3>
         <p class="main-body-small">Оставьте заявку и мы Вам перезвоним, чтобы обсудить все детали и договориться о дальнейшей работе. Так же, Вы можете перейти в <a href="kontakty.html" > контакты </a> и связаться с нами сейчас.</p>
-        <form action="">
+        <form action="" id="modalForm">
           <label for="consultation_name-modal">Имя<img src="static/img/man.svg" alt="man"/>
             <input class="input-default input-font" type="text" id="consultation_name-modal" placeholder="Имя" name="Имя" required="required"/>
           </label>
@@ -27,6 +27,12 @@
             <button class="subm btn-padding input-font" type="submit" id="consultation_btn-modal">оставить заявку</button><img src="static/img/arrow.svg" alt="arrow"/>
           </label>
         </form>
+        <div id="success-modal">
+          <h3 class="h3-font">Заявка успешно отправлена</h3>
+        </div>
+        <div id="error-modal">
+          <h3 class="h3-font">Произошла ошибка, обновите пожалуйста страницу</h3>
+        </div>
       </div>
     </div>
     <div class="services__wrapper childrenRoom-first-section__wrapper main-padding pt30 pb100">
@@ -265,7 +271,7 @@
       </div>
     </div>
     <footer class="main-padding">
-      <form action="">
+      <form action="" id="footerForm">
         <h3 class="text-center h3-font"> оставьте заявку на бесплатную консультацию</h3>
         <label for="consultation_name">Имя<img src="static/img/man.svg" alt="имя" title="имя"/>
           <input class="input-default input-font" type="text" id="consultation_name" placeholder="Имя" name="Имя" required="required"/>
@@ -276,6 +282,12 @@
         <label class="img-reverted" for="consultation_btn"> 
           <button class="subm btn-padding input-font" type="submit" id="consultation_btn">оставить заявку</button><img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/>
         </label>
+        <div id="success">
+          <h3 class="h3-font">Заявка успешно отправлена</h3>
+        </div>
+        <div id="error">
+          <h3 class="h3-font">Произошла ошибка, обновите пожалуйста страницу</h3>
+        </div>
       </form><a class="logo border-left pt350 pb100" href="/">
         <svg width="100%" viewBox="0 0 126 51" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
