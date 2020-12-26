@@ -135,7 +135,7 @@
       </div>
     </div>
     <footer class="main-padding">
-      <form action="">
+      <form action="" id="footerForm">
         <h3 class="text-center h3-font"> оставьте заявку на бесплатную консультацию</h3>
         <label for="consultation_name">Имя<img src="static/img/man.svg" alt="имя" title="имя"/>
           <input class="input-default input-font" type="text" id="consultation_name" placeholder="Имя" name="Имя" required="required"/>
@@ -146,6 +146,12 @@
         <label class="img-reverted" for="consultation_btn"> 
           <button class="subm btn-padding input-font" type="submit" id="consultation_btn">оставить заявку</button><img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/>
         </label>
+        <div id="success">
+          <h3 class="h3-font">Заявка успешно отправлена</h3>
+        </div>
+        <div id="error">
+          <h3 class="h3-font">Произошла ошибка, обновите пожалуйста страницу</h3>
+        </div>
       </form><a class="logo border-left pt350 pb100" href="/">
         <svg width="100%" viewBox="0 0 126 51" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">

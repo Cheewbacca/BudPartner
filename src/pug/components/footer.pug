@@ -1,5 +1,5 @@
 footer.main-padding
-    form(action="")
+    form(action="")#footerForm
         h3.text-center.h3-font  оставьте заявку на бесплатную консультацию
 
         label(for="consultation_name") Имя
@@ -11,6 +11,11 @@ footer.main-padding
         label(for="consultation_btn").img-reverted 
             button(type="submit" id="consultation_btn").subm.btn-padding.input-font оставить заявку
             img(src="static/img/arrow.svg", alt="оставить заявку", title="оставить заявку")
+
+        #success
+            h3.h3-font Заявка успешно отправлена
+        #error
+            h3.h3-font Произошла ошибка, обновите пожалуйста страницу
 
     a(href="/").logo.border-left.pt350.pb100
         include ../svg/header__logo

@@ -12,6 +12,29 @@
     <link rel="stylesheet" href="static\css\slick.css"/>
   </head>
   <body>
+    <div id="modal__wrapper">
+      <div class="modal__content"><a class="icon-cross" href="#" id="modal__cross"></a>
+        <h3 class="h3-font"> оставьте заявку на бесплатную консультацию</h3>
+        <p class="main-body-small">Оставьте заявку и мы Вам перезвоним, чтобы обсудить все детали и договориться о дальнейшей работе. Так же, Вы можете перейти в <a href="kontakty.html" > контакты </a> и связаться с нами сейчас.</p>
+        <form action="" id="modalForm">
+          <label for="consultation_name-modal">Имя<img src="static/img/man.svg" alt="man"/>
+            <input class="input-default input-font" type="text" id="consultation_name-modal" placeholder="Имя" name="Имя" required="required"/>
+          </label>
+          <label for="consultation_phone-modal">Телефон <img src="static/img/black-phone.svg" alt="phone"/>
+            <input class="input-default input-font" type="text" id="consultation_phone-modal" placeholder="Телефон" name="Телефон" required="required"/>
+          </label>
+          <label class="img-reverted" for="consultation_btn-modal"> 
+            <button class="subm btn-padding input-font" type="submit" id="consultation_btn-modal">оставить заявку</button><img src="static/img/arrow.svg" alt="arrow"/>
+          </label>
+        </form>
+        <div id="success-modal">
+          <h3 class="h3-font">Заявка успешно отправлена</h3>
+        </div>
+        <div id="error-modal">
+          <h3 class="h3-font">Произошла ошибка, обновите пожалуйста страницу</h3>
+        </div>
+      </div>
+    </div>
     <div class="services__wrapper hallway-first-section__wrapper main-padding pt30 pb100">
       <header><a class="logo" href="/">
           <svg width="100%" viewBox="0 0 126 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,14 +85,14 @@
         </nav>
       </header>
       <div class="first-section__content">
-        <h1 class="h1-font mt50">прихожая</h1><a class="subm small-btn-padding input-font mt30" href="#">оставить заявку<img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/></a>
+        <h1 class="h1-font mt50">прихожая</h1><a class="subm small-btn-padding input-font mt30" href="#" id="getModal">оставить заявку<img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/></a>
       </div>
     </div>
     <div class="our-works__wrapper main-padding main-y-padding" id="ourWorksWrapper">
       <div class="our-works__content">
         <h2 class="h2-font pl20 border-left">наши работы</h2>
         <div class="our-works__slider-wrap mt50">
-          <div class="our-works__slider" id="ourWorksSlider">
+          <div class="our-works__slider">
             <div class="our-works__slider-item"><img class="our-works__slider-img" src="/static/img/kitchen__main-bg.png" alt="наши работы - кухни?" title="наши работы - кухни?"/>
               <div class="our-works__slider-scale"></div>
             </div>
@@ -90,8 +113,8 @@
             </div>
           </div>
           <div class="our-works__slider-buttons">
-            <div class="rounded-button rounded-button--left" id="nextArrow"></div>
-            <div class="rounded-button rounded-button--right" id="prevArrow"></div>
+            <div class="rounded-button rounded-button--left nextArrow"></div>
+            <div class="rounded-button rounded-button--right prevArrow"></div>
           </div>
         </div>
       </div>
@@ -106,7 +129,7 @@
       <div class="materials__content"><a class="h2-font heading-arrow pl20 border-left" href="#">материалы</a>
         <div class="materials__items mt50">
           <div class="materials__item">
-            <div class="materials__img materials__img--facades p25">
+            <div class="materials__img materials__img--facades p25" style="background-image: url('/static/img/materials__facades.png')">
               <h3 class="h3-font">Фасады</h3>
             </div>
             <div class="materials__text-block p25">
@@ -118,7 +141,7 @@
             </div>
           </div>
           <div class="materials__item">
-            <div class="materials__img materials__img--body p25">
+            <div class="materials__img materials__img--body p25" style="background-image: url('/static/img/materials__body.png')">
               <h3 class="h3-font">корпуса</h3>
             </div>
             <div class="materials__text-block p25">
@@ -130,7 +153,7 @@
             </div>
           </div>
           <div class="materials__item">
-            <div class="materials__img materials__img--furniture p25">
+            <div class="materials__img materials__img--furniture p25" style="background-image: url('/static/img/materials__furniture.png')">
               <h3 class="h3-font">фурнитура</h3>
             </div>
             <div class="materials__text-block p25">
@@ -248,7 +271,7 @@
       </div>
     </div>
     <footer class="main-padding">
-      <form action="">
+      <form action="" id="footerForm">
         <h3 class="text-center h3-font"> оставьте заявку на бесплатную консультацию</h3>
         <label for="consultation_name">Имя<img src="static/img/man.svg" alt="имя" title="имя"/>
           <input class="input-default input-font" type="text" id="consultation_name" placeholder="Имя" name="Имя" required="required"/>
@@ -259,6 +282,12 @@
         <label class="img-reverted" for="consultation_btn"> 
           <button class="subm btn-padding input-font" type="submit" id="consultation_btn">оставить заявку</button><img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/>
         </label>
+        <div id="success">
+          <h3 class="h3-font">Заявка успешно отправлена</h3>
+        </div>
+        <div id="error">
+          <h3 class="h3-font">Произошла ошибка, обновите пожалуйста страницу</h3>
+        </div>
       </form><a class="logo border-left pt350 pb100" href="/">
         <svg width="100%" viewBox="0 0 126 51" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">

@@ -1,5 +1,5 @@
 $('document').ready(() => {
-    const slider = $('#ourWorksSlider');
+    const slider = $('.our-works__slider');
     // to avoid animation bug in slick slider (when slide from last to first)
     // set slidesToShow equal number of items - 1
     const slidesToShow = slider.children().length - 1;
@@ -9,8 +9,8 @@ $('document').ready(() => {
         speed: 800,
         centerMode: true,
         variableWidth: true,
-        nextArrow: $('#prevArrow'),
-        prevArrow: $('#nextArrow'),
+        nextArrow: $('.prevArrow'),
+        prevArrow: $('.nextArrow'),
     });
 
 });
