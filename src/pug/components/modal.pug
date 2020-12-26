@@ -3,7 +3,7 @@
         a(href="#").icon-cross#modal__cross
         h3.h3-font  оставьте заявку на бесплатную консультацию
         p.main-body-small Оставьте заявку и мы Вам перезвоним, чтобы обсудить все детали и договориться о дальнейшей работе. Так же, Вы можете перейти в <a href="kontakty.html" > контакты </a> и связаться с нами сейчас.
-        form(action="")
+        form(action="")#modalForm
             label(for="consultation_name-modal") Имя
                 img(src="static/img/man.svg", alt="man")
                 input(type="text" id="consultation_name-modal" placeholder="Имя" name="Имя" required).input-default.input-font
@@ -13,3 +13,7 @@
             label(for="consultation_btn-modal").img-reverted 
                 button(type="submit" id="consultation_btn-modal").subm.btn-padding.input-font оставить заявку
                 img(src="static/img/arrow.svg", alt="arrow")
+        #success-modal
+            h3.h3-font Заявка успешно отправлена
+        #error-modal
+            h3.h3-font Произошла ошибка, обновите пожалуйста страницу

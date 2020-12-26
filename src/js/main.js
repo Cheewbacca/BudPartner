@@ -17,6 +17,11 @@ $('#modal__cross').on('click', function(e){
     $('#modal__wrapper').fadeOut();
 });
 
+$('#getModal').on('click', function(e){
+    e.preventDefault();
+    $('#modal__wrapper').css('display', 'flex');
+});
+
 const headerHeight = $('header').height();
 
 const header = $('header');
@@ -87,3 +92,44 @@ $('#cross').on('click', function(e){
 });
 
 $("#consultation_phone").inputmask({"mask": "(+380) 99-999-99-99"});
+
+function sendForm(type){
+    type == 'footerForm' ? type = '' : type = '-modal';
+
+    $.ajax({
+        method: "POST",
+        url: $(this).attr('action'),
+        data: { 
+            name: $('#consultation_name' + type).val(), 
+            phone: $('#consultation_phone' + type).val(),
+        }
+    })
+    .done(function( response ) {
+        
+        if (type){
+            $('.modal__content').children().hide();
+            $('#modal__cross').show();
+        }else{
+            $('#footerForm').children().hide();
+        }
+
+
+        if (response.success == false){
+            $('#error' + type).show();
+        }else{
+            $('#success' + type).show();
+        }
+    });
+}
+
+$('#footerForm').on('submit', function(e){
+    e.preventDefault();
+
+    sendForm('footerForm');
+});
+
+$('#modalForm').on('submit', function(e){
+    e.preventDefault();
+
+    sendForm('modalForm');
+});

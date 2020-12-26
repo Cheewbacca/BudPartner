@@ -6,22 +6,36 @@
     left: 0;
     z-index: $zIndexBiggest;
     background-color: rgba(0, 0, 0, .7)
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 0 calculateWidth(225)
+    @media screen and ( max-width:  768px )
+        padding: 0 12px
     .modal__content
         position: relative
         padding: calculateHeight(50) calculateWidth(100) calculateHeight(100)
         border-radius: 10px;
         box-shadow: $main_shadow;
         background-color: $dark-blue;
+        @media screen and ( max-width: 768px )
+            padding: calculateHeight(50) 12px calculateHeight(100)
+        @media screen and ( max-width: 500px )
+            padding-bottom: calculateHeight(50)
+        #success-modal,
+        #error-modal
+            margin-top: calculateHeight(20);
+            text-align: center
+            display: none;
         #modal__cross
             position: absolute;
             left: initial !important;
             bottom: initial !important;
             top: calculateHeight(30) !important
             right: calculateWidth(30) !important
+            @media screen and ( max-width:  768px )
+                top: -15px !important
+                right: 12px !important
             &::before,
             &::after
                 background-color: $white;
@@ -30,6 +44,8 @@
             width: 80%
             margin-top: calculateHeight(20)
             color: $white
+            @media screen and ( max-width: 500px )
+                width: 100%
             a 
                 color: $orange;
         form
@@ -39,8 +55,14 @@
             height: auto
             display: flex
             justify-content: space-between
+            @media screen and ( max-width:  768px )
+                flex-wrap: wrap
             label
                 position: relative
+                @media screen and ( max-width:  768px )
+                    flex-basis: 50%
+                @media screen and ( max-width: 500px )
+                    margin-top: 15px
                 img
                     position: absolute
                     left: calculateWidth(25)
@@ -48,12 +70,26 @@
                     height: calculateWidth(14)
                     top: 50%;
                     margin-top: calculateWidth(-7)
+                    @media screen and ( max-width:  768px )
+                        width: tW(15)
+                        height: tW(14)
+                        margin-top: tW(-7)
+                    @media screen and ( max-width:  500px )
+                        width: 15px
+                        height: 14px
+                        margin-top: -7px
                 button 
                     white-space: nowrap
+                    @media screen and ( max-width:  768px )
+                        margin-top: 25px
+                    @media screen and ( max-width: 500px )
+                        padding: 0 15px
             .img-reverted 
                 img
                     left: initial;
                     right: calculateWidth(25)
+                    @media screen and ( max-width:  768px )
+                        display: none
             input 
                 height: 100%
             h3
