@@ -12,6 +12,23 @@
     <link rel="stylesheet" href="static\css\slick.css"/>
   </head>
   <body>
+    <div id="modal__wrapper">
+      <div class="modal__content"><a class="icon-cross" href="#" id="modal__cross"></a>
+        <h3 class="h3-font"> оставьте заявку на бесплатную консультацию</h3>
+        <p class="main-body-small">Оставьте заявку и мы Вам перезвоним, чтобы обсудить все детали и договориться о дальнейшей работе. Так же, Вы можете перейти в <a href="kontakty.html" > контакты </a> и связаться с нами сейчас.</p>
+        <form action="">
+          <label for="consultation_name-modal">Имя<img src="static/img/man.svg" alt="man"/>
+            <input class="input-default input-font" type="text" id="consultation_name-modal" placeholder="Имя" name="Имя" required="required"/>
+          </label>
+          <label for="consultation_phone-modal">Телефон <img src="static/img/black-phone.svg" alt="phone"/>
+            <input class="input-default input-font" type="text" id="consultation_phone-modal" placeholder="Телефон" name="Телефон" required="required"/>
+          </label>
+          <label class="img-reverted" for="consultation_btn-modal"> 
+            <button class="subm btn-padding input-font" type="submit" id="consultation_btn-modal">оставить заявку</button><img src="static/img/arrow.svg" alt="arrow"/>
+          </label>
+        </form>
+      </div>
+    </div>
     <div class="services__wrapper facades-first-section__wrapper main-padding pt30 pb100">
       <header><a class="logo" href="/">
           <svg width="100%" viewBox="0 0 126 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +79,7 @@
         </nav>
       </header>
       <div class="first-section__content">
-        <h1 class="h1-font mt50">мебельные фасады</h1><a class="subm small-btn-padding input-font mt30" href="#">оставить заявку<img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/></a>
+        <h1 class="h1-font mt50">мебельные фасады</h1><a class="subm small-btn-padding input-font mt30" href="#" id="getModal">оставить заявку<img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/></a>
       </div>
     </div>
     <div class="facades-kinds__wrapper main-padding main-y-padding">
