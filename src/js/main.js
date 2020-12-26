@@ -93,8 +93,8 @@ $('#cross').on('click', function(e){
 
 $("#consultation_phone").inputmask({"mask": "(+380) 99-999-99-99"});
 
-function sendForm(type){
-    type == 'footerForm' ? type = '' : type = '-modal';
+function sendForm(type = ''){
+    type == 'footer' ? type = '' : type = '-modal';
 
     $.ajax({
         method: "POST",
@@ -113,7 +113,6 @@ function sendForm(type){
             $('#footerForm').children().hide();
         }
 
-
         if (response.success == false){
             $('#error' + type).show();
         }else{
@@ -122,14 +121,10 @@ function sendForm(type){
     });
 }
 
-$('#footerForm').on('submit', function(e){
-    e.preventDefault();
-
-    sendForm('footerForm');
-});
-
-$('#modalForm').on('submit', function(e){
-    e.preventDefault();
-
-    sendForm('modalForm');
+$('form').each(function(){
+    $(this).on('submit', function(e){
+        e.preventDefault();
+    
+        sendForm($(this).data('form'));
+    });
 });

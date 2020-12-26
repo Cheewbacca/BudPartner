@@ -13,7 +13,7 @@ footer
         padding-bottom: tH(100)
     @media screen and ( max-width: 500px )
         padding-bottom: 200px
-    form
+    .form
         width: 100%;
         position: absolute;
         top: calculateHeight(100)
@@ -24,56 +24,63 @@ footer
         @media screen and ( max-width: 768px )
             padding: tH(100) 0px; 
             position: static
-        #success,
-        #error
-            text-align: center
-            display: none;
-        label
-            margin: calculateHeight(30) calculateWidth(12.5) 0
-            position: relative
-            @media screen and ( max-width: 768px )
-                margin: tH(30) tW(12.5) 0
-            @media screen and ( max-width: 500px )
-                width: 75%
-            img
-                position: absolute
-                left: calculateWidth(25)
-                width: calculateWidth(15)
-                height: calculateWidth(14)
-                top: 50%;
-                margin-top: calculateWidth(-7)
+        @media screen and ( max-width: 500px )
+            margin: 50px 0px
+        form
+            margin-top: 25px
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            #success,
+            #error
+                text-align: center
+                display: none;
+            label
+                margin: calculateHeight(30) calculateWidth(12.5) 0
+                position: relative
                 @media screen and ( max-width: 768px )
-                    left: tW(25)
-                    width: tW(15)
-                    height: tW(14)
-                    margin-top: tW(-7)
+                    margin: tH(30) tW(12.5) 0
                 @media screen and ( max-width: 500px )
-                    left: 25px
-                    width: 15px
-                    height: 14px
-                    margin-top: -7px
+                    width: 75%
+                img
+                    position: absolute
+                    left: calculateWidth(25)
+                    width: calculateWidth(15)
+                    height: calculateWidth(14)
+                    top: 50%;
+                    margin-top: calculateWidth(-7)
+                    @media screen and ( max-width: 768px )
+                        left: tW(25)
+                        width: tW(15)
+                        height: tW(14)
+                        margin-top: tW(-7)
+                    @media screen and ( max-width: 500px )
+                        left: 25px
+                        width: 15px
+                        height: 14px
+                        margin-top: -7px
+                input 
+                    height: 100%
+                    @media screen and ( max-width: 500px )
+                        width: 100% !important
+            .img-reverted 
+                img
+                    left: initial;
+                    right: calculateWidth(25)
+                    @media screen and ( max-width: 768px )
+                        right: tW(25)
+                    @media screen and ( max-width: 500px )
+                        right: 25px
             input 
                 height: 100%
                 @media screen and ( max-width: 500px )
-                    width: 100% !important
-        .img-reverted 
-            img
-                left: initial;
-                right: calculateWidth(25)
-                @media screen and ( max-width: 768px )
-                    right: tW(25)
+                    width: 100%
+            button
                 @media screen and ( max-width: 500px )
-                    right: 25px
-        input 
-            height: 100%
-            @media screen and ( max-width: 500px )
-                width: 100%
-        button
-            @media screen and ( max-width: 500px )
-                width: 100%
-        h3
-            width: 100%;
-            color: $white
+                    width: 100%
+            h3
+                width: 100%;
+                color: $white
 
     a, 
     div, 
