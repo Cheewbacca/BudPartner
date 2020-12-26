@@ -43,6 +43,11 @@ $.each($('.our-products__content ul li a:not(".subm")'), function(linkIndex){
     });
 });
 
+$('#getModal').on('click', function(e){
+    e.preventDefault();
+    $('#modal__wrapper').css('display', 'flex');
+});
+
 (function($) {
     $(function() {
             let a = 0;
