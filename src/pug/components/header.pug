@@ -1,4 +1,9 @@
-header
+style(type="text/css").
+  .active-link::after {
+    content: url(static/img/orArrow.svg);
+  }
+
+header(data-arrow-dark='static/img/arrow-dark.svg' data-arrow='static/img/arrow.svg')
     a(href="/").logo
         include ../svg/header__logo
     nav#burger

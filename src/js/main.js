@@ -38,14 +38,14 @@ $(window).scroll(function(event) {
         }
         header.addClass('header__scroll');
         if (currentWidth > 768){
-            $('.burger__wrapper-top ul li.nav_items img').attr('src', 'static/img/arrow-dark.svg');
+            $('.burger__wrapper-top ul li.nav_items img').attr('src', header.data('arrow-dark'));
         }
         
         header.children('nav').children('ul').children('li').addClass('heading-arrow');
         $('.contact-us .social-list').fadeIn(500, ()=>{ $('.contact-us .social-list').addClass('scrolled'); });
     } else {
         header.removeClass('header__scroll');
-        $('.burger__wrapper-top ul li.nav_items img').attr('src', 'static/img/arrow.svg');
+        $('.burger__wrapper-top ul li.nav_items img').attr('src', header.data('arrow'));
         header.children('nav').children('ul').children('li').removeClass('heading-arrow');
         $('.contact-us .social-list').fadeIn(500, ()=>{ $('.contact-us .social-list').removeClass('scrolled'); });
         if ($('#header_clone').length  && $(window).width() > 768){
@@ -93,6 +93,11 @@ $('#cross').on('click', function(e){
 
 $("#consultation_phone").inputmask({"mask": "(+380) 99-999-99-99"});
 
+var errors = {
+    'name': ['name', 'description'],
+    'phone': ['phone', 'description']
+}
+
 function sendForm(type = ''){
     type == 'footer' ? type = '' : type = '-modal';
 
@@ -107,15 +112,18 @@ function sendForm(type = ''){
     .done(function( response ) {
         
         if (type){
-            $('.modal__content').children().hide();
-            $('#modal__cross').show();
+            $(this).children().hide();
         }else{
-            $('#footerForm').children().hide();
+            $(this).parent().children().hide();
         }
 
         if (response.success == false){
+            $('#error' + type + ' h3').text(response.message);
+            $('#success' + type).parent().append('<p class="main-body">' + response.errors.name  +'</p>');
+            $('#success' + type).parent().append('<p class="main-body">' + response.errors.phone  +'</p>');
             $('#error' + type).show();
         }else{
+            $('#success' + type + ' h3').text(response.message);
             $('#success' + type).show();
         }
     });
@@ -125,6 +133,6 @@ $('form').each(function(){
     $(this).on('submit', function(e){
         e.preventDefault();
     
-        sendForm($(this).data('form'));
+        sendForm.call($(this), $(this).data('form'));
     });
 });
