@@ -87,7 +87,7 @@ footer
     ul
         @media screen and ( max-width: 768px )
             padding: initial !important
-            margin: 0 auto;
+            margin: 0;
             border: initial !important;
     ul 
         @media screen and ( max-width: 768px )
@@ -99,7 +99,7 @@ footer
             text-align: center;
             span
                 @media screen and ( max-width: 768px )
-                    margin: 0 auto
+                    // margin: 0 auto
             &:first-child
                 margin-bottom: calculateHeight(5)
             &:not(:first-child)
@@ -108,6 +108,8 @@ footer
                 color: $white
                 &:hover
                     color: $orange
+                @media screen and ( max-width: 768px )
+                    margin: 0
     div 
         ul.mt50
             @media screen and ( max-width: 768px )                
