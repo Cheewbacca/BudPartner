@@ -8,6 +8,7 @@ footer
     background-color: $dark_blue;
     align-items: start
     position: relative
+    color: $white
     @media screen and ( max-width: 768px )
         grid-template-columns: repeat( 1, 1fr )
         padding-bottom: tH(100)
@@ -19,7 +20,7 @@ footer
         top: calculateHeight(100)
         height: auto
         display: flex
-        flex-wrap: wrap
+        flex-flow: column wrap
         justify-content: center
         @media screen and ( max-width: 768px )
             padding: tH(100) 0px; 
@@ -81,6 +82,8 @@ footer
             h3
                 width: 100%;
                 color: $white
+    .main-body-small
+        color: $white
 
     a, 
     div, 
