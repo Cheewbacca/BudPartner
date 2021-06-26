@@ -9,13 +9,16 @@
     display: flex
     &__img
         object-fit: cover
+        width: calc(100% - 120px)
+        height: auto
         max-width: calc(100% - 120px)
-        max-height: 90%
+        max-height: 85%
         margin: auto
         position: relative
         z-index: 4
         @media all and (max-width: 550px)
             max-width: 99%
+            width: 99%
     &__buttons
         @media all and (max-width: 550px)
             display: flex
