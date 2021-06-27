@@ -6,10 +6,14 @@
         form(action="")
             label(for="consultation_name-modal") Имя
                 img(src="static/img/man.svg", alt="man")
-                input(type="text" id="consultation_name-modal" placeholder="Имя" name="Имя" required).input-default.input-font
+                input(type="text" id="consultation_name-modal" placeholder="Имя" name="Имя").input-default.input-font
+                .error_message 
+                    p.input-font Fill out this field
             label(for="consultation_phone-modal") Телефон 
                 img(src="static/img/black-phone.svg", alt="phone")
-                input(type="text" id="consultation_phone-modal" placeholder="Телефон" name="Телефон" required).input-default.input-font
+                input(type="text" id="consultation_phone-modal" placeholder="Телефон" name="Телефон").input-default.input-font
+                .error_message 
+                    p.input-font Fill out this field
             label(for="consultation_btn-modal").img-reverted 
                 button(type="submit" id="consultation_btn-modal").subm.btn-padding.input-font оставить заявку
                 img(src="static/img/arrow.svg", alt="arrow")
