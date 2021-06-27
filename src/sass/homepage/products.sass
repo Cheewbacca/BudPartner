@@ -26,9 +26,11 @@
                         background-color: initial
                         border: 1px solid $orange
                         position: relative
-                        padding-right: 55px
                         align-items: center;
                         white-space: nowrap
+                        &:hover
+                            color: $white
+                            background-color: $orange
                         img
                             width: calculateWidth(15)
                             height: calculateWidth(14)
@@ -38,13 +40,8 @@
                                 height: tW(14)
                             @media screen and ( max-width: 500px )
                                 width: 15px
-                                height: 15px
-
-                    &:hover
-                        a
-                            color: $white
-                            background-color: $orange
-                            
+                                height: 15px                            
+                        
                 a
                     color: $dark_blue
                     &:hover

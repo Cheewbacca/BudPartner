@@ -18,10 +18,16 @@
         <p class="main-body-small">Оставьте заявку и мы Вам перезвоним, чтобы обсудить все детали и договориться о дальнейшей работе. Так же, Вы можете перейти в <a href="kontakty.html" > контакты </a> и связаться с нами сейчас.</p>
         <form action="">
           <label for="consultation_name-modal">Имя<img src="static/img/man.svg" alt="man"/>
-            <input class="input-default input-font" type="text" id="consultation_name-modal" placeholder="Имя" name="Имя" required="required"/>
+            <input class="input-default input-font" type="text" id="consultation_name-modal" placeholder="Имя" name="Имя"/>
+            <div class="error_message"> 
+              <p class="input-font">Fill out this field</p>
+            </div>
           </label>
           <label for="consultation_phone-modal">Телефон <img src="static/img/black-phone.svg" alt="phone"/>
-            <input class="input-default input-font" type="text" id="consultation_phone-modal" placeholder="Телефон" name="Телефон" required="required"/>
+            <input class="input-default input-font" type="text" id="consultation_phone-modal" placeholder="Телефон" name="Телефон"/>
+            <div class="error_message"> 
+              <p class="input-font">Fill out this field</p>
+            </div>
           </label>
           <label class="img-reverted" for="consultation_btn-modal"> 
             <button class="subm btn-padding input-font" type="submit" id="consultation_btn-modal">оставить заявку</button><img src="static/img/arrow.svg" alt="arrow"/>
@@ -91,7 +97,9 @@
         </nav>
       </header>
       <div class="first-section__content">
-        <h1 class="h1-font mt50">детские комнаты</h1><a class="subm small-btn-padding input-font mt30" href="#" id="getModal">оставить заявку<img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/></a>
+        <h1 class="h1-font mt50">детские комнаты</h1><a class="subm small-btn-padding input-font mt30" href="#" id="getModal">оставить заявку<svg width="100%" height="100%" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.6065 4.02802L11.7053 4.07074M11.7053 4.07074L11.772 8.19347M11.7053 4.07074L4.07083 11.7052" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
       </div>
     </div>
     <div class="our-works__wrapper main-padding main-y-padding" id="ourWorksWrapper">
@@ -281,13 +289,22 @@
         <h3 class="text-center h3-font"> оставьте заявку на бесплатную консультацию</h3>
         <form action="" data-form="footer">
           <label for="consultation_name">Имя<img src="static/img/man.svg" alt="имя" title="имя"/>
-            <input class="input-default input-font" type="text" id="consultation_name" placeholder="Имя" name="Имя" required="required"/>
+            <input class="input-default input-font" type="text" id="consultation_name" placeholder="Имя" name="Имя"/>
+            <div class="error_message"> 
+              <p class="input-font">Fill out this field</p>
+            </div>
           </label>
           <label for="consultation_phone">Телефон <img src="static/img/black-phone.svg" alt="телефон" title="телефон"/>
-            <input class="input-default input-font" type="text" id="consultation_phone" placeholder="Телефон" name="Телефон" required="required"/>
+            <input class="input-default input-font" type="text" id="consultation_phone" placeholder="Телефон" name="Телефон"/>
+            <div class="error_message"> 
+              <p class="input-font">Fill out this field</p>
+            </div>
           </label>
           <label class="img-reverted" for="consultation_btn"> 
-            <button class="subm btn-padding input-font" type="submit" id="consultation_btn">оставить заявку</button><img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/>
+            <button class="subm btn-padding input-font" type="submit" id="consultation_btn">оставить заявку<svg width="100%" height="100%" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.6065 4.02802L11.7053 4.07074M11.7053 4.07074L11.772 8.19347M11.7053 4.07074L4.07083 11.7052" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
           </label>
           <div id="success">
             <h3 class="h3-font">Заявка успешно отправлена</h3>
