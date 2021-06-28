@@ -13,11 +13,11 @@ if (source) {
     method: "GET",
     url: source,
   }).done(function (response) {
-    if (response.success == false) {
+    if (!response.length) {
       return;
     }
 
-    $.each(data.images, function (key, value) {
+    $.each(response, function (key, value) {
       $.each(this, function (key, value) {
         preloadImage(value);
         imagesStack.push(value);
