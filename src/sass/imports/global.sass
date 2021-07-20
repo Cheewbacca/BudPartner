@@ -157,36 +157,36 @@
     opacity: 1 !important
 
 .error_message
-    position: absolute;
+    position: absolute
     top: -25px
     background: $dark_blue
-    border: 1px solid $white;
-    max-width: 100%;
-    padding: 5px 10px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border: 1px solid $white
+    max-width: 100%
+    padding: 5px 10px
+    left: 50%
+    transform: translate(-50%, -50%)
     border-radius: 20px
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity .3s;
+    z-index: 9999
+    opacity: 0
+    transition: opacity .3s
     p
-        width: 100% !important;
-        margin: initial !important;
+        width: 100% !important
+        margin: initial !important
         font-weight: normal
         text-align: center
-        color: $white;
+        color: $white
 
     &::after
-        content: '';
-        position: absolute;
-        bottom: -10px;
+        content: ''
+        position: absolute
+        bottom: -10px
         background: $dark_blue
-        left: 50%;
+        left: 50%
         transform: translate(-50%, -50%) rotate(45deg)
         width: 10px
         height: 10px
-        border-right: 1px solid $white;
-        border-bottom: 1px solid $white;
+        border-right: 1px solid $white
+        border-bottom: 1px solid $white
 a
     transition: color .3s
 
@@ -380,7 +380,7 @@ input::placeholder
     height: 52px
     line-height: 1
     align-items: center
-    transition: background .3s, color .3s;
+    transition: background .3s, color .3s
     border: 1px solid $orange
     img
         width: calculateWidth(15)
@@ -390,14 +390,10 @@ input::placeholder
         width: calculateWidth(15)
         height: calculateWidth(14)
         margin-left: 5px
-        path 
+        path
             transition: .3s
     &:hover
         background: $orange_hover
-        color: $dark
-        svg
-            path 
-                stroke: $dark
     @media screen and ( max-width: 768px )
         svg
             width: tW(15)
@@ -407,15 +403,15 @@ input::placeholder
         svg
             width: 15px
             height: 15px
-    
+
 .inverted_button
     svg
-        path 
+        path
             stroke: $orange
-            
+
     &:hover
         svg
-            path 
+            path
                 stroke: $white
 
 label
