@@ -4,6 +4,7 @@ header
     justify-content: space-between
     align-items: flex-start
     z-index: $zIndexFirst;        
+    transition: transform .3s, background-color .3s, opacity 1s;
     @media screen and ( max-width: 768px )
         align-items: center;
         padding-bottom: tH(100)
@@ -20,10 +21,13 @@ header
                     &:hover   
                         a 
                             color: $orange
+                        img 
+                            filter: invert(68%) sepia(16%) saturate(2267%) hue-rotate(321deg) brightness(100%) contrast(94%)
                 a
                     color: $white
                     margin-right: calculateWidth(5)
                 img 
+                    transition: filter .3s
                     width: calculateWidth(15)
                 ul.language
                     flex-grow: 0
@@ -135,10 +139,11 @@ header
     left: 0;
     top: 0;
     align-items: center;
-    padding: calculateHeight(10) calculateWidth(120) 
+    padding: calculateHeight(10) calculateWidth(120)  
     transition: box-shadow .3s
     max-height: 100px
-    transition: transform .3s, background-color .3s;
+    transition: transform .3s, background-color .3s, opacity 1s;
+    z-index: 9;
     &:hover
         box-shadow: $main_shadow;
         transform: translate(0px, 0px) !important;
@@ -164,8 +169,11 @@ header
                     ul  
                         display: flex;
                         li 
-                            margin-left: 50px
+                            margin-left: 50px;
+                            margin-bottom: initial
                             &:last-child
                                 display: none;
                             a 
                                 color: $dark_blue;
+                                &:hover
+                                    color: $orange;

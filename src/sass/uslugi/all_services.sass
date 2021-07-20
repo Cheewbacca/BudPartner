@@ -15,47 +15,27 @@
         min-width: 182px
         position: relative
         margin-right: 10px
-        .kitchen
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all1.png')
-        .livingRoom
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all2.png')
-        .bedroom
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all3.png')
-        .wardrobe
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all4.png')
-        .bath
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all5.png')
-        .childrenRoom
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all6.png')
-        .business
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all7.png')
-        .table
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all8.png')
-        .hallway
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all9.png')
-        .door
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all10.png')
-        .upholstery
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all11.png')
-        .panels
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all12.png')
-        .stairs
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all13.png')
-        .painting
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all14.png')
-        .facades
-            background-image: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%), url('/static/img/services__main-all15.png')
         .height-equal-width
             padding-top: 100%
         .content
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
             background-size: 100%
             background-repeat: no-repeat
             padding-right: 20px
+            transition: background-size .6s, background-position 2s
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                bottom: 0 
+                right: 0
+                left: 0
+                display: block
+                background: linear-gradient(180deg, rgba(0, 33, 60, 0.5) 0%, rgba(0, 33, 60, 0) 100%)
             &:hover
                 transition: background-size .6s
                 z-index: 1
@@ -66,13 +46,14 @@
                     transition: color .6s
     &__heading
         position: relative
+        word-break: break-word;
         &:after
             content: ''
             width: 20px
             height: 20px
             margin-left: 5px
             display: inline-block
-            background-image: url('/static/img/orArrow.svg')
+            background-image: url('../img/orArrow.svg')
             background-size: cover
             background-repeat: no-repeat
             position: absolute

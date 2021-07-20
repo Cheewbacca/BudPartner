@@ -7,12 +7,16 @@ html(land='ru')
         meta(description="Budparnter development")
         title Home
         link(rel="shortcut icon", href="static//img//icon.png", type="image/x-icon")
+        link(rel="canonical", href="")
         link(rel="stylesheet", href="static\\css\\main.css")
         link(rel="stylesheet", href="static\\css\\slick.css")
     body
+        include ../components/modal
+        
         .first-section__wrapper.main-padding.pt30.pb45
             include ../components/header
             include ../homepage/first_screen
+
         .our-goals__wrapper.main-padding
             include ../homepage/goals
         .our-products__wrapper.main-padding
@@ -24,12 +28,12 @@ html(land='ru')
         include ../components/process
         .portfolio__wrapper.main-padding
             include ../homepage/portfolio
-        .clients__wrapper.main-padding
-            include ../homepage/clients
-        
-        include ../components/modal
+            
+        include ../components/clients
+
         include ../components/footer
         
         script(src="static//js//libs.min.js")
+        script(src="static/js/inputmask.js")
         script(src="static//js//main.js")
         script(src="static//js//homepage.js")

@@ -78,7 +78,13 @@
 
 .mt150
     margin-top: calculateHeight(150)
-    
+
+.mt130
+    margin-top: 130px
+
+.mt120
+    margin-top: calculateHeight(120)
+
 .main-y-padding
     padding-top: calculateHeight(100)
     padding-bottom: calculateHeight(150)
@@ -128,25 +134,59 @@
 // Icons
 
 .icon-cross
-    position: relative;
+    position: relative
     width: calculateWidth(28)
     height: calculateWidth(28)
     &::before,
     &::after
-        content: ' ';
-        position: absolute;
-        height: 1.5px;
-        width: 100%;
-        bottom: 0;
+        content: ' '
+        position: absolute
+        height: 1.5px
+        width: 100%
+        bottom: 0
         margin-bottom: calculateWidth(14)
-        left: 0;
+        left: 0
         transform: rotate(45deg)
         background-color: $dark_blue
     &::before
-        transform: rotate(-45deg);
+        transform: rotate(-45deg)
 
 // General
 
+.opacity1
+    opacity: 1 !important
+
+.error_message
+    position: absolute;
+    top: -25px
+    background: $dark_blue
+    border: 1px solid $white;
+    max-width: 100%;
+    padding: 5px 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity .3s;
+    p
+        width: 100% !important;
+        margin: initial !important;
+        font-weight: normal
+        text-align: center
+        color: $white;
+
+    &::after
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        background: $dark_blue
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg)
+        width: 10px
+        height: 10px
+        border-right: 1px solid $white;
+        border-bottom: 1px solid $white;
 a
     transition: color .3s
 
@@ -154,22 +194,28 @@ svg
     --color-logo: #ffffff
 
 .active-link
-    text-decoration: underline;
-    color: $orange !important;
+    text-decoration: underline
+    color: $orange !important
     position: relative
     &::after
-        content: url(../img/orArrow.svg);
-        position: absolute;
+        position: absolute
         right: calculateWidth(-15)
         width: calculateWidth(16)
         top: 0
+    &:hover
+        color: $orange_hover !important
+
+.link-hover
+    color: $orange
+    &:hover
+        color: $orange_hover !important
 
 .text-center
-    text-align: center;
+    text-align: center
 
 .center
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: auto
+    margin-right: auto
 
 .text-darkBlue
     color: $dark_blue
@@ -178,35 +224,35 @@ svg
     width: calculateWidth(125)
 
 .underline
-    text-decoration: underline;
+    text-decoration: underline
 
 .border-right
-    border-right: 0.5px solid $border;
+    border-right: 0.5px solid $border
 
 .border-left
-    border-left: 0.5px solid $border;
+    border-left: 0.5px solid $border
 
 .border-big
-    border-width: 1px;
+    border-width: 1px
 
 .border-biggest
-    border-width: 1.5px;
+    border-width: 1.5px
 
 .border-right-d
-    border-right: 0.5px dashed $light;
+    border-right: 0.5px dashed $light
 
 .border-left-d
-    border-left: 0.5px dashed $light;
+    border-left: 0.5px dashed $light
 
 .check
     padding-left: calculateWidth(20)
-    position: relative;
+    position: relative
     &::after
         content: url(../img/check.svg)
-        position: absolute;
+        position: absolute
         left: 0
-        width: calculateWidth(16)            
-  
+        width: calculateWidth(16)
+
 .border-left-light
     border-left: 0.5px solid $white
 .border-right-light
@@ -222,9 +268,9 @@ svg
             width: 100%
 
 .social-list.scrolled
-    position: fixed;
-    bottom: 30px;
-    right: 8.33333vw;
+    position: fixed
+    bottom: 30px
+    right: 8.33333vw
 
 .heading-arrow
     position: relative
@@ -233,7 +279,7 @@ svg
         width: 30px
         height: 30px
         display: inline-block
-        background-image: url('/static/img/orArrow.svg')
+        background-image: url('../img/orArrow.svg')
         background-size: cover
         background-repeat: no-repeat
         position: absolute
@@ -252,7 +298,7 @@ svg
         width: 18px
         height: 13px
         display: inline-block
-        background-image: url('/static/img/check.svg')
+        background-image: url('../img/check.svg')
         background-size: cover
         background-repeat: no-repeat
         position: absolute
@@ -276,7 +322,7 @@ svg
         display: block
         width: 20px
         height: 20px
-        background-image: url('/static/img/arrow.svg')
+        background-image: url('../img/arrow.svg')
         background-size: cover
         background-repeat: no-repeat
         position: absolute
@@ -294,71 +340,104 @@ svg
     &:hover
         background: $orange_hover
 
+.border-initial
+    border: initial !important
+
 // Inputs
 
 .input-default
-    padding: calculateHeight(12) calculateWidth(25) calculateHeight(12) calculateWidth(50) 
-    background: $white;
-    border-radius: 50px;
-    color: $dark_blue;
+    padding: calculateHeight(12) calculateWidth(25) calculateHeight(12) calculateWidth(50)
+    background: $white
+    border-radius: 50px
+    color: $dark_blue
     border: 1px solid black
     &:hover
-        box-shadow: 0 0 10px 10px $dark_shadow;
+        box-shadow: 0 0 10px 10px $dark_shadow
     &:active
-        border: 1px solid $dark_blue;
+        border: 1px solid $dark_blue
 
 .input-error
-    border: 1px solid $error;
-    color: $error;
+    border: 1px solid $error
+    color: $error
 
 input::placeholder
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    color: $dark_blue;
+    font-family: 'Montserrat', sans-serif
+    font-style: normal
+    font-weight: 500
+    color: $dark_blue
 
 .subm
     text-align: center
-    background-color: $orange
-    border-radius: 50px;
-    color: $white;
-    outline: none;
+    background: $orange
+    border-radius: 50px
+    color: $white
+    outline: none
     border: none
     cursor: pointer
     text-transform: uppercase
     display: inline-flex
-    justify-content: center;
-    height: 52px;
-    line-height: 1;
-    align-items: center;
-    @media screen and ( max-width: 500px )
-        justify-content: space-around;
+    justify-content: center
+    height: 52px
+    line-height: 1
+    align-items: center
+    transition: background .3s, color .3s;
+    border: 1px solid $orange
     img
         width: calculateWidth(15)
         height: calculateWidth(14)
         margin-left: 5px
+    svg
+        width: calculateWidth(15)
+        height: calculateWidth(14)
+        margin-left: 5px
+        path 
+            transition: .3s
+    &:hover
+        background: $orange_hover
+        color: $dark
+        svg
+            path 
+                stroke: $dark
+    @media screen and ( max-width: 768px )
+        svg
+            width: tW(15)
+            height: tH(14)
+    @media screen and ( max-width: 500px )
+        justify-content: space-around
+        svg
+            width: 15px
+            height: 15px
     
+.inverted_button
+    svg
+        path 
+            stroke: $orange
+            
+    &:hover
+        svg
+            path 
+                stroke: $white
+
 label
     font-size: 0
 
 button
     text-transform: uppercase
-    
 
 .gray-bg
     position: absolute
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-    left: 0;
+    width: 100%
+    height: 50%
+    bottom: 0
+    left: 0
     background-color: $light
     z-index: -1
-    
+
 .grid-template
-    height: 100%;
+    height: 100%
     width: calc(100% - 8.33333vw - 8.33333vw)
     position: absolute
-    display: grid;
+    display: grid
     grid-template-columns: repeat( 4 , 1fr)
     @media screen and ( max-width: 768px )
         grid-template-columns: repeat( 2 , 1fr)
@@ -379,7 +458,7 @@ button
     .pt95
         padding-top: tH(95)
 
-    .pb100  
+    .pb100
         padding-bottom: tH(100)
 
     .pb170
@@ -423,7 +502,7 @@ button
 
     .btn-padding
         padding: tH(20) tW(55)
-    
+
     .icon-cross
         width: tW(28)
         height: tW(28)
@@ -434,7 +513,7 @@ button
     .check
         padding-left: tW(20)
         &::after
-            width: tW(16)    
+            width: tW(16)
 
     .active-link
         &::after
@@ -444,6 +523,9 @@ button
     .mt150
         margin-top: tH(150)
 
+    .mt120
+        margin-top: tH(120)
+
     .mb165
         margin-bottom: tH(165)
 
@@ -452,7 +534,7 @@ button
 
     .mb70
         margin-bottom: tH(70)
-    
+
     .mb50
         margin-bottom: tH(50)
 
@@ -479,7 +561,7 @@ button
 
     .logo
         width: tW(125)
-    
+
     .mr20
         margin-right: tW(20)
 
@@ -526,7 +608,7 @@ button
     .pt95
         padding-top: 95px
 
-    .pb100  
+    .pb100
         padding-bottom: 100px
 
     .pb170
@@ -569,7 +651,7 @@ button
         padding-left: 12px
 
     .btn-padding
-        padding: 1.77778vh 1.73611vw;
+        padding: 1.77778vh 1.73611vw
 
     .icon-cross
         width: 28px
@@ -590,10 +672,13 @@ button
 
     .mt150
         margin-top: 150px
-    
+
+    .mt120
+        margin-top: 120px
+
     .mb165
         margin-bottom: 165px
-    
+
     .mt70
         margin-top: 70px
 
@@ -641,7 +726,7 @@ button
 
     .social-list
         a
-            width: 50px 
+            width: 50px
 
     .main-padding
         padding-left: 20px

@@ -7,12 +7,48 @@
     <meta description="Budparnter development"/>
     <title>Услуги</title>
     <link rel="shortcut icon" href="static//img//icon.png" type="image/x-icon"/>
+    <link rel="canonical" href=""/>
     <link rel="stylesheet" href="static\css\main.css"/>
     <link rel="stylesheet" href="static\css\slick.css"/>
   </head>
   <body>
-    <div class="services__wrapper services-first-section__wrapper main-padding pt30 pb100">
-      <header><a class="logo" href="/">
+    <div id="modal__wrapper">
+      <div class="modal__content"><a class="icon-cross" href="#" id="modal__cross"></a>
+        <h3 class="h3-font"> оставьте заявку на бесплатную консультацию</h3>
+        <p class="main-body-small">Оставьте заявку и мы Вам перезвоним, чтобы обсудить все детали и договориться о дальнейшей работе. Так же, Вы можете перейти в <a href="kontakty.html" > контакты </a> и связаться с нами сейчас.</p>
+        <form action="">
+          <label for="consultation_name-modal">Имя<img src="static/img/man.svg" alt="man"/>
+            <input class="input-default input-font" type="text" id="consultation_name-modal" placeholder="Имя" name="Имя"/>
+            <div class="error_message"> 
+              <p class="input-font">Fill out this field</p>
+            </div>
+          </label>
+          <label for="consultation_phone-modal">Телефон <img src="static/img/black-phone.svg" alt="phone"/>
+            <input class="input-default input-font" type="text" id="consultation_phone-modal" placeholder="Телефон" name="Телефон"/>
+            <div class="error_message"> 
+              <p class="input-font">Fill out this field</p>
+            </div>
+          </label>
+          <label class="img-reverted" for="consultation_btn-modal"> 
+            <button class="subm btn-padding input-font" type="submit" id="consultation_btn-modal">оставить заявку</button><img src="static/img/arrow.svg" alt="arrow"/>
+          </label>
+        </form>
+        <div id="success-modal">
+          <h3 class="h3-font">Заявка успешно отправлена</h3>
+        </div>
+        <div id="error-modal">
+          <h3 class="h3-font">Произошла ошибка, обновите пожалуйста страницу</h3>
+        </div>
+      </div>
+    </div>
+    <div class="services__wrapper services-first-section__wrapper main-padding pt30 pb100 bg-attachment-fixed">
+      <style type="text/css">
+        .active-link::after {
+          content: url(static/img/orArrow.svg);
+        }
+        
+      </style>
+      <header data-arrow-dark="static/img/arrow-dark.svg" data-arrow="static/img/arrow.svg"><a class="logo" href="/">
           <svg width="100%" viewBox="0 0 126 51" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
               <path d="M38.6138 0.765731V4.84068C38.6138 4.94907 38.5766 5.05538 38.5058 5.14779C38.435 5.24017 38.3338 5.31509 38.2131 5.36411C38.0921 5.41317 37.957 5.43447 37.8219 5.42563C37.6871 5.41683 37.5578 5.37822 37.4487 5.31412L29.1781 0.455741C29.0442 0.377524 28.8811 0.337999 28.7156 0.34363C28.5499 0.349261 28.3917 0.399709 28.2666 0.486736L1.36399 19.0692C1.25151 19.1475 1.17154 19.2514 1.13476 19.367C1.09799 19.4826 1.10616 19.6045 1.15819 19.7163C1.21022 19.8281 1.30362 19.9246 1.42593 19.9927C1.54823 20.0609 1.6936 20.0976 1.84263 20.0978H5.75977C5.94897 20.1036 6.12802 20.168 6.2593 20.2773C6.39055 20.3866 6.46378 20.5323 6.46364 20.684V40.7317C6.46443 40.8467 6.50739 40.9591 6.58723 41.0546C6.66707 41.1502 6.78022 41.2249 6.91263 41.2694C7.04503 41.3136 7.19084 41.3261 7.33192 41.3046C7.473 41.283 7.60309 41.2292 7.70602 41.1491L47.8591 9.51871C47.9285 9.46433 47.9834 9.39939 48.0209 9.32778C48.0585 9.25616 48.0777 9.17927 48.0773 9.10162V0.765731C48.0773 0.61076 48.0007 0.462095 47.8641 0.352247C47.7276 0.242401 47.5426 0.18031 47.349 0.179565H39.3457C39.1517 0.179565 38.9653 0.241323 38.828 0.35125C38.6907 0.461175 38.6138 0.610271 38.6138 0.765731ZM19.5911 26.6189H12.7529C12.5587 26.6189 12.3725 26.5571 12.2352 26.4472C12.098 26.3372 12.0208 26.1882 12.0208 26.0327V20.7234C12.0208 20.568 12.098 20.4189 12.2352 20.3089C12.3725 20.199 12.5587 20.1373 12.7529 20.1373H19.5911C19.7853 20.1373 19.9715 20.199 20.1088 20.3089C20.246 20.4189 20.3232 20.568 20.3232 20.7234V26.0383C20.3213 26.1928 20.2434 26.3405 20.1063 26.4492C19.9692 26.5579 19.7841 26.6189 19.5911 26.6189Z" fill="#F7875F" stroke="#F7875F" stroke-miterlimit="10"></path>
@@ -61,69 +97,71 @@
         </nav>
       </header>
       <div class="first-section__content">
-        <h1 class="h1-font mt50">услуги</h1><a class="subm small-btn-padding input-font mt30" href="#">оставить заявку<img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/></a>
+        <h1 class="h1-font mt50">услуги</h1><a class="subm small-btn-padding input-font mt30" href="#" id="getModal">оставить заявку<svg width="100%" height="100%" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.6065 4.02802L11.7053 4.07074M11.7053 4.07074L11.772 8.19347M11.7053 4.07074L4.07083 11.7052" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
       </div>
     </div>
     <div class="all-services">
       <div class="all-services__content main-padding main-y-padding"><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 kitchen">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all1.png');">
             <h3 class="h3-font all-services__heading">Кухни</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 livingRoom">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all2.png');">
             <h3 class="h3-font all-services__heading">Гостинные</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 bedroom">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all3.png');">
             <h3 class="h3-font all-services__heading">Спальни</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 wardrobe">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all4.png');">
             <h3 class="h3-font all-services__heading">шкафы, гардеробные</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 bath">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all5.png');">
             <h3 class="h3-font all-services__heading">Ванные комнаты</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 childrenRoom">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all6.png');">
             <h3 class="h3-font all-services__heading">Детские комнаты</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 business">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all7.png');">
             <h3 class="h3-font all-services__heading">Мебель для бизнеса</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 table">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all8.png');">
             <h3 class="h3-font all-services__heading">Столы</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 hallway">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all9.png');">
             <h3 class="h3-font all-services__heading">прихожая</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 door">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all10.png');">
             <h3 class="h3-font all-services__heading">Двери</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 upholstery">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all11.png');">
             <h3 class="h3-font all-services__heading">обшивка мебели</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 panels">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all12.png');">
             <h3 class="h3-font all-services__heading">стеновые панели</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 stairs">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all13.png');">
             <h3 class="h3-font all-services__heading">лестницы</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 painting">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all14.png');">
             <h3 class="h3-font all-services__heading">покраска изделий</h3>
           </div></a><a class="all-services__item" href="#">
           <div class="height-equal-width"></div>
-          <div class="content p25 facades">
+          <div class="content p25" style="background-image: url('/static/img/services__main-all15.png');">
             <h3 class="h3-font all-services__heading">МЕБЕЛЬНЫЕ фасады</h3>
           </div></a>
         <div class="absolute-lines absolute-lines--d">
@@ -135,18 +173,35 @@
       </div>
     </div>
     <footer class="main-padding">
-      <form action="">
+      <div class="form">
         <h3 class="text-center h3-font"> оставьте заявку на бесплатную консультацию</h3>
-        <label for="consultation_name">Имя<img src="static/img/man.svg" alt="имя" title="имя"/>
-          <input class="input-default input-font" type="text" id="consultation_name" placeholder="Имя" name="Имя" required="required"/>
-        </label>
-        <label for="consultation_phone">Телефон <img src="static/img/black-phone.svg" alt="телефон" title="телефон"/>
-          <input class="input-default input-font" type="text" id="consultation_phone" placeholder="Телефон" name="Телефон" required="required"/>
-        </label>
-        <label class="img-reverted" for="consultation_btn"> 
-          <button class="subm btn-padding input-font" type="submit" id="consultation_btn">оставить заявку</button><img src="static/img/arrow.svg" alt="оставить заявку" title="оставить заявку"/>
-        </label>
-      </form><a class="logo border-left pt350 pb100" href="/">
+        <form action="" data-form="footer">
+          <label for="consultation_name">Имя<img src="static/img/man.svg" alt="имя" title="имя"/>
+            <input class="input-default input-font" type="text" id="consultation_name" placeholder="Имя" name="Имя"/>
+            <div class="error_message"> 
+              <p class="input-font">Fill out this field</p>
+            </div>
+          </label>
+          <label for="consultation_phone">Телефон <img src="static/img/black-phone.svg" alt="телефон" title="телефон"/>
+            <input class="input-default input-font" type="text" id="consultation_phone" placeholder="Телефон" name="Телефон"/>
+            <div class="error_message"> 
+              <p class="input-font">Fill out this field</p>
+            </div>
+          </label>
+          <label class="img-reverted" for="consultation_btn"> 
+            <button class="subm btn-padding input-font" type="submit" id="consultation_btn">оставить заявку<svg width="100%" height="100%" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.6065 4.02802L11.7053 4.07074M11.7053 4.07074L11.772 8.19347M11.7053 4.07074L4.07083 11.7052" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+          </label>
+          <div id="success">
+            <h3 class="h3-font">Заявка успешно отправлена</h3>
+          </div>
+          <div id="error">
+            <h3 class="h3-font">Произошла ошибка, обновите пожалуйста страницу</h3>
+          </div>
+        </form>
+      </div><a class="logo border-left pt350 pb100" href="/">
         <svg width="100%" viewBox="0 0 126 51" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
             <path d="M38.6138 0.765731V4.84068C38.6138 4.94907 38.5766 5.05538 38.5058 5.14779C38.435 5.24017 38.3338 5.31509 38.2131 5.36411C38.0921 5.41317 37.957 5.43447 37.8219 5.42563C37.6871 5.41683 37.5578 5.37822 37.4487 5.31412L29.1781 0.455741C29.0442 0.377524 28.8811 0.337999 28.7156 0.34363C28.5499 0.349261 28.3917 0.399709 28.2666 0.486736L1.36399 19.0692C1.25151 19.1475 1.17154 19.2514 1.13476 19.367C1.09799 19.4826 1.10616 19.6045 1.15819 19.7163C1.21022 19.8281 1.30362 19.9246 1.42593 19.9927C1.54823 20.0609 1.6936 20.0976 1.84263 20.0978H5.75977C5.94897 20.1036 6.12802 20.168 6.2593 20.2773C6.39055 20.3866 6.46378 20.5323 6.46364 20.684V40.7317C6.46443 40.8467 6.50739 40.9591 6.58723 41.0546C6.66707 41.1502 6.78022 41.2249 6.91263 41.2694C7.04503 41.3136 7.19084 41.3261 7.33192 41.3046C7.473 41.283 7.60309 41.2292 7.70602 41.1491L47.8591 9.51871C47.9285 9.46433 47.9834 9.39939 48.0209 9.32778C48.0585 9.25616 48.0777 9.17927 48.0773 9.10162V0.765731C48.0773 0.61076 48.0007 0.462095 47.8641 0.352247C47.7276 0.242401 47.5426 0.18031 47.349 0.179565H39.3457C39.1517 0.179565 38.9653 0.241323 38.828 0.35125C38.6907 0.461175 38.6138 0.610271 38.6138 0.765731ZM19.5911 26.6189H12.7529C12.5587 26.6189 12.3725 26.5571 12.2352 26.4472C12.098 26.3372 12.0208 26.1882 12.0208 26.0327V20.7234C12.0208 20.568 12.098 20.4189 12.2352 20.3089C12.3725 20.199 12.5587 20.1373 12.7529 20.1373H19.5911C19.7853 20.1373 19.9715 20.199 20.1088 20.3089C20.246 20.4189 20.3232 20.568 20.3232 20.7234V26.0383C20.3213 26.1928 20.2434 26.3405 20.1063 26.4492C19.9692 26.5579 19.7841 26.6189 19.5911 26.6189Z" fill="#F7875F" stroke="#F7875F" stroke-miterlimit="10"></path>
@@ -161,7 +216,7 @@
           </defs>
         </svg></a>
       <ul class="pt350 pb100 border-left">
-        <li><span class="h4-font"> услуги</span></li>
+        <li><span class="h4-font color-white">услуги</span></li>
         <li> <a class="main-body-small" href="kukhni.html">Кухни</a></li>
         <li> <a class="main-body-small" href="gostinye.html">Гостинные</a></li>
         <li> <a class="main-body-small" href="spalni.html">Спальни</a></li>
@@ -176,14 +231,14 @@
         <li> <a class="main-body-small" href="facades.html">Фасады</a></li>
       </ul>
       <ul class="pt350 pb100 border-left">
-        <li><span class="h4-font">Полезные страницы</span></li>
+        <li><span class="h4-font color-white">Полезные страницы</span></li>
         <li> <a class="main-body-small" href="o-nas.html">О нас</a></li>
         <li> <a class="main-body-small" href="#">Материалы</a></li>
         <li> <a class="main-body-small" href="kontakty.html">Контакты</a></li>
       </ul>
       <div class="contact-us border-left pt350 pb100 border-right">
         <ul>
-          <li><span class="h4-font">Позвоните нам</span></li>
+          <li><span class="h4-font color-white">Позвоните нам</span></li>
           <li> 
             <svg class="mr10" width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M0.000244141 2.55322C0.000244141 1.89018 0.263636 1.2543 0.732477 0.785456C1.20132 0.316615 1.8372 0.0532227 2.50024 0.0532227H10.0002C10.6633 0.0532227 11.2992 0.316615 11.768 0.785456C12.2369 1.2543 12.5002 1.89018 12.5002 2.55322V17.5532C12.5002 18.2163 12.2369 18.8521 11.768 19.321C11.2992 19.7898 10.6633 20.0532 10.0002 20.0532H2.50024C1.8372 20.0532 1.20132 19.7898 0.732477 19.321C0.263636 18.8521 0.000244141 18.2163 0.000244141 17.5532V2.55322ZM7.50024 16.3032C7.50024 16.6347 7.36855 16.9527 7.13413 17.1871C6.89971 17.4215 6.58176 17.5532 6.25024 17.5532C5.91872 17.5532 5.60078 17.4215 5.36636 17.1871C5.13194 16.9527 5.00024 16.6347 5.00024 16.3032C5.00024 15.9717 5.13194 15.6538 5.36636 15.4193C5.60078 15.1849 5.91872 15.0532 6.25024 15.0532C6.58176 15.0532 6.89971 15.1849 7.13413 15.4193C7.36855 15.6538 7.50024 15.9717 7.50024 16.3032Z" fill="white"></path>
@@ -211,7 +266,7 @@
           </li>
         </ul>
         <ul class="mt50">
-          <li><span class="h4-font">Напишите нам</span></li>
+          <li><span class="h4-font color-white">Напишите нам</span></li>
           <li> 
             <svg class="mr10" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M18.0004 0.0532227H2.00037C0.900366 0.0532227 0.0103662 0.953223 0.0103662 2.05322L0.000366211 14.0532C0.000366211 15.1532 0.900366 16.0532 2.00037 16.0532H18.0004C19.1004 16.0532 20.0004 15.1532 20.0004 14.0532V2.05322C20.0004 0.953223 19.1004 0.0532227 18.0004 0.0532227ZM17.6004 4.30322L10.5304 8.72322C10.2104 8.92322 9.79037 8.92322 9.47037 8.72322L2.40037 4.30322C2.30009 4.24693 2.21229 4.17088 2.14225 4.07968C2.07222 3.98847 2.02143 3.884 1.99294 3.77259C1.96445 3.66119 1.95887 3.54516 1.97652 3.43153C1.99418 3.3179 2.0347 3.20904 2.09565 3.11152C2.15659 3.01401 2.23669 2.92988 2.33109 2.86422C2.42549 2.79856 2.53224 2.75273 2.64486 2.72952C2.75749 2.70631 2.87365 2.70619 2.98632 2.72917C3.09899 2.75215 3.20583 2.79776 3.30037 2.86322L10.0004 7.05322L16.7004 2.86322C16.7949 2.79776 16.9017 2.75215 17.0144 2.72917C17.1271 2.70619 17.2432 2.70631 17.3559 2.72952C17.4685 2.75273 17.5752 2.79856 17.6696 2.86422C17.764 2.92988 17.8441 3.01401 17.9051 3.11152C17.966 3.20904 18.0066 3.3179 18.0242 3.43153C18.0419 3.54516 18.0363 3.66119 18.0078 3.77259C17.9793 3.884 17.9285 3.98847 17.8585 4.07968C17.7884 4.17088 17.7006 4.24693 17.6004 4.30322Z" fill="white"></path>
@@ -233,5 +288,6 @@
     </footer>
     <script src="static/js/libs.min.js"></script>
     <script src="static/js/main.js"></script>
+    <script src="static/js/fixBgAttachmentFixed.js"></script>
   </body>
 </html>

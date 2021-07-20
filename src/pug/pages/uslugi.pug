@@ -7,10 +7,12 @@ html(lang="ru")
         meta(description="Budparnter development")
         title Услуги
         link(rel="shortcut icon", href="static//img//icon.png", type="image/x-icon")
+        link(rel="canonical", href="")
         link(rel="stylesheet", href="static\\css\\main.css")
         link(rel="stylesheet", href="static\\css\\slick.css")
     body
-        .services__wrapper.services-first-section__wrapper.main-padding.pt30.pb100
+        include ../components/modal
+        .services__wrapper.services-first-section__wrapper.main-padding.pt30.pb100.bg-attachment-fixed
             include ../components/header
             include ../uslugi/first_section
         
@@ -21,3 +23,4 @@ html(lang="ru")
 
         script(src="static/js/libs.min.js")
         script(src="static/js/main.js")
+        script(src="static/js/fixBgAttachmentFixed.js")
