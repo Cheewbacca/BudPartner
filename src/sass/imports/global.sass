@@ -201,14 +201,18 @@ svg
         position: absolute
         right: calculateWidth(-15)
         width: calculateWidth(16)
-        top: 0
+        bottom: -3px
     &:hover
         color: $orange_hover !important
 
 .link-hover
     color: $orange
+    font-weight: bold
     &:hover
         color: $orange_hover !important
+        text-decoration: underline
+
+
 
 .text-center
     text-align: center
@@ -270,7 +274,7 @@ svg
 .social-list.scrolled
     position: fixed
     bottom: 30px
-    right: 8.33333vw
+    left: 8.33333vw
 
 .heading-arrow
     position: relative
@@ -394,10 +398,6 @@ input::placeholder
             transition: .3s
     &:hover
         background: $orange_hover
-        color: $dark
-        svg
-            path 
-                stroke: $dark
     @media screen and ( max-width: 768px )
         svg
             width: tW(15)

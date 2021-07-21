@@ -17,7 +17,7 @@ $("#modal__cross").on("click", function (e) {
   $("#modal__wrapper").fadeOut();
 });
 
-$("#getModal").on("click", function (e) {
+$(".getModal").on("click", function (e) {
   e.preventDefault();
   $("#modal__wrapper").css("display", "flex");
 });
