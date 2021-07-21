@@ -201,14 +201,18 @@ svg
         position: absolute
         right: calculateWidth(-15)
         width: calculateWidth(16)
-        top: 0
+        bottom: -3px
     &:hover
         color: $orange_hover !important
 
 .link-hover
     color: $orange
+    font-weight: bold
     &:hover
         color: $orange_hover !important
+        text-decoration: underline
+
+
 
 .text-center
     text-align: center
@@ -270,7 +274,7 @@ svg
 .social-list.scrolled
     position: fixed
     bottom: 30px
-    right: 8.33333vw
+    left: 8.33333vw
 
 .heading-arrow
     position: relative
@@ -398,7 +402,7 @@ input::placeholder
         svg
             width: tW(15)
             height: tH(14)
-    @media screen and ( max-width: 500px )
+    @media screen and ( max-width: 600px )
         justify-content: space-around
         svg
             width: 15px
@@ -588,7 +592,7 @@ button
         padding-left: tW(120)
         padding-right: tW(120)
 
-@media screen and ( max-width: 500px )
+@media screen and ( max-width: 600px )
     .pt350
         padding-top: 350px
 
