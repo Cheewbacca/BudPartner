@@ -20,6 +20,10 @@ $("#modal__cross").on("click", function (e) {
 $(".getModal").on("click", function (e) {
   e.preventDefault();
   $("#modal__wrapper").css("display", "flex");
+  const deviceAgent = navigator.userAgent.toLowerCase();
+  if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
+    $('.input-default').addClass('ios-input-padding');
+  }
 });
 
 const headerHeight = $("header").height();
