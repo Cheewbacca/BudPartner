@@ -3,7 +3,6 @@
         background-image: url('../img/callback__bg.png')
         background-size: cover
         background-repeat: no-repeat
-        // min-height: 522px
     &__heading
         color: $white
         border-left-color: $white
@@ -22,16 +21,18 @@
             flex-direction: column
             align-items: center
         label
-            margin: 0 calculateWidth(12.5) 
+            margin: 0 calculateWidth(12.5)
             position: relative
             @media all and (max-width: 768px)
                 margin: calculateHeight(30) calculateWidth(12.5) 0
+                .subm
+                    width: 253px
             img
                 position: absolute
                 left: calculateWidth(25)
                 width: calculateWidth(15)
                 height: calculateWidth(14)
-                top: 50%;
+                top: 50%
                 margin-top: calculateWidth(-7)
                 @media all and (max-width: 768px)
                     width: 15px
@@ -39,10 +40,18 @@
                     top: 0
                     bottom: 0
                     margin: auto
-        .img-reverted 
+                    left: tW(25)
+                @media screen and ( max-width: 500px )
+                    left: 25px
+                    width: 15px
+                    height: 14px
+        .img-reverted
             img
                 left: unset
                 right: calculateWidth(25)
+        .svg-arrow
+            width: 10px
+            height: 10px
         @media all and (min-width: 769px)
-            input 
+            input
                 height: 100%

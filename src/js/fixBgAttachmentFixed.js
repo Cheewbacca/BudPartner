@@ -3,5 +3,6 @@ $(document).ready(function($){
     
     if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
         $('.bg-attachment-fixed').css('background-attachment', 'scroll');
+        $('.input-default').addClass('ios-input-padding');
     }
 });
