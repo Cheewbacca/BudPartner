@@ -398,12 +398,17 @@ input::placeholder
             transition: .3s
     &:hover
         background: $orange_hover
+    @media screen and (max-width: 1200px)
+        font-size: 12px
+        svg
+            width: tW(15)
+            height: tH(14)
     @media screen and ( max-width: 768px )
         svg
             width: tW(15)
             height: tH(14)
     @media screen and ( max-width: 600px )
-        justify-content: space-around
+        padding: 20px
         svg
             width: 15px
             height: 15px
@@ -723,6 +728,10 @@ button
 
     .input-default
         padding: 12px 50px
+
+    .ios-input-padding
+        padding-top: 5px
+        padding-bottom: 5px
 
     .social-list
         a
