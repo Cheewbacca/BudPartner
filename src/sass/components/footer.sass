@@ -1,11 +1,11 @@
-footer > * 
+footer > *
     height: 100%
 footer
-    display: grid;
+    display: grid
     grid-template-columns: repeat( 4, 1fr )
-    grid-template-rows: 1fr 
-    width: 100%;
-    background-color: $dark_blue;
+    grid-template-rows: 1fr
+    width: 100%
+    background-color: $dark_blue
     align-items: start
     position: relative
     color: $white
@@ -15,15 +15,15 @@ footer
     @media screen and ( max-width: 500px )
         padding-bottom: 200px
     .form
-        width: 100%;
-        position: absolute;
+        width: 100%
+        position: absolute
         top: calculateHeight(100)
         height: auto
         display: flex
         flex-flow: column wrap
         justify-content: center
         @media screen and ( max-width: 768px )
-            padding: tH(100) 0px; 
+            padding: tH(100) 0px
             position: static
         @media screen and ( max-width: 500px )
             margin: 50px 0px
@@ -35,7 +35,7 @@ footer
             #success,
             #error
                 text-align: center
-                display: none;
+                display: none
             label
                 margin: calculateHeight(30) calculateWidth(12.5) 0
                 position: relative
@@ -48,7 +48,7 @@ footer
                     left: calculateWidth(25)
                     width: calculateWidth(15)
                     height: calculateWidth(14)
-                    top: 50%;
+                    top: 50%
                     margin-top: calculateWidth(-7)
                     @media screen and ( max-width: 768px )
                         left: tW(25)
@@ -60,19 +60,19 @@ footer
                         width: 15px
                         height: 14px
                         margin-top: -7px
-                input 
+                input
                     height: 100%
                     @media screen and ( max-width: 500px )
                         width: 100% !important
-            .img-reverted 
+            .img-reverted
                 img
-                    left: initial;
+                    left: initial
                     right: calculateWidth(25)
                     @media screen and ( max-width: 768px )
                         right: tW(25)
                     @media screen and ( max-width: 500px )
                         right: 25px
-            input 
+            input
                 height: 100%
                 @media screen and ( max-width: 500px )
                     width: 100%
@@ -80,26 +80,26 @@ footer
                 @media screen and ( max-width: 500px )
                     width: 100%
             h3
-                width: 100%;
+                width: 100%
                 color: $white
     .main-body-small
         color: $white
 
-    a, 
-    div, 
+    a,
+    div,
     ul
         @media screen and ( max-width: 768px )
             padding: initial !important
-            margin: 0;
-            border: initial !important;
-    ul 
+            margin: 0
+            border: initial !important
+    ul
         @media screen and ( max-width: 768px )
-            margin-top: 50px;
-        li 
+            margin-top: 50px
+        li
             color: $white
             align-items: flex-end
-            display: flex;
-            text-align: center;
+            display: flex
+            text-align: center
             span
                 @media screen and ( max-width: 768px )
                     // margin: 0 auto
@@ -107,15 +107,15 @@ footer
                 margin-bottom: calculateHeight(5)
             &:not(:first-child)
                 margin-top: calculateHeight(10)
-            a 
+            a
                 color: $white
                 &:hover
                     color: $orange
                 @media screen and ( max-width: 768px )
                     margin: 0
-    div 
+    div
         ul.mt50
-            @media screen and ( max-width: 768px )                
-                li 
+            @media screen and ( max-width: 768px )
+                li
                     a
                         margin: initial
