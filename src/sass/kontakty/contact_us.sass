@@ -8,7 +8,7 @@
         @media all and (max-width: 768px)
             grid-template-columns: 1fr
             grid-gap: 150px 0
-    &__li 
+    &__li
         position: relative
         padding-left: 20px
         &--email
@@ -23,9 +23,14 @@
                 grid-template-columns: 1fr
     &__link
         color: $dark_blue
+        padding: 3px 12px
+        transition: none
+        &:hover
+            background: $dark_blue
+            color: #fff
     &__img
         position: absolute
-        left: 1px
+        left: 5px
         top: 0
         bottom: 0
         margin: auto
@@ -40,6 +45,6 @@
 
 #success-modal,
 #error-modal
-    display: none;
-    text-align: center;
-    margin-top: 50px        
+    display: none
+    text-align: center
+    margin-top: 50px
