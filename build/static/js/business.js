@@ -1,57 +1,32 @@
-$(document).ready(() => {
-    const officeSlider = $('.officeSlider');
-    // to avoid animation bug in slick slider (when slide from last to first)
-    // set slidesToShow equal number of items - 1
-    let slidesToShow = officeSlider.children().length - 1;
+$('document').ready(() => {
+    $('.slider').each(function() {
+        const slidesToShow = $(this).children().length - 1;
+        const nextArrow = $(this).next('.business-slider__buttons').find('.nextArrow');
+        const prevArrow = $(this).next('.business-slider__buttons').find('.prevArrow');
 
-    officeSlider.slick({
-        slidesToShow: slidesToShow,
-        speed: 800,
-        centerMode: true,
-        variableWidth: true,
-        nextArrow: $('.officePrevArrow'),
-        prevArrow: $('.officeNextArrow'),
-    });
+        $(this).slick({
+            slidesToShow: slidesToShow,
+            speed: 800,
+            centerMode: true,
+            variableWidth: true,
+            nextArrow: nextArrow,
+            prevArrow: prevArrow,
+        });
 
+        const imageArray = [];
+        const sliderImg = $(this).find('.slider-img');
+        const sliderScale = $(this).find('.slider-scale');
 
-    const saleStaffSlider = $('.saleStaffSlider');
-    slidesToShow = saleStaffSlider.children().length - 1;
+        sliderImg.each(function () {
+            imageArray.push({
+                src: $(this).attr('src'),
+                alt: $(this).attr('alt'),
+                title: $(this).attr('title'),
+            });
+        });
 
-    saleStaffSlider.slick({
-        slidesToShow: slidesToShow,
-        speed: 800,
-        centerMode: true,
-        variableWidth: true,
-        nextArrow: $('.saleStaffPrevArrow'),
-        prevArrow: $('.saleStaffNextArrow'),
-    });
-});
-
-
-let officeSliderImgArray = [];
-let saleStaffSliderImgArray = [];
-
-$('.business-slider__slider-img--office').each(function () {
-    officeSliderImgArray.push({
-        src: $(this).attr('src'),
-        alt: $(this).attr('alt'),
-        title: $(this).attr('title'),
+        sliderImg.on('click', { array: imageArray }, handleImgSliderClick);
+        sliderScale.on('click', { array: imageArray }, handleImgSliderClick);
     });
 });
-$('.business-slider__slider-img--saleStaff').each(function () {
-    saleStaffSliderImgArray.push({
-        src: $(this).attr('src'),
-        alt: $(this).attr('alt'),
-        title: $(this).attr('title'),
-    });
-});
-
-console.log(officeSliderImgArray, saleStaffSliderImgArray);
-
-$('.business-slider__slider-img--office').on('click', { array: officeSliderImgArray }, handleImgSliderClick);
-$('.business-slider__slider-scale--office').on('click', { array: officeSliderImgArray }, handleImgSliderClick);
-
-$('.business-slider__slider-img--saleStaff').on('click', { array: saleStaffSliderImgArray }, handleImgSliderClick);
-$('.business-slider__slider-scale--saleStaff').on('click', { array: saleStaffSliderImgArray }, handleImgSliderClick);
-
 
